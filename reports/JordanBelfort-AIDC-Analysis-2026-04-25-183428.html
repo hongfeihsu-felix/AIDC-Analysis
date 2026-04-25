@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI / Data Center Market Analysis — 2026年4月25日双周刊</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #0a0e17; color: #e1e4e8; line-height: 1.6; font-size: 14px; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+  header { background: linear-gradient(135deg, #1a1f35 0%, #0d1420 100%); border: 1px solid #2d3748; border-radius: 12px; padding: 30px 40px; margin-bottom: 20px; }
+  header h1 { font-size: 24px; font-weight: 700; color: #63b3ed; margin-bottom: 8px; }
+  .subtitle { color: #a0aec0; font-size: 14px; }
+  .meta { display: flex; gap: 20px; margin-top: 15px; flex-wrap: wrap; }
+  .meta-item { background: #1a2332; border: 1px solid #2d3748; border-radius: 6px; padding: 6px 14px; font-size: 12px; color: #a0aec0; }
+  .meta-item strong { color: #63b3ed; }
+  .section { background: #111827; border: 1px solid #1e2a3a; border-radius: 10px; padding: 24px; margin-bottom: 16px; }
+  .section h2 { font-size: 16px; font-weight: 600; color: #63b3ed; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid #1e2a3a; }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 600; margin-left: 8px; vertical-align: middle; }
+  .tag-new { background: #276749; color: #68d391; }
+  .tag-update { background: #744210; color: #fbd38d; }
+  .tag-high { background: #742a2a; color: #fc8181; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+  .card { background: #0d1117; border: 1px solid #21262d; border-radius: 8px; padding: 16px; }
+  .card h3 { font-size: 13px; font-weight: 600; color: #8b949e; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .card .value { font-size: 22px; font-weight: 700; color: #e6edf3; margin-bottom: 6px; }
+  .card .sub { font-size: 11px; color: #6e7681; }
+  .card .delta { font-size: 12px; margin-top: 6px; }
+  .positive { color: #3fb950; }
+  .negative { color: #f85149; }
+  .neutral { color: #d29922; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 13px; }
+  th { background: #161b22; color: #8b949e; padding: 8px 12px; text-align: left; border-bottom: 1px solid #21262d; font-weight: 600; }
+  td { padding: 10px 12px; border-bottom: 1px solid #161b22; color: #c9d1d9; }
+  tr:hover td { background: #161b22; }
+  .signal-item { display: flex; gap: 12px; padding: 10px 0; border-bottom: 1px solid #161b22; }
+  .signal-item:last-child { border-bottom: none; }
+  .signal-icon { width: 32px; height: 32px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+  .icon-capex { background: #1a3a4a; color: #63b3ed; }
+  .icon-gpu { background: #3a1a4a; color: #b794f4; }
+  .icon-csp { background: #1a4a2a; color: #68d391; }
+  .icon-interconnect { background: #4a3a1a; color: #fbd38d; }
+  .icon-mtk { background: #4a1a2a; color: #ff7b72; }
+  .icon-event { background: #2a3a4a; color: #79c0ff; }
+  .signal-content .title { font-size: 13px; font-weight: 600; color: #e6edf3; margin-bottom: 2px; }
+  .signal-content .desc { font-size: 12px; color: #8b949e; }
+  .signal-content .source { font-size: 11px; color: #6e7681; margin-top: 3px; }
+  .highlight-box { background: #0d1f2d; border: 1px solid #1a3a5c; border-radius: 8px; padding: 16px; margin-top: 12px; }
+  .highlight-box h4 { font-size: 13px; font-weight: 600; color: #63b3ed; margin-bottom: 8px; }
+  .supply-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .supply-item { background: #0d1117; border: 1px solid #21262d; border-radius: 6px; padding: 12px; text-align: center; }
+  .supply-item .label { font-size: 11px; color: #8b949e; margin-bottom: 4px; }
+  .supply-item .val { font-size: 16px; font-weight: 700; color: #e6edf3; }
+  .supply-item .status { font-size: 10px; color: #6e7681; margin-top: 2px; }
+  .mtk-section { background: linear-gradient(135deg, #1a0d2e 0%, #0d1a1f 100%); border: 1px solid #3d2a5c; border-radius: 10px; padding: 24px; margin-bottom: 16px; }
+  .mtk-section h2 { color: #ff7b72; border-bottom-color: #3d2a5c; }
+  .footer { text-align: center; padding: 20px; color: #6e7681; font-size: 12px; }
+  .toc { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+  .toc a { background: #1a2332; border: 1px solid #2d3748; border-radius: 6px; padding: 6px 14px; color: #8b949e; text-decoration: none; font-size: 12px; transition: all 0.2s; }
+  .toc a:hover { background: #2d3748; color: #63b3ed; }
+  .cycle-bar { height: 8px; background: #1e2a3a; border-radius: 4px; margin: 8px 0; overflow: hidden; }
+  .cycle-fill { height: 100%; border-radius: 4px; transition: width 0.3s; }
+  .cycle-early { background: #68d391; }
+  .cycle-mid { background: #63b3ed; }
+  .cycle-late { background: #fbd38d; }
+  .cycle-peak { background: #fc8181; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>🤖 AI / Data Center Market Intelligence</h1>
+  <div class="subtitle">AI 基础设施与数据中心的双周追踪报告 — MediaTek 战略规划支持</div>
+  <div class="meta">
+    <div class="meta-item"><strong>报告日期</strong> 2026-04-25</div>
+    <div class="meta-item"><strong>报告编号</strong> #4</div>
+    <div class="meta-item"><strong>覆盖期</strong> 2026-04-11 → 2026-04-25</div>
+    <div class="meta-item"><strong>作者</strong> Hermes Agent for Felix</div>
+  </div>
+</header>
+
+<div class="toc">
+  <a href="#capex">1. AI Capex Cycle</a>
+  <a href="#gpu-asic">2. GPU/ASIC 供需</a>
+  <a href="#csp">3. CSP 深度</a>
+  <a href="#optical">4. 光互连/温控</a>
+  <a href="#mtk">5. MediaTek TPU 机会</a>
+  <a href="#signals">6. 事件信号</a>
+</div>
+
+<!-- ============ SECTION 1: AI CAPEX CYCLE ============ -->
+<div class="section" id="capex">
+  <h2>1. AI Capex Cycle Position <span class="tag tag-high">中期·高位</span></h2>
+  
+  <div class="grid">
+    <div class="card">
+      <h3>全球 AI 数据中心 Capex 2026E</h3>
+      <div class="value">$6,000 亿</div>
+      <div class="sub">YoY +40% from 2025</div>
+      <div class="delta positive">▲ 持续加速阶段</div>
+    </div>
+    <div class="card">
+      <h3>CSP AI Capex 总和</h3>
+      <div class="value">~$3,200 亿</div>
+      <div class="sub">Google + Meta + Microsoft + Amazon</div>
+      <div class="delta neutral">● Q1 2026 增速放缓但绝对值高位</div>
+    </div>
+    <div class="card">
+      <h3>NVIDIA 数据中心收入占比</h3>
+      <div class="value">85-88%</div>
+      <div class="sub">FY2026 consensus $206.4B</div>
+      <div class="delta positive">▲ Blackwell 量产驱动</div>
+    </div>
+    <div class="card">
+      <h3>Marvell DC ASIC 收入 (Q3 FY26)</h3>
+      <div class="value">$15.18 亿</div>
+      <div class="sub">QoQ +42% YoY; DC占比 >75%</div>
+      <div class="delta positive">▲ Custom ASIC 景气延续</div>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <h4>📊 Capex 周期位置判断</h4>
+    <div style="margin-bottom: 10px;">
+      <div style="display:flex;justify-content:space-between;color:#8b949e;font-size:12px;margin-bottom:4px;">
+        <span>早期</span><span>中期·高峰</span><span>后期</span>
+      </div>
+      <div class="cycle-bar">
+        <div class="cycle-fill cycle-mid" style="width: 65%;"></div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:#8b949e;">
+    <strong style="color:#63b3ed">当前位置: Mid-cycle Peak Investment（中期高峰）</strong><br>
+    CSP capex 维持历史高位，但边际增速开始放缓。NVIDIA Blackwell 量产爬坡，AMD MI350/MI400 推进，
+    Google/Meta 自研 ASIC 加速。算力饥饿期进入后半段，供需缺口逐步收窄但结构性偏紧持续至2026年底。
+    </p>
+  </div>
+
+  <div class="grid" style="margin-top: 16px;">
+    <div class="card">
+      <h3>Google 2026 Capex</h3>
+      <div class="value">$500 亿</div>
+      <div class="sub">AI聚焦比例 70%</div>
+    </div>
+    <div class="card">
+      <h3>Meta 2026 AI Capex</h3>
+      <div class="value">>$600 亿</div>
+      <div class="sub">+23% from 2025; 新项目:Tulsa</div>
+    </div>
+    <div class="card">
+      <h3>Microsoft 2026 AI Capex</h3>
+      <div class="value">$1,500 亿</div>
+      <div class="sub">Q2 FY26 annualized $150B run rate</div>
+    </div>
+    <div class="card">
+      <h3>Amazon 2026 AI Capex</h3>
+      <div class="value">~$1,000 亿</div>
+      <div class="sub">AI聚焦比例 60%</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SECTION 2: GPU/ASIC SUPPLY & DEMAND ============ -->
+<div class="section" id="gpu-asic">
+  <h2>2. GPU/ASIC Supply & Demand <span class="tag tag-update">供应链更新</span></h2>
+
+  <div class="supply-grid">
+    <div class="supply-item">
+      <div class="label">NVIDIA Blackwell</div>
+      <div class="val" style="color:#68d391;">量产爬坡</div>
+      <div class="status">H200→B200过渡期; CoWoS瓶颈</div>
+    </div>
+    <div class="supply-item">
+      <div class="label">NVIDIA Rubin R100</div>
+      <div class="val" style="color:#63b3ed;">提前量产</div>
+      <div class="status">4月宣布量产; Q1 2027规模</div>
+    </div>
+    <div class="supply-item">
+      <div class="label">AMD MI350</div>
+      <div class="val" style="color:#fbd38d;">推理渗透</div>
+      <div class="status">意义采纳中; MI400 July发布</div>
+    </div>
+    <div class="supply-item">
+      <div class="label">HBM4 供需</div>
+      <div class="val" style="color:#fc8181;">全线售罄</div>
+      <div class="status">2026全年缺口; SK Hynix主导</div>
+    </div>
+  </div>
+
+  <table style="margin-top: 16px;">
+    <tr>
+      <th>厂商</th>
+      <th>产品线</th>
+      <th>状态</th>
+      <th>关键信号</th>
+    </tr>
+    <tr>
+      <td><strong style="color:#68d391;">NVIDIA</strong></td>
+      <td>GB200 NVL72 (B200)</td>
+      <td>量产爬坡</td>
+      <td>2026出货占比 >70%; CoWoS封装仍是瓶颈</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#68d391;">NVIDIA</strong></td>
+      <td>Rubin R100</td>
+      <td><span class="tag tag-new">NEW</span> 已宣布量产</td>
+      <td>336B晶体管，16-Hi HBM4; Q1 2027规模量产; Q4 2026客户送样</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#fbd38d;">AMD</strong></td>
+      <td>Instinct MI350X</td>
+      <td>推理场景规模采纳</td>
+      <td>HBM3 memory; 在部分客户实现对H100替代</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#fbd38d;">AMD</strong></td>
+      <td>Instinct MI400</td>
+      <td><span class="tag tag-new">NEW</span> 7月发布</td>
+      <td>432GB HBM4; 19.6 TB/s带宽; Advancing AI 2026 (July)详细披露</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#fc8181;">Huawei</strong></td>
+      <td>Ascend 910B/920</td>
+      <td>受限</td>
+      <td>国内替代受制裁影响; 性能受压</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#b794f4;">Broadcom</strong></td>
+      <td>Google TPU v6 (3rd gen)</td>
+      <td>规模量产</td>
+      <td>Q1 FY26 AI收入 $84亿 YoY +106%; Meta MTIA 2nm合作协议</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#b794f4;">Marvell</strong></td>
+      <td>AWS Trainium/Inferentia</td>
+      <td>增长</td>
+      <td>3个主要hyperscaler项目; 1.6T光模块采样中</td>
+    </tr>
+  </table>
+
+  <div class="highlight-box" style="margin-top:16px;">
+    <h4>🔍 供需错配信号</h4>
+    <table>
+      <tr><th>环节</th><th>状态</th><th>边际变化</th></tr>
+      <tr><td>CoWoS封装</td><td style="color:#fbd38d;">2026下半年才可缓解</td><td>台积电积极扩产</td></tr>
+      <tr><td>ABF基板</td><td style="color:#fc8181;">16-20周交付期; 玻璃纤维短缺</td><td>略有延长</td></tr>
+      <tr><td>HBM4</td><td style="color:#fc8181;">2026全线售罄</td><td>SK Hynix 4x扩产</td></tr>
+      <tr><td>光模块</td><td style="color:#fbd38d;">Innolight/Eosen预订至2028</td><td>800G/1.6T切换</td></tr>
+      <tr><td>液冷</td><td style="color:#fbd38d;">12-18个月交付期</td><td>Vertiv满产</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- ============ SECTION 3: CSP DEEP DIVE ============ -->
+<div class="section" id="csp">
+  <h2>3. Cloud Service Provider Deep Dive <span class="tag tag-update">本期重点</span></h2>
+  
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:16px;">
+    <div class="card" style="border-left:3px solid #63b3ed;">
+      <h3 style="color:#63b3ed;">Google</h3>
+      <div style="margin-top:8px;">
+        <div style="font-size:20px;font-weight:700;color:#e6edf3;margin-bottom:4px;">$500亿 Capex 2026</div>
+        <div style="font-size:11px;color:#8b949e;">AI聚焦 70% | TPU v8 (April Cloud Next发布)</div>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:#8b949e;">
+        <strong style="color:#63b3ed;">🆕 TPU v8 重大更新:</strong><br>
+        • TPUv8t "Sunfish" (训练): 9600芯片/集群, 121 FP4 EFlops/pod (3x Ironwood)<br>
+        • TPUv8i (推理): 1152芯片/pod, 384MB on-chip SRAM (3x Ironwood)<br>
+        • 全栈ARM CPU (Axion)替代x86<br>
+        • 液冷4代; 性能/瓦特2x提升<br>
+        • 宣布4家伙伴供应链: Broadcom(Training), MediaTek(Inference), Marvell, 其他
+      </div>
+    </div>
+
+    <div class="card" style="border-left:3px solid #68d391;">
+      <h3 style="color:#68d391;">Meta</h3>
+      <div style="margin-top:8px;">
+        <div style="font-size:20px;font-weight:700;color:#e6edf3;margin-bottom:4px;">>$600亿 Capex 2026</div>
+        <div style="font-size:11px;color:#8b949e;">AI聚焦 85% | 4月22日公布Tulsa新项目</div>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:#8b949e;">
+        <strong style="color:#68d391;">🆕 重大变化:</strong><br>
+        • 宣布5月20日大规模裁员10% (~8,000人)<br>
+        • 与Broadcom延长2nm多代AI芯片合作协议 (4月14日)<br>
+        • AI DC capex >$600亿 (from $47B in 2025)<br>
+        • MTIA自研ASIC持续推进
+      </div>
+    </div>
+
+    <div class="card" style="border-left:3px solid #f85149;">
+      <h3 style="color:#f85149;">Microsoft</h3>
+      <div style="margin-top:8px;">
+        <div style="font-size:20px;font-weight:700;color:#e6edf3;margin-bottom:4px;">$1,500亿 Capex 2026E</div>
+        <div style="font-size:11px;color:#8b949e;"> annualized run rate | 4月29日Q3 FY26财报</div>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:#8b949e;">
+        <strong style="color:#f85149;">🆕 重要信号:</strong><br>
+        • Q2 FY26 AI相关capex $375亿 (单季度$150B annualized)<br>
+        • 4月23日宣布51年来首次自愿退休计划 (8,750人符合资格)<br>
+        • Azure AI增长/算力供给是4月29日财报焦点<br>
+        • Stargate项目持续推进; OpenAI算力需求旺盛
+      </div>
+    </div>
+
+    <div class="card" style="border-left:3px solid #fbd38d;">
+      <h3 style="color:#fbd38d;">Amazon</h3>
+      <div style="margin-top:8px;">
+        <div style="font-size:20px;font-weight:700;color:#e6edf3;margin-bottom:4px;">~$1,000亿 Capex 2026</div>
+        <div style="font-size:11px;color:#8b949e;">AI聚焦 60% | Trainium/Inferentia自研</div>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:#8b949e;">
+        <strong style="color:#fbd38d;">近期动态:</strong><br>
+        • AWS AI收入增长但capex增速趋稳<br>
+        • Trainium (训练) + Inferentia (推理) 自研持续<br>
+        • Marvell代工合作关系深化<br>
+        • 关注是否有新ASIC项目公告
+      </div>
+    </div>
+  </div>
+
+  <div class="highlight-box">
+    <h4>🔬 本期 CSP 专题: Google Cloud Next 2026 (4月22-24日, Las Vegas)</h4>
+    <p style="font-size:12px;color:#8b949e;">
+    核心发布: <strong style="color:#63b3ed;">TPU v8系列正式亮相</strong> — Google首次将TPU分为训练(TPUv8t)和推理(TPUv8i)两个独立版本，呼应了"agentic era"对算力的差异化需求。
+    训练芯片TPUv8t聚焦大规模集群扩展性(百万芯片逻辑集群)，推理芯片TPUv8i聚焦高效多任务推理和长上下文支持。
+    供应链策略: <strong style="color:#ff7b72;">MediaTek首度切入Google TPU供应链，负责推理芯片</strong>，Broadcom继续负责训练芯片代工，Marvell提供互连和定制方案，形成4方供应体系。
+    </p>
+  </div>
+</div>
+
+<!-- ============ SECTION 4: INTERCONNECT & COOLING ============ -->
+<div class="section" id="optical">
+  <h2>4. Interconnect & Cooling <span class="tag">稳定</span></h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>光模块 — Coherent</h3>
+      <div style="font-size:12px;color:#8b949e;margin-top:8px;">
+        1.6T coherent pluggable + CPO 产品线; NVIDIA CPO合作
+      </div>
+      <div style="margin-top:8px;font-size:11px;color:#6e7681;">行业地位: 400G/800G主要供应商</div>
+    </div>
+    <div class="card">
+      <h3>光模块 — Lumentum</h3>
+      <div style="font-size:12px;color:#8b949e;margin-top:8px;">
+        800G/1.6T coherent pluggable; CPO光引擎; 钒酸钇(YVO4)供应链
+      </div>
+      <div style="margin-top:8px;font-size:11px;color:#6e7681;">受益AI数据中心内部互联需求</div>
+    </div>
+    <div class="card">
+      <h3>光模块代工 — Fabrinet</h3>
+      <div style="font-size:12px;color:#8b949e;margin-top:8px;">
+        #1 CPO/TPON OEM; 客户: Coherent, Lumentum, InnoLight<br>
+        <strong style="color:#68d391;">产能利用率 100%+</strong>
+      </div>
+      <div style="margin-top:8px;font-size:11px;color:#6e7681;">精硅光引擎良率提升中</div>
+    </div>
+    <div class="card">
+      <h3>光模块 — InnoLight (300308.SZ)</h3>
+      <div style="font-size:12px;color:#8b949e;margin-top:8px;">
+        全球400/800G市场份额: <strong style="color:#68d391;">~45%</strong><br>
+        Google NPO订单占比: 60% (7.2M units)<br>
+        预订through 2028
+      </div>
+      <div style="margin-top:8px;font-size:11px;color:#6e7681;">+1034% from April 2025 low</div>
+    </div>
+    <div class="card">
+      <h3>光模块 — Eosen (300502.SZ)</h3>
+      <div style="font-size:12px;color:#8b949e;margin-top:8px;">
+        全球400/800G市场份额: <strong style="color:#fbd38d;">~20-25%</strong><br>
+        Google NPO订单占比: 40% (4.8M units)<br>
+        1.6T: 已发布, 2026规模放量
+      </div>
+      <div style="margin-top:8px;font-size:11px;color:#6e7681;">估值显著低于InnoLight</div>
+    </div>
+  </div>
+
+  <div class="highlight-box" style="margin-top:16px;">
+    <h4>❄️ 温控系统 — Vertiv (VRT)</h4>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:10px;">
+      <div>
+        <div style="font-size:11px;color:#8b949e;">2026市场规模</div>
+        <div style="font-size:18px;font-weight:700;color:#e6edf3;">$40亿</div>
+      </div>
+      <div>
+        <div style="font-size:11px;color:#8b949e;">2032年市场规模</div>
+        <div style="font-size:18px;font-weight:700;color:#e6edf3;">$130.5亿</div>
+      </div>
+      <div>
+        <div style="font-size:11px;color:#8b949e;">CAGR</div>
+        <div style="font-size:18px;font-weight:700;color:#68d391;">17-18%</div>
+      </div>
+      <div>
+        <div style="font-size:11px;color:#8b949e;">GB200 NVL72 Rack功率密度</div>
+        <div style="font-size:18px;font-weight:700;color:#fbd38d;">120kW</div>
+      </div>
+    </div>
+    <p style="font-size:12px;color:#8b948e;margin-top:10px;">
+    <strong>核心产品:</strong> Liebert EXM/PEX CRAH, 液冷分配单元; NVL72参考设计认证; 交付期12-18个月<br>
+    <strong>液冷渗透率:</strong> AI数据中心从风冷向液冷切换加速; Google TPU v8全系采用第4代液冷(主动控制阀门)
+    </p>
+  </div>
+</div>
+
+<!-- ============ SECTION 5: MEDIATEK APU/TPU OPPORTUNITY ============ -->
+<div class="mtk-section" id="mtk">
+  <h2>5. MediaTek APU / Custom ASIC Opportunity <span class="tag tag-new">重大更新</span></h2>
+
+  <div class="highlight-box" style="background:#1a0d2e;border-color:#5a2a6a;margin-bottom:16px;">
+    <h4 style="color:#ff7b72;">🔥 重大突破: MediaTek 首度切入 Google TPU 供应链</h4>
+    <p style="font-size:13px;color:#e6edf3;margin-top:8px;">
+    根据4月22-24日 Google Cloud Next 2026 期间供应链报告及多方媒体交叉验证:
+    </p>
+    <ul style="font-size:12px;color:#c9d1d9;margin-top:8px;padding-left:18px;line-height:1.8;">
+      <li>MediaTek 获得 <strong style="color:#ff7b72;">Google TPU v8i (推理芯片)</strong> 代工订单 — 这是MediaTek首次进入Google TPU生态</li>
+      <li>此前MediaTek已<strong style="color:#ff7b72;">获得 TPU v7e/v8e 订单</strong> (多个报道提及v7e/v8e TPU)</li>
+      <li>MediaTek向台积电请求<strong style="color:#ff7b72;">7倍CoWoS产能增加</strong> — 侧面印证大单规模</li>
+      <li>Google TPU v8供应链分工: <strong>Broadcom</strong> (训练/TPUv8t) + <strong>MediaTek</strong> (推理/TPUv8i) + Marvell (互连) + 第四方</li>
+    </ul>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
+    <div class="card" style="border:1px solid #3d2a5c;">
+      <h3 style="color:#ff7b72;">TPU v8i — 推理芯片</h3>
+      <div style="margin-top:8px;font-size:12px;color:#8b949e;">
+        <strong style="color:#e6edf3;">MediaTek 负责代工</strong><br><br>
+        <strong>Spec (公开信息):</strong><br>
+        • 1,152 chips/pod (vs Ironwood 256)<br>
+        • 11.6 EFlops/pod<br>
+        • 384 MB on-chip SRAM/chip (3x Ironwood)<br>
+        • 全栈ARM CPU (Axion) host<br>
+        • Google TPU v8 Cloud Next发布
+      </div>
+    </div>
+    <div class="card" style="border:1px solid #3d2a5c;">
+      <h3 style="color:#ff7b72;">TPU v7e — 早期报道</h3>
+      <div style="margin-top:8px;font-size:12px;color:#8b949e;">
+        <strong style="color:#e6edf3;">MediaTek 参与设计</strong><br><br>
+        <strong>公开信息:</strong><br>
+        • TechPowerUp报道: "Google Teams up with MediaTek for Next-Generation TPU v7 Design"<br>
+        • 媒体报道(MediaTek参与下一代TPU v7设计)<br>
+        • 量产预计2026年
+      </div>
+    </div>
+    <div class="card" style="border:1px solid #3d2a5c;">
+      <h3 style="color:#ff7b72;">MediaTek 资源转移</h3>
+      <div style="margin-top:8px;font-size:12px;color:#8b949e;">
+        <strong style="color:#e6edf3;">移动芯片 → AI芯片</strong><br><br>
+        多个报道指出MediaTek正在将资源从移动SoC转向AI芯片:
+        <br>• "MediaTek desvía recursos de sus chips móvil a IA"<br>
+        • 证实公司战略优先级转移
+      </div>
+    </div>
+  </div>
+
+  <table style="margin-top:16px;">
+    <tr>
+      <th>Google TPU 版本</th>
+      <th>定位</th>
+      <th>代工厂</th>
+      <th>MediaTek 角色</th>
+      <th>公开进度</th>
+    </tr>
+    <tr>
+      <td><strong style="color:#ff7b72;">TPU v7e</strong></td>
+      <td>推理/训练</td>
+      <td>TSMC</td>
+      <td><span class="tag tag-new">NEW 参与设计</span></td>
+      <td>2026量产</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#ff7b72;">TPU v8i</strong></td>
+      <td>推理专用</td>
+      <td>TSMC (MediaTek)</td>
+      <td><span class="tag tag-new">NEW 代工厂</span></td>
+      <td>Cloud Next April 2026发布</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#ff7b72;">TPU v8t</strong></td>
+      <td>训练专用</td>
+      <td>TSMC (Broadcom)</td>
+      <td>—</td>
+      <td>Cloud Next April 2026发布</td>
+    </tr>
+    <tr>
+      <td><strong style="color:#8b949e;">TPU v9</strong></td>
+      <td>未知</td>
+      <td>未知</td>
+      <td>待确认</td>
+      <td>无公开信息</td>
+    </tr>
+  </table>
+
+  <div class="highlight-box" style="background:#0d1f2d;border-color:#1a3a5c;margin-top:16px;">
+    <h4 style="color:#63b3ed;">📈 MediaTek TPU 机会估算</h4>
+    <p style="font-size:12px;color:#8b949e;">
+    <strong>已知:</strong> Google年度capex中AI基础设施占比70% = ~$350亿 (2026E $500亿 x 70%)<br>
+    <strong>TPU vs 外购GPU比例:</strong> Google内部TPU使用量超过外购NVIDIA GPU比例 (自研成本优势)<br>
+    <strong>估算TPU市场规模(Google内部):</strong> 假设TPU占Google AI capex的40-50% = $140-175亿<br>
+    <strong>MediaTek分到的推理部分(假设):</strong> TPUv8i占TPU总需求的30-40% = $42-70亿规模<br>
+    <strong>⚠️ 注意:</strong> 以上为公开信息推算，MediaTek实际TPU收入贡献模式(NRE vs Royalty)尚不明确，需等财报披露
+    </p>
+  </div>
+
+  <div class="highlight-box" style="background:#1f0d0d;border-color:#5a2a2a;margin-top:12px;">
+    <h4 style="color:#fc8181;">⚠️ 风险因素</h4>
+    <ul style="font-size:12px;color:#8b949e;padding-left:18px;line-height:1.8;">
+      <li><strong>地缘政治:</strong> 美国芯片出口管制升级风险；台积电CoWoS产能分配优先级不确定</li>
+      <li><strong>Google引入第二供应商:</strong> MediaTek切入可能促使Broadcom争取更多份额，或Google引入第三供应商制衡</li>
+      <li><strong>竞争:</strong> Marvell在互连/基础IP层的存在可能侵蚀MediaTek利润空间</li>
+      <li><strong>量产不确定性:</strong> 7倍CoWoS请求反映的是需求信号，但实际产能落地时间和良率仍有变数</li>
+    </ul>
+  </div>
+</div>
+
+<!-- ============ SECTION 6: EMERGING SIGNALS ============ -->
+<div class="section" id="signals">
+  <h2>6. Emerging Signals & Event-Driven <span class="tag tag-new">两周事件</span></h2>
+
+  <div class="signal-item">
+    <div class="signal-icon icon-event">📅</div>
+    <div class="signal-content">
+      <div class="title">Google Cloud Next 2026 (April 22-24, Las Vegas)</div>
+      <div class="desc">TPU v8系列正式发布；4家伙伴供应链官宣；Gemini Enterprise新功能</div>
+      <div class="source">核心事件 · 影响: HIGH</div>
+    </div>
+  </div>
+
+  <div class="signal-item">
+    <div class="signal-icon icon-event">📅</div>
+    <div class="signal-content">
+      <div class="title">Microsoft Q3 FY2026 Earnings (April 29, 2026)</div>
+      <div class="desc">Azure AI收入增速/容量/capex指引；Copilot货币化进展；Stargate算力需求</div>
+      <div class="source">财报事件 · 影响: HIGH</div>
+    </div>
+  </div>
+
+  <div class="signal-item">
+    <div class="signal-icon icon-gpu">🚀</div>
+    <div class="signal-content">
+      <div class="title">NVIDIA Rubin R100 提前进入量产 (April 2026)</div>
+      <div class="desc">比预期提前宣布量产；336B晶体管，16-Hi HBM4；Q1 2027规模量产，Q4 2026客户送样</div>
+      <div class="source">供应链 · 影响: HIGH</div>
+    </div>
+  </div>
+
+  <div class="signal-item">
+    <div class="signal-icon icon-csp">🏢</div>
+    <div class="signal-content">
+      <div class="title">Meta 宣布大规模裁员 ~8,000人 (May 20, 2026)</div>
+      <div class="desc">10%全球员工；与$115B+ AI capex投资相关；同期Tulsa数据中心新项目公布</div>
+      <div class="source">4月22日 · 影响: MEDIUM</div>
+    </div>
+  </div>
+
+  <div class="signal-item">
+    <div class="signal-icon icon-mtk">📈</div>
+    <div class="signal-content">
+      <div class="title">MediaTek 资源转向AI芯片 (多篇报道)</div>
+      <div class="desc">"MediaTek desvía recursos de sus chips móvil a IA" — 战略重心从移动SoC加速转移至AI</div>
+      <div class="source">媒体报道 · 影响: HIGH</div>
+    </div>
+  </div>
+
+  <div class="signal-item">
+    <div class="signal-icon icon-event">🏛️</div>
+    <div class="signal-content">
+      <div class="title">US Targets 'AI Distillation' — 对华出口新限制讨论</div>
+      <div class="desc">美国政策层面讨论限制"AI蒸馏"技术出口；对中国AI发展影响；可能加剧硬件管制</div>
+      <div class="source">Investing.com · 影响: MEDIUM</div>
+    </div>
+  </div>
+
+  <div class="signal-item">
+    <div class="signal-icon icon-gpu">⚡</div>
+    <div class="signal-content">
+      <div class="title">Groq 推理芯片成本效率突出 (Wccftech)</div>
+      <div class="desc">Groq推理芯片成本比NVIDIA Blackwell低5倍，速度快2倍；推理芯片竞争加剧</div>
+      <div class="source">Wccftech · 影响: MEDIUM</div>
+    </div>
+  </div>
+
+  <div class="signal-item">
+    <div class="signal-icon icon-csp">🚗</div>
+    <div class="signal-content">
+      <div class="title">Tesla 上调2026 AI/Robotics Capex 指引</div>
+      <div class="desc">Dojo超算+FSD训练需求；4月23日Tesla capex指引上调；AI基础设施投资延伸至自动驾驶</div>
+      <div class="source">Motley Fool · 影响: LOW-MEDIUM</div>
+    </div>
+  </div>
+
+  <div class="signal-item">
+    <div class="signal-icon icon-capex">💰</div>
+    <div class="signal-content">
+      <div class="title">AI Capex Cycle "still alive" (CNBC, April 21)</div>
+      <div class="desc">策略师观点: AI capex周期仍在持续；中长期未见明显拐点</div>
+      <div class="source">CNBC · 影响: MEDIUM</div>
+    </div>
+  </div>
+
+  <div class="signal-item">
+    <div class="signal-icon icon-interconnect">🔵</div>
+    <div class="signal-content">
+      <div class="title">Eosen 1.6T光模块量产启动</div>
+      <div class="desc">300502.SZ — 1.6T产品已发布，2026规模出货；Google NPO占比40%</div>
+      <div class="source">供应链 · 影响: LOW</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============ SUPPLY CHAIN MAPPING ============ -->
+<div class="section" id="mapping">
+  <h2>📐 AI Supply Chain Mapping</h2>
+  <div style="background:#0d1117;border:1px solid #21262d;border-radius:8px;padding:20px;font-family:monospace;font-size:12px;line-height:1.8;color:#8b949e;overflow-x:auto;">
+<pre style="margin:0;">
+CSP Capex (Google $500B / Meta $600B+ / Microsoft $1500B / Amazon $1000B)
+    │
+    ├── GPU/ASIC采购
+    │   ├── NVIDIA (H100/B200/GB200) ← 最大受益者, 85-88%数据中心收入占比
+    │   │   └── Rubin R100: 提前量产, Q1 2027规模
+    │   ├── AMD (MI350 推理采纳; MI400 July发布)
+    │   │   └── MI400: 432GB HBM4, 19.6 TB/s带宽
+    │   └── Huawei Ascend (国内受限)
+    │
+    ├── Custom ASIC ☜ 本期重点变化
+    │   ├── Google TPU → <span style="color:#ff7b72;">MediaTek (v8i 推理 NEW!)</span> + Broadcom (v8t 训练)
+    │   │   └── TPU v8: 训练/推理分离, 4家伙伴供应链
+    │   ├── Amazon Trainium/Inferentia → Marvell (代工)
+    │   └── Meta MTIA → Broadcom (2nm延长合作 April 2026)
+    │
+    ├── Interconnect
+    │   ├── Coherent/Lumentum (光模块 800G/1.6T)
+    │   ├── Fabrinet (代工, 100%+ 利用率)
+    │   └── InnoLight/Eosen (中国光模块, 预订至2028)
+    │
+    └── Cooling
+        └── Vertiv (液冷, 12-18月交付, 120kW rack密度)
+</pre>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<div class="footer">
+  <p>AI / Data Center Market Intelligence — Bi-weekly Report #4 | 2026-04-25</p>
+  <p>Data sources: Company earnings / Digitimes / TrendForce / Canalys / Yahoo Finance news / Ars Technica / Wccftech / TechPowerUp</p>
+  <p>⚠️ 本报告所有信息均基于公开数据，不涉及公司内部信息。MediaTek TPU 相关细节需等官方披露确认。</p>
+</div>
+
+</div>
+</body>
+</html>
