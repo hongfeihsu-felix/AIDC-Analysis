@@ -1,0 +1,164 @@
+{
+  "last_updated": "2026-04-25T18:34:00+08:00",
+  "report_number": 4,
+  "period": "2026-04-11 to 2026-04-25",
+  "ai_capex_cycle": {
+    "phase": "mid-cycle - peak investment",
+    "global_ai_datacenter_cape_2026": 600e9,
+    "csp_cape_focus": {
+      "google": {"annual_capex_2026": 500e9, "ai_focused_pct": 70},
+      "meta": {"annual_capex_2026": 600e9, "ai_focused_pct": 85},
+      "microsoft": {"annual_capex_2026": 1500e9, "ai_focused_pct": 65},
+      "amazon": {"annual_capex_2026": 1000e9, "ai_focused_pct": 60}
+    },
+    "notes": "CSP capex at historic highs; Microsoft $150B annualized run rate; Meta $60B+; Google TPU v8 launched at Cloud Next"
+  },
+  "gpu_asic": {
+    "nvidia": {
+      "blackwell_b200_gb200": {
+        "status": "mass production ramp",
+        "2026_shipment_share": ">70%",
+        "nvl72_cabinet_forecast_2025": "25K-35K",
+        "notes": "H200 to B200 transition ongoing; CoWoS packaging remains bottleneck"
+      },
+      "rubin_r100": {
+        "status": "mass production declared April 2026 (ahead of schedule)",
+        "volume_production": "Q1 2027",
+        "specs": "336B transistors, 16-hi HBM4",
+        "customer_sampling": "Q4 2026"
+      },
+      "fy2026_revenue_consensus": 206.4e9,
+      "data_center_revenue_share": "85-88%"
+    },
+    "amd": {
+      "mi350x": {"status": "meaningful adoption for inference workloads"},
+      "mi400_series": {"status": "发布时间 July 2026 (Advancing AI 2026)", "specs": "432GB HBM4, 19.6 TB/s bandwidth"},
+      "data_center_revenue_2026": 28.7e9,
+      "market_share_by_flops": "15-18%"
+    },
+    "huawei_ascend": {
+      "910b_920": "国内替代受制裁影响；性能受压",
+      "status": "受限"
+    }
+  },
+  "custom_asic": {
+    "broadcom": {
+      "q1_fy2026_ai_revenue": 8.4e9,
+      "yoy_growth": 106,
+      "tpu_v6": "3rd gen mass production",
+      "meta_mtia": "2nm multi-gen agreement April 14 2026",
+      "openai_xpu": "development stage reported March 2026",
+      "target_2027": 100e9
+    },
+    "marvell": {
+      "dc_revenue_q3_fy2026": 1.518e9,
+      "yoy_growth": 42,
+      "dc_revenue_pct_of_total": ">75%",
+      "nvidia_investment": 2e9,
+      "major_hyperscaler_programs": 3,
+      "1_6t_interconnect": "sampling"
+    }
+  },
+  "google_tpu_v8": {
+    "announcement_date": "April 22-24 2026 (Cloud Next)",
+    "tpu_v8t_sunfish": {
+      "name": "TPUv8t (Sunfish)",
+      "use": "训练",
+      "chips_per_pod": 9600,
+      "memory_per_pod": "2 PB HBM",
+      "compute_per_pod": "121 FP4 EFlops",
+      "vs_ironwood": "3x training compute",
+      "foundry": "Broadcom"
+    },
+    "tpu_v8i": {
+      "name": "TPUv8i",
+      "use": "推理专用",
+      "chips_per_pod": 1152,
+      "compute_per_pod": "11.6 EFlops",
+      "on_chip_sram": "384 MB (3x Ironwood)",
+      "host_cpu": "Google Axion ARM (1 CPU per 2 TPU)",
+      "foundry": "MediaTek (NEW - first time MediaTek in Google TPU supply chain)"
+    },
+    "liquid_cooling": "4th gen active valve control",
+    "performance_per_watt": "2x Ironwood",
+    "supply_chain_partners": ["Broadcom (training)", "MediaTek (inference)", "Marvell", "fourth partner TBD"]
+  },
+  "interconnect": {
+    "coherent": {
+      "position": "1.6T coherent pluggable + CPO development",
+      "partner": "NVIDIA for CPO"
+    },
+    "lumentum": {
+      "position": "800G/1.6T coherent pluggable; CPO optical engines"
+    },
+    "fabrinet": {
+      "position": "#1 CPO/TPON OEM manufacturer",
+      "customers": "Coherent, Lumentum, InnoLight",
+      "utilization": "100%+"
+    },
+    "innolight": {
+      "ticker": "300308.SZ",
+      "global_share_400_800g": "~45%",
+      "google_npo_order_share": "60% (7.2M units)",
+      "order_backlog": "through 2028"
+    },
+    "eosen": {
+      "ticker": "300502.SZ",
+      "global_share_400_800g": "~20-25%",
+      "google_npo_order_share": "40% (4.8M units)",
+      "1_6t_status": "launched, 2026 volume",
+      "stock_performance": "+1034% from April 2025 low"
+    }
+  },
+  "cooling": {
+    "vertiv": {
+      "position": "#1 AI rack cooling",
+      "key_product": "Liebert EXM/PEX CRAH, liquid cooling distribution units",
+      "nvl72_reference_design": true,
+      "lead_time": "12-18 months"
+    },
+    "market_size_2026": 4e9,
+    "market_size_2032": 13.05e9,
+    "cagr": "17-18%",
+    "rack_power_density_nvl72": "120kW"
+  },
+  "hbm": {
+    "sk_hynix": {
+      "market_share": "~55-60%",
+      "hbm3e_status": "mass production",
+      "hbm4_status": "qualification with NVIDIA",
+      "nvidia_gb200_primary": true,
+      "capacity_target_2026": "18B gigabits",
+      "investment_vs_prior_year": "4x"
+    },
+    "samsung": {
+      "market_share": "~30-35%",
+      "hbm3e_status": "mass production",
+      "hbm4_status": "sampling Q2 2026",
+      "capacity_increase_2026": "+50%"
+    },
+    "micron": {
+      "market_share": "~8-12%",
+      "hbm4_status": "delayed; qualification behind schedule 12-18 months",
+      "hbm4_qual_target": "Q4 FY2026"
+    },
+    "supply_demand": "entirely sold out through 2026"
+  },
+  "supply_demand_signals": {
+    "hbm4": "entirely sold out 2026",
+    "abf_substrate": "lead time 16-20 weeks; fiberglass shortage",
+    "cowos": "capacity relief late 2026 at earliest",
+    "optical_modules": "Innolight/Eosen booked through 2028",
+    "liquid_cooling": "12-18 month lead times"
+  },
+  "mediaTek_apu": {
+    "status": "MediaTek首度切入Google TPU供应链 — TPUv8i推理芯片代工",
+    "google_tpu_v8i": "MediaTek代工厂; 1152 chips/pod; Cloud Next April 2026发布",
+    "google_tpu_v7e": "MediaTek参与设计; 2026量产报道",
+    "google_tpu_v9": "无公开信息",
+    "cowos_request": "MediaTek向台积电请求7倍CoWoS产能增加",
+    "notes": "MediaTek资源从移动SoC加速转向AI芯片; 首次进入Google TPU生态意义重大",
+    "estimated_tpu_market_google": "~$140-175亿 (占Google AI capex 40-50%)",
+    "estimated_mtk_share": "~$42-70亿 (TPUv8i推理部分30-40%, 模式待确认)"
+  }
+}
