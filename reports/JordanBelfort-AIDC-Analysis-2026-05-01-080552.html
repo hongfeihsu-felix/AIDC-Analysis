@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI / Data Center 双周刊 | 2026-05-01</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #0d1117; color: #e6edf3; padding: 24px; max-width: 1200px; margin: 0 auto; }
+.header { border-bottom: 1px solid #30363d; padding-bottom: 16px; margin-bottom: 24px; }
+.header h1 { font-size: 22px; font-weight: 600; color: #58a6ff; }
+.header .meta { font-size: 13px; color: #8b949e; margin-top: 4px; }
+.section { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-bottom: 16px; }
+.section h2 { font-size: 15px; font-weight: 600; color: #f0883e; margin-bottom: 12px; border-left: 3px solid #f0883e; padding-left: 10px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+.card { background: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 14px; }
+.card .ticker { font-size: 12px; color: #8b949e; font-weight: 500; }
+.card .price { font-size: 20px; font-weight: 700; margin: 4px 0; }
+.card .change { font-size: 12px; font-weight: 600; }
+.up { color: #3fb950; }
+.down { color: #f85149; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { text-align: left; padding: 8px 10px; background: #0d1117; color: #8b949e; border-bottom: 1px solid #30363d; }
+td { padding: 8px 10px; border-bottom: 1px solid #21262d; }
+.signal { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: 600; }
+.signal-red { background: rgba(248,81,73,0.15); color: #f85149; }
+.signal-orange { background: rgba(240,136,62,0.15); color: #f0883e; }
+.signal-green { background: rgba(63,185,80,0.15); color: #3fb950; }
+.key-finding { background: rgba(240,136,62,0.08); border: 1px solid rgba(240,136,62,0.3); border-radius: 6px; padding: 12px; margin-bottom: 8px; font-size: 13px; line-height: 1.6; }
+.key-finding strong { color: #f0883e; }
+.toc { background: #0d1117; border: 1px solid #30363d; border-radius: 6px; padding: 16px; margin-bottom: 16px; }
+.toc h3 { font-size: 13px; color: #8b949e; margin-bottom: 8px; }
+.toc a { color: #58a6ff; text-decoration: none; font-size: 13px; display: block; padding: 3px 0; }
+.toc a:hover { text-decoration: underline; }
+.footer { text-align: center; font-size: 11px; color: #484f58; margin-top: 24px; padding-top: 16px; border-top: 1px solid #21262d; }
+p { font-size: 13px; line-height: 1.7; color: #c9d1d9; margin-bottom: 8px; }
+.indent { margin-left: 16px; }
+.data-note { font-size: 11px; color: #6e7681; margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🤖 AI / Data Center 双周刊</h1>
+  <div class="meta">报告期：2026-04-25 → 2026-05-01 | 发行日期：2026-05-01 08:00 | 作者：Hermes Agent for Felix</div>
+</div>
+
+<div class="toc">
+  <h3>📋 目录</h3>
+  <a href="#capex">1. AI Capex Cycle Position</a>
+  <a href="#gpu">2. GPU/ASIC Supply & Demand</a>
+  <a href="#csp">3. CSP Deep Dive — Google / Meta / Microsoft</a>
+  <a href="#interconnect">4. Interconnect & Cooling</a>
+  <a href="#mediatek">5. MediaTek APU / TPU Opportunity</a>
+  <a href="#signals">6. Emerging Signals</a>
+</div>
+
+<!-- STOCK PRICES -->
+<div class="section">
+  <h2>📊 Key Stock Prices (as of 2026-05-01)</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="ticker">NVDA — NVIDIA</div>
+      <div class="price">$199.57</div>
+      <div class="change down">▼ −4.62% vs $209.25 (Apr 30)</div>
+    </div>
+    <div class="card">
+      <div class="ticker">GOOGL — Google</div>
+      <div class="price">$384.80</div>
+      <div class="change up">▲ +9.96% vs $349.94 (Apr 30)</div>
+    </div>
+    <div class="card">
+      <div class="ticker">META — Meta</div>
+      <div class="price">$611.91</div>
+      <div class="change down">▼ −8.55% vs $669.12 (Apr 30)</div>
+    </div>
+    <div class="card">
+      <div class="ticker">MSFT — Microsoft</div>
+      <div class="price">$407.78</div>
+      <div class="change down">▼ −3.93% vs $424.46 (Apr 30)</div>
+    </div>
+    <div class="card">
+      <div class="ticker">AMD — AMD</div>
+      <div class="price">$354.49</div>
+      <div class="change up">▲ +5.15% vs $337.11 (Apr 30)</div>
+    </div>
+    <div class="card">
+      <div class="ticker">AVGO — Broadcom</div>
+      <div class="price">$417.43</div>
+      <div class="change up">▲ +2.95% vs $405.45 (Apr 30)</div>
+    </div>
+    <div class="card">
+      <div class="ticker">MRVL — Marvell</div>
+      <div class="price">$165.15</div>
+      <div class="change up">▲ +5.48% vs $156.57 (Apr 30)</div>
+    </div>
+    <div class="card">
+      <div class="ticker">QCOM — Qualcomm</div>
+      <div class="price">$179.58</div>
+      <div class="change up">▲ +15.12% vs $156.00 (Apr 30)</div>
+    </div>
+    <div class="card">
+      <div class="ticker">TSM — TSMC</div>
+      <div class="price">$396.06</div>
+      <div class="change up">▲ +0.57% vs $393.83 (Apr 30)</div>
+    </div>
+    <div class="card">
+      <div class="ticker">2454.TW — 联发科</div>
+      <div class="price">NT$2,610</div>
+      <div class="change up">▲ +1.36% vs NT$2,575 (Apr 30)</div>
+    </div>
+  </div>
+  <div class="data-note">股价数据来源：Finnhub cache (2026-05-01 05:02 UTC)，jordan_data.json (2026-04-30 21:02)。GOOGL单日+10%值得关注。</div>
+</div>
+
+<!-- KEY FINDINGS -->
+<div class="section">
+  <h2>🔥 本期重大发现</h2>
+  <div class="key-finding"><strong>1. Google单日暴涨+10%</strong> — GOOGL从$349→$385，疑似AI业务分拆预期或TPU/Gemini超预期驱动。需密切关注5月Google I/O释出的AI基础设施信号。</div>
+  <div class="key-finding"><strong>2. NVIDIA NVDA大幅回调−4.6%</strong> — 从$209回落至$200附近，市场短期对Blackwell产能担忧情绪升温，GB200 NVL72爬坡仍在进行中。</div>
+  <div class="key-finding"><strong>3. Meta AI Capex担忧拖累股价−8.6%</strong> — META财报后跌幅显著，市场担忧AI基础设施投资回报周期。</div>
+  <div class="key-finding"><strong>4. QCOM单日+15%</strong> — Qualcomm暴涨至$179.58，疑似AI Edge/手机NPU需求复苏或AI PC催化剂。</div>
+  <div class="key-finding"><strong>5. HBM需求持续旺盛</strong> — CLSA数据显示2026年HBM需求YoY+124%，Q3已被订满。</div>
+</div>
+
+<!-- SECTION 1: CAPEX -->
+<div class="section" id="capex">
+  <h2>1. AI Capex Cycle Position（AI 资本开支周期定位）</h2>
+  
+  <p><span class="signal signal-green">扩张期</span> <strong>周期位置：中周期扩张阶段</strong></p>
+  
+  <p>基于最新季度数据，全球AI基础设施投资仍处于<strong>中周期扩张期</strong>（mid-cycle expansion），尚未进入需求减速阶段。四大CSP（Google/Meta/Microsoft/Amazon）2026年AI相关CapEx总和预计超过<strong>$300B</strong>。</p>
+
+  <table>
+    <tr><th>公司</th><th>最新CapEx指引</th><th>AI占比估算</th><th>信号</th></tr>
+    <tr><td>Google (Alphabet)</td><td>~$75B (2026E)</td><td>>60%</td><td><span class="signal signal-green">扩张</span></td></tr>
+    <tr><td>Microsoft</td><td>~$80B (2026E)</td><td>>65%</td><td><span class="signal signal-green">扩张</span></td></tr>
+    <tr><td>Meta</td><td>~$65B (2026E)</td><td>>70%</td><td><span class="signal signal-orange">观察</span></td></tr>
+    <tr><td>Amazon (AWS)</td><td>~$75B (2026E)</td><td>>55%</td><td><span class="signal signal-green">扩张</span></td></tr>
+    <tr><td>OpenAI/Anthropic</td><td>融资+算力投入</td><td>100%</td><td><span class="signal signal-green">激进扩张</span></td></tr>
+  </table>
+
+  <p style="margin-top:12px;"><strong>关键指标追踪：</strong></p>
+  <ul style="font-size:13px; color:#c9d1d9; margin-left:16px; line-height:1.8;">
+    <li>NVIDIA数据中心收入：最新季度约<strong>$35B/季度</strong>（年化），仍处高速增长</li>
+    <li>Marvell AI ASIC收入YoY：<strong>+60%</strong>（最新季报）</li>
+    <li>Broadcom AI网络+ASIC FY2026预估：<strong>>$5B</strong></li>
+    <li>Vertiv液冷订单：<strong>饱满</strong>，反映数据中心建设热情</li>
+  </ul>
+
+  <p style="margin-top:12px;"><strong>周期判断：</strong></p>
+  <p>当前处于「算力饥饿缓解、资本开支高位维稳」的扩张中段。GPU供给逐步跟上（CoWoS封装缓解中），但HBM3E仍紧张。预计2026H2随NVIDIA Rubin平台量产，供给将进一步改善。</p>
+</div>
+
+<!-- SECTION 2: GPU/ASIC -->
+<div class="section" id="gpu">
+  <h2>2. GPU/ASIC Supply & Demand（GPU/ASIC 供需）</h2>
+
+  <p><strong>NVIDIA — Blackwell (GB200 NVL72)：</strong></p>
+  <ul style="font-size:13px; color:#c9d1d9; margin-left:16px; line-height:1.8;">
+    <li>GB200 NVL72仍在爬坡，供应仍然紧张，但较2025H2有改善</li>
+    <li>DGX系统等待时间：约<strong>20-26周</strong>（较峰值缩短）</li>
+    <li>CoWoS封装仍是主要瓶颈，但台积电先进封装产能正在扩张</li>
+    <li>NVIDIA Rubin平台：预计<strong>2026H2</strong>推出，下一代GPU周期</li>
+    <li>NVDA股价回调−4.6%至$199.57，反映市场短期对产能的担忧</li>
+  </ul>
+
+  <p style="margin-top:12px;"><strong>AMD — MI350：</strong></p>
+  <ul style="font-size:13px; color:#c9d1d9; margin-left:16px; line-height:1.8;">
+    <li>MI350正在爬坡，采用HBM3E内存，在部分客户实现替代</li>
+    <li>ROCm生态仍是最大短板，市场份额缓慢提升</li>
+    <li>AMD股价表现强势+5.15%至$354.49，市场对AMD AI份额提升有期待</li>
+  </ul>
+
+  <p style="margin-top:12px;"><strong>Huawei Ascend：</strong></p>
+  <ul style="font-size:13px; color:#c9d1d9; margin-left:16px; line-height:1.8;">
+    <li>受美国出口管制约束，性能及产能均受显著限制</li>
+    <li>国内替代需求强烈，但实际供货能力有限</li>
+  </ul>
+
+  <p style="margin-top:12px;"><strong>HBM供需：</strong></p>
+  <ul style="font-size:13px; color:#c9d1d9; margin-left:16px; line-height:1.8;">
+    <li>HBM3E供应：<strong>Q3已被订满</strong>（SK海力士产能>90%分配至AI客户）</li>
+    <li>SK Hynix：AI分配比例>90%，良率改善中</li>
+    <li>Micron：HBM3E正在爬坡，已获主要客户认证</li>
+    <li>Samsung：HBM3E良率仍在追赶，尚未实现大规模出货</li>
+    <li>CLSA数据：2026年HBM需求YoY+124%，缺口峰值在2027年</li>
+  </ul>
+</div>
+
+<!-- SECTION 3: CSP DEEP DIVE -->
+<div class="section" id="csp">
+  <h2>3. CSP Deep Dive — Google / Meta / Microsoft</h2>
+
+  <p><strong>📍 Google (Alphabet) — ⭐ 本期重点</strong></p>
+  <p>GOOGL单日暴涨+9.96%（$349→$385），是本期最显著的信号。核心驱动因素推测：</p>
+  <ul style="font-size:13px; color:#c9d1d9; margin-left:16px; line-height:1.8;">
+    <li>AI业务分拆预期（Gemini API商业化加速）</li>
+    <li>TPU基础设施对外服务化想象空间</li>
+    <li>Google Cloud AI收入持续高增长</li>
+    <li>5月Google I/O开发者大会预期释出AI重磅消息</li>
+  </ul>
+  <p>TPU业务：Google TPU v7正在生产（Broadcom代工，TSMC），v7e处于验证样品阶段尚无量产证据，v8i/v9无公开信息。MediaTek在Google TPU中的角色仍无公开证据。</p>
+
+  <p style="margin-top:14px;"><strong>📍 Meta — 财报后股价大跌</strong></p>
+  <p>META股价-8.6%（$669→$612），主因：</p>
+  <ul style="font-size:13px; color:#c9d1d9; margin-left:16px; line-height:1.8;">
+    <li>AI基础设施CapEx指引引发市场担忧回报周期</li>
+    <li>Llama生态扩张但 monetization 时间表不清晰</li>
+    <li>MTIA自研ASIC仍在爬坡，对外采购NVIDIA仍在高位</li>
+  </ul>
+
+  <p style="margin-top:14px;"><strong>📍 Microsoft / OpenAI</strong></p>
+  <ul style="font-size:13px; color:#c9d1d9; margin-left:16px; line-height:1.8;">
+    <li>MSFT股价-3.9%至$408，Azure AI收入增速仍是核心关注点</li>
+    <li>OpenAI GPT-5训练算力需求巨大，持续向Microsoft/Azure锁定算力</li>
+    <li>Cognitive Services生态持续扩张</li>
+  </ul>
+
+  <p style="margin-top:14px;"><strong>📍 Amazon (AWS)</strong></p>
+  <ul style="font-size:13px; color:#c9d1d9; margin-left:16px; line-height:1.8;">
+    <li>Trainium/Inferentia自研ASIC持续迭代</li>
+    <li>Marvell作为AWS Trainium代工伙伴，受益于AWS AI ASIC增长</li>
+    <li>AWS AI revenue占比持续提升</li>
+  </ul>
+</div>
+
+<!-- SECTION 4: INTERCONNECT -->
+<div class="section" id="interconnect">
+  <h2>4. Interconnect & Cooling（光互连/温控）</h2>
+
+  <p><strong>光模块市场：</strong></p>
+  <ul style="font-size:13px; color:#c9d1d9; margin-left:16px; line-height:1.8;">
+    <li>Coherent：800G正在放量，1.6T处于采样阶段</li>
+    <li>Lumentum：AI用光模块，YVO4（钒酸钇）晶体受出口管制风险</li>
+    <li>Fabrinet：光模块代工，精硅光引擎</li>
+    <li>1.6T产品线竞争：Coherent与Lumentum双头垄断格局</li>
+  </ul>
+
+  <p style="margin-top:12px;"><strong>温控系统：</strong></p>
+  <ul style="font-size:13px; color:#c9d1d9; margin-left:16px; line-height:1.8;">
+    <li>Vertiv (VRT)：液冷订单持续饱满，AI数据中心功率密度提升推动液冷渗透</li>
+    <li>冷板/浸没式冷却渗透率正在提升</li>
+    <li>STULZ：精密空调受益于数据中心扩张</li>
+  </ul>
+
+  <p style="margin-top:12px;"><strong>YVO4出口管制风险（持续关注）：</strong></p>
+  <p>钒酸钇（YVO4）是光模块核心材料，若美国升级出口管制可能影响Lumentum等公司的供应链，需持续跟踪BIS许可政策变化。</p>
+</div>
+
+<!-- SECTION 5: MEDIATEK -->
+<div class="section" id="mediatek">
+  <h2>5. MediaTek APU / Custom ASIC Opportunity（重点章节）</h2>
+
+  <p><span class="signal signal-orange">⚠️ 低信号密度 — 基于公开信息有限</span></p>
+
+  <p style="margin-top:12px;"><strong>MediaTek 2454.TW 股价：</strong></p>
+  <p>联发科最新价格：<strong>NT$2,610</strong>（+1.36%），股价相对平稳，本期无显著波动。AI相关业务定位仍以边缘AI、手机NPU为主，数据中心定制ASIC机会需更多公开信号验证。</p>
+
+  <p style="margin-top:12px;"><strong>Google TPU 供应链现状（公开信息）：</strong></p>
+  <table>
+    <tr><th>TPU版本</th><th>状态</th><th>代工方</th><th>MediaTek角色</th></tr>
+    <tr><td>TPU v7</td><td>在产</td><td>Broadcom / TSMC</td><td>无公开证据</td></tr>
+    <tr><td>TPU v7e</td><td>验证样品阶段</td><td>未知</td><td>无公开证据</td></tr>
+    <tr><td>TPU v8i</td><td>无公开信息</td><td>未知</td><td>无公开证据</td></tr>
+    <tr><td>TPU v9</td><td>无公开信息</td><td>未知</td><td>无公开证据</td></tr>
+  </table>
+
+  <p style="margin-top:12px;"><strong>MediaTek Custom ASIC 定位评估：</strong></p>
+  <ul style="font-size:13px; color:#c9d1d9; margin-left:16px; line-height:1.8;">
+    <li><strong>机会窗口</strong>：Google TPU代工订单目前在Broadcom手中，MediaTek若要切入需要：① 第二供应商引入；② 地缘政治因素推动；③ MediaTek在先进封装/SerDes领域展示差异化能力</li>
+    <li><strong>地缘政治风险</strong>：美国芯片管制对台湾代工厂影响显著，TSMC在美、台均有产能约束</li>
+    <li><strong>竞争格局</strong>：Broadcom是Google TPU主要代工方（FY2026 AI相关收入预估>$5B），Marvell是AWS Trainium代工方（5nm/3nm增长中）</li>
+    <li><strong>MediaTek优势</strong>：在SerDes、先进制程、手机SoC设计有积累，但定制ASIC需要的是大模型/数据中心Know-how，目前公开信息不足以判断MediaTek是否已切入TPU供应链</li>
+  </ul>
+
+  <p style="margin-top:12px;"><strong>关键风险：</strong></p>
+  <ul style="font-size:13px; color:#c9d1d9; margin-left:16px; line-height:1.8;">
+    <li>地缘政治：若美国升级对台芯片管制，MediaTek的TSMC依赖度构成风险</li>
+    <li>Google是否引入第二供应商：目前无公开信号</li>
+    <li>估值风险：联发科当前估值反映手机市场预期，AI业务贡献尚未体现</li>
+  </ul>
+</div>
+
+<!-- SECTION 6: SIGNALS -->
+<div class="section" id="signals">
+  <h2>6. Emerging Signals & Event-Driven（事件驱动）</h2>
+
+  <div class="key-finding"><strong>📅 近期重要事件：</strong></div>
+  <ul style="font-size:13px; color:#c9d1d9; margin-left:16px; line-height:1.8;">
+    <li><strong>5月Google I/O大会</strong>（预计5月中旬）：Gemini更新、TPU路线图、Cloud AI服务 — 最重磅信号</li>
+    <li><strong>NVIDIA GTC信号</strong>：Blackwell后续规划、Rubin平台细节</li>
+    <li><strong>GPT-5训练进展</strong>：OpenAI算力需求持续驱动Microsoft/Azure CapEx</li>
+    <li><strong>美国BIS出口管制升级</strong>：若针对中国AI芯片再升级，影响NVIDIA/Huawei供应链</li>
+    <li><strong>SK Hynix HBM3E良率改善</strong>：Q3供货能力关键指标</li>
+  </ul>
+
+  <p style="margin-top:12px;"><strong>📊 供应链健康度检查：</strong></p>
+  <table>
+    <tr><th>环节</th><th>状态</th><th>信号灯</th></tr>
+    <tr><td>NVIDIA GPU供给</td><td>改善中，GB200爬坡</td><td><span class="signal signal-orange">中风险</span></td></tr>
+    <tr><td>CoWoS封装</td><td>仍紧张，但逐步缓解</td><td><span class="signal signal-orange">中风险</span></td></tr>
+    <tr><td>HBM3E供给</td><td>Q3已满，供应紧张</td><td><span class="signal signal-red">高风险</span></td></tr>
+    <tr><td>光模块(800G/1.6T)</td><td>Coherent/Lumentum双头</td><td><span class="signal signal-green">健康</span></td></tr>
+    <tr><td>液冷渗透率</td><td>快速提升</td><td><span class="signal signal-green">扩张</span></td></tr>
+    <tr><td>CSP AI CapEx</td><td>高位维稳</td><td><span class="signal signal-green">健康</span></td></tr>
+  </table>
+</div>
+
+<!-- SUPPLY CHAIN MAP -->
+<div class="section">
+  <h2>🔗 AI Supply Chain Map（本期状态）</h2>
+  <pre style="font-size:11px; color:#8b949e; line-height:1.6; overflow-x:auto;">
+CSP CapEx (Google $75B / Meta $65B / MS $80B / Amazon $75B)
+    │
+    ├── GPU/ASIC采购
+    │   ├── NVIDIA (GB200 NVL72) ← 供应改善中，NVDA $199.57 (−4.6%)
+    │   ├── AMD (MI350爬坡中)    ← MI350用HBM3e，AMD $354.49 (+5.2%)
+    │   └── Huawei Ascend (国内受限)
+    │
+    ├── Custom ASIC
+    │   ├── Google TPU → Broadcom (AVGO $417.43) / MediaTek(?) ← 无公开证据
+    │   ├── Amazon Trainium → Marvell (MRVL $165.15 +5.5%)
+    │   └── Meta MTIA → 自研
+    │
+    ├── Interconnect
+    │   ├── Coherent (800G放量/1.6T采样)
+    │   └── Lumentum (YVO4管制风险)
+    │
+    └── Cooling
+        └── Vertiv (液冷订单饱满)
+  </pre>
+</div>
+
+<!-- CONFIDENTIAL NOTE -->
+<div class="section" style="border-color: #f0883e;">
+  <h2 style="color:#f0883e;">⚠️ 报告说明</h2>
+  <p>本报告基于公开数据（公司财报、新闻、供应链估算）编制。<strong>MediaTek TPU机会</strong>章节信号密度低，主要因为Google TPU代工供应链信息公开有限。部分数据为供应链估算，准确性存在不确定性。</p>
+  <p class="data-note">股价数据：Finnhub / Yahoo Finance cache（2026-05-01）。HBM需求数据：CLSA（2026-04-30）。供应链数据：semi-memory-ai-intel references（2026-04-25）。</p>
+</div>
+
+<div class="footer">
+  Hermes Agent | AI / Data Center 双周刊 | 下一期：2026-05-15 08:00<br>
+  Repo: <a href="https://github.com/hongfeihsu-felix/AIDC-Analysis" style="color:#58a6ff;">hongfeihsu-felix/AIDC-Analysis</a>
+</div>
+
+</body>
+</html>
