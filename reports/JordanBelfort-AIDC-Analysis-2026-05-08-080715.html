@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI / Data Center 雙週刊 | 2026-05-08</title>
+<style>
+:root {
+  --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #e6edf3;
+  --muted: #8b949e; --accent: #58a6ff; --green: #3fb950; --red: #f85149;
+  --orange: #d29922; --purple: #bc8cff;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: -apple-system, 'SF Pro Text', 'Noto Sans TC', sans-serif; line-height: 1.7; }
+.container { max-width: 960px; margin: 0 auto; padding: 24px 20px; }
+h1 { font-size: 28px; font-weight: 700; margin-bottom: 4px; }
+h2 { font-size: 20px; font-weight: 600; color: var(--accent); margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+h3 { font-size: 16px; font-weight: 600; margin: 20px 0 10px; color: var(--purple); }
+.subtitle { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+.exec-summary { background: linear-gradient(135deg, #1a2332 0%, #161b22 100%); border: 1px solid var(--accent); border-radius: 8px; padding: 20px; margin-bottom: 28px; }
+.exec-summary h2 { border: none; margin-top: 0; padding: 0; }
+.exec-summary ul { padding-left: 20px; }
+.exec-summary li { margin-bottom: 8px; }
+.tag { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; margin-right: 4px; }
+.tag-bull { background: rgba(63,185,80,0.15); color: var(--green); }
+.tag-bear { background: rgba(248,81,73,0.15); color: var(--red); }
+.tag-neutral { background: rgba(210,153,34,0.15); color: var(--orange); }
+.tag-info { background: rgba(88,166,255,0.15); color: var(--accent); }
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 14px; }
+th { background: var(--card); color: var(--accent); text-align: left; padding: 10px 12px; border-bottom: 2px solid var(--border); font-weight: 600; }
+td { padding: 8px 12px; border-bottom: 1px solid var(--border); }
+tr:hover { background: rgba(88,166,255,0.04); }
+.up { color: var(--green); }
+.down { color: var(--red); }
+.signal-box { display: flex; gap: 12px; flex-wrap: wrap; margin: 12px 0; }
+.signal-card { flex: 1; min-width: 200px; background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 14px; }
+.signal-card .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+.signal-card .value { font-size: 22px; font-weight: 700; margin-top: 4px; }
+.footnote { font-size: 12px; color: var(--muted); margin-top: 6px; }
+.divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
+.alert { background: rgba(248,81,73,0.08); border-left: 3px solid var(--red); padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; font-size: 14px; }
+.highlight { background: rgba(88,166,255,0.08); border-left: 3px solid var(--accent); padding: 12px 16px; margin: 16px 0; border-radius: 0 6px 6px 0; font-size: 14px; }
+.supply-chain { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 13px; background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: 16px; overflow-x: auto; white-space: pre; line-height: 1.5; }
+.event-row { display: flex; align-items: baseline; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--border); }
+.event-date { font-size: 13px; color: var(--accent); font-weight: 600; min-width: 85px; }
+.event-text { font-size: 14px; }
+.footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); text-align: center; }
+@media (max-width: 600px) {
+  .container { padding: 16px 12px; }
+  h1 { font-size: 22px; }
+  h2 { font-size: 17px; }
+  table { font-size: 12px; }
+  th, td { padding: 6px 8px; }
+  .signal-card { min-width: 100%; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>🤖 AI / Data Center 雙週刊</h1>
+<p class="subtitle">Hermes Agent · 2026-05-08 · 追蹤期：2026-04-25 至 2026-05-08 (Week 18-19) · Mid-Cycle Expansion</p>
+
+<!-- ===== EXECUTIVE SUMMARY ===== -->
+<div class="exec-summary">
+<h2>📋 Executive Summary</h2>
+<ul>
+<li><span class="tag tag-bull">看漲</span> <strong>半導體 ETF 創歷史新高</strong>，AMD 財報大爆發（股價 +19%），BofA 分析師 Vivek Arya 判斷「我們正處於 AI 第三代的起點」，AI CapEx 維持高速擴張。</li>
+<li><span class="tag tag-bull">看漲</span> <strong>NVIDIA 投資 Corning $32 億</strong>布局光纖基礎設施，為 AI 數據中心長距離互連做準備；Musk Terafab 芯片工廠投資規模上看 $1,190 億。</li>
+<li><span class="tag tag-neutral">觀察</span> <strong>半導體估值泡沫擔憂浮現</strong>：CNBC 指出「chip rally raises bubble concerns」，選擇權市場對半導體看多情緒略有降溫。</li>
+<li><span class="tag tag-bear">警示</span> <strong>CoreWeave 股價跌 10%</strong>：營收指引疲弱、支出預算增加——AI 基礎設施支出回報週期的早期預警信號。</li>
+<li><span class="tag tag-bear">警示</span> <strong>地緣風險升溫</strong>：美伊霍爾木茲海峽交火（油價飆升至 $96.88）、歐盟考慮限制敏感政府數據使用美國雲服務。</li>
+<li><span class="tag tag-info">日程</span> <strong>NVIDIA Q1 FY27 財報 5/20</strong>：市場預期 EPS $1.79、營收 $80.1B，為本週期最重要催化劑。</li>
+</ul>
+</div>
+
+<!-- ===== 關鍵數據速覽 ===== -->
+<h2>📊 關鍵數據速覽</h2>
+
+<div class="signal-box">
+  <div class="signal-card">
+    <div class="label">AI CapEx Cycle</div>
+    <div class="value" style="color:var(--green);">中期擴張 🟢</div>
+    <div class="footnote">CY26 Top5 CSP &gt;$800Bn (+67% YoY)</div>
+  </div>
+  <div class="signal-card">
+    <div class="label">HBM3e 供需</div>
+    <div class="value" style="color:var(--red);">持續緊張 🔴</div>
+    <div class="footnote">Q3 已售罄，&gt;90% 鎖定 AI 客戶</div>
+  </div>
+  <div class="signal-card">
+    <div class="label">Semis Sentiment</div>
+    <div class="value" style="color:var(--orange);">高檔震盪 🟡</div>
+    <div class="footnote">ETF 新高但選擇權看多降溫</div>
+  </div>
+</div>
+
+<table>
+<thead>
+<tr><th>標的</th><th>代碼</th><th>價格 (USD)</th><th>漲跌幅</th><th>日期</th></tr>
+</thead>
+<tbody>
+<tr><td>NVIDIA</td><td>NVDA</td><td>$211.50</td><td class="up">+1.85%</td><td>5/7 收盤</td></tr>
+<tr><td>台積電</td><td>TSM</td><td>$414.15</td><td class="down">-1.28%</td><td>5/7 收盤</td></tr>
+<tr><td>AMD</td><td>AMD</td><td>$408.46</td><td class="down">-3.09%</td><td>5/7 收盤</td></tr>
+<tr><td>高通</td><td>QCOM</td><td>$202.55</td><td class="up">+5.13%</td><td>5/7 收盤</td></tr>
+<tr><td>美光</td><td>MU</td><td>$646.63</td><td class="down">-3.02%</td><td>5/7 收盤</td></tr>
+<tr><td>博通</td><td>AVGO</td><td>$412.56</td><td class="down">-3.03%</td><td>5/7 收盤</td></tr>
+<tr><td>三星電子</td><td>005930.KS</td><td>₩271,500</td><td class="up">+2.07%</td><td>5/7 韓股收盤</td></tr>
+<tr><td>SK 海力士</td><td>000660.KS</td><td>₩1,654,000</td><td class="up">+3.31%</td><td>5/7 韓股收盤</td></tr>
+<tr><td>聯發科</td><td>2454.TW</td><td>NT$3,420</td><td class="down">-0.29%</td><td>5/7 台股收盤</td></tr>
+</tbody>
+</table>
+<p class="footnote">美股數據截至 2026-05-07 EDT 16:00 收盤價；亞股為 5/7 當地時間收盤價。</p>
+
+<table>
+<thead>
+<tr><th>指標</th><th>數值</th><th>變化</th><th>來源</th></tr>
+</thead>
+<tbody>
+<tr><td>DDR5 合約價 (16Gb)</td><td>US$35-40/GB</td><td class="up">+93% QoQ (1Q26)</td><td>BofA / TrendForce</td></tr>
+<tr><td>HBM3e 合約價 (8-Hi)</td><td>US$45/GB</td><td class="up">+18% QoQ</td><td>BofA</td></tr>
+<tr><td>DDR5 現貨價</td><td>US$38/GB</td><td class="up">+17.9% MoM (4月)</td><td>DRAMeXchange</td></tr>
+<tr><td>CY26 Top5 CSP CapEx</td><td>&gt;$800Bn</td><td class="up">+67% YoY</td><td>BofA 4/29</td></tr>
+<tr><td>CY27 CapEx 預測 (JPM)</td><td>~$1.1-1.2Tn</td><td class="up">+40% YoY</td><td>JPM 4/27</td></tr>
+<tr><td>CoWoS 產能目標 (EOY)</td><td>130K wspm</td><td>—</td><td>TSMC</td></tr>
+<tr><td>S&P 500 Futures</td><td>7,359</td><td>-0.05%</td><td>Yahoo 5/8</td></tr>
+<tr><td>VIX</td><td>17.08</td><td class="down">-1.78%</td><td>Yahoo 5/8</td></tr>
+<tr><td>Gold</td><td>$4,712</td><td>+0.02%</td><td>Yahoo 5/8</td></tr>
+<tr><td>Crude Oil (WTI)</td><td>$96.88</td><td class="up">+2.18%</td><td>Yahoo 5/8</td></tr>
+</tbody>
+</table>
+
+<!-- ===== Section 1: AI Capex Cycle ===== -->
+<h2>1️⃣ AI Capex Cycle Position（AI 資本開支週期定位）</h2>
+
+<h3>週期判斷：中期擴張（Mid-Cycle Expansion）</h3>
+<p>AI 基礎設施投資週期維持高速運轉。CY2026 Top 5 CSP（Google、Microsoft、Amazon、Meta、NVIDIA 訂單管道）合計資本開支預估 <strong>&gt;$800Bn</strong>，YoY +67%。JPM 首個 CY2027 預測為 ~$1.1-1.2Tn（+40% YoY），顯示增速雖有放緩但仍維持高位。</p>
+
+<div class="highlight">
+<strong>🔑 關鍵數據：</strong>NVIDIA Blackwell + Rubin 訂單可見度已超過 $1T（截至 CY27）。MU 簽署行業首個 5 年期 CSA（JPM 4/27），標誌 AI 客戶開始鎖定長期供應。CY26 CapEx Top 5 &gt;$800Bn (+67% YoY)
+</div>
+
+<h3>CSP CapEx 追蹤</h3>
+<table>
+<thead>
+<tr><th>CSP</th><th>CY26E CapEx</th><th>YoY</th><th>關鍵信號</th><th>來源</th></tr>
+</thead>
+<tbody>
+<tr><td>Google</td><td>~$185B</td><td class="up">上調</td><td>TPU v7/v8 擴產，Gemini 商業化加速</td><td>BofA 4/29</td></tr>
+<tr><td>Microsoft</td><td>$190B</td><td class="up">+61%</td><td>Azure AI 收入強勁，OpenAI 算力需求持續</td><td>BofA 4/29</td></tr>
+<tr><td>Amazon</td><td>$200B</td><td class="up">+50%+</td><td>Trainium 2 爬坡，AWS AI 收入增長</td><td>BofA 4/29</td></tr>
+<tr><td>Meta</td><td>$135B</td><td class="up">上調</td><td>Llama 生態擴張，MTIA 自研推進</td><td>BofA 4/29</td></tr>
+<tr><td>Tesla</td><td>Terafab $119B 計劃</td><td>—</td><td>德州 Terafab 芯片工廠，FSD + Dojo 算力</td><td>CNBC 5/6</td></tr>
+</tbody>
+</table>
+
+<div class="alert">
+<strong>⚠️ 週期風險信號：</strong>CoreWeave (CRWV) 股價跌 10%——營收指引疲弱、支出預算增加。這是 AI 基礎設施投資回報率的早期「壓力測試」信號。若更多 GPU-as-a-Service 廠商出現類似問題，可能標誌從「算力飢餓期」轉向「供給消化期」的過渡。
+</div>
+
+<!-- ===== Section 2: GPU/ASIC Supply ===== -->
+<h2>2️⃣ GPU/ASIC Supply & Demand（GPU/ASIC 供需）</h2>
+
+<h3>NVIDIA：Rubin 過渡期 + Corning 光纖佈局</h3>
+<ul>
+<li><strong>Blackwell (GB200)</strong>：持續量產爬坡中，DGX 交付週期仍為 20-26 週</li>
+<li><strong>Rubin (GB300)</strong>：預計 2026H2 開始放量，上半年爬坡、下半年爆量</li>
+<li><strong>重大事件</strong>：NVIDIA 宣佈投資 Corning 高達 $32 億用於光纖 AI 基礎設施，CEO 黃仁勳稱此合作將「復興美國製造業」。這是 NVIDIA 首次大規模投資光互連供應鏈，標誌 AI 數據中心從單純「堆算力」轉向「全棧優化」。</li>
+</ul>
+
+<h3>AMD：MI350 加速追趕</h3>
+<p>AMD 財報大爆發，股價單日 +19%。CEO Lisa Su 解釋預測大幅上調的關鍵原因：<strong>AI 需求強勁驅動數據中心收入超預期</strong>。MI350 搭載 HBM3e，目標在部分客戶場景中替代 NVIDIA。</p>
+
+<h3>供需錯配信號</h3>
+<table>
+<thead>
+<tr><th>信號</th><th>狀態</th><th>含義</th></tr>
+</thead>
+<tbody>
+<tr><td>GPU 交付週期</td><td>20-26 週 (DGX)</td><td>仍偏緊張</td></tr>
+<tr><td>HBM3e 供應</td><td>Q3 已售罄</td><td class="up">嚴重供不應求</td></tr>
+<tr><td>CoWoS 封裝</td><td>瓶頸緩解中</td><td>目標 130K wspm EOY</td></tr>
+<tr><td>DDR5 合約價</td><td>$35-40/GB</td><td class="up">+93% QoQ 創 25 年新高</td></tr>
+<tr><td>選擇權情緒</td><td>看多略降溫</td><td class="down">短線回調風險</td></tr>
+</tbody>
+</table>
+
+<h3>HBM 供需缺口模型（CLSA / BofA / JPM）</h3>
+<table>
+<thead>
+<tr><th>年份</th><th>需求 (M Gb)</th><th>供給 (M Gb)</th><th>缺口 (M Gb)</th><th>缺口/需求</th></tr>
+</thead>
+<tbody>
+<tr><td>2025A</td><td>11,194</td><td>~9,000</td><td class="down">-2,194</td><td>-20%</td></tr>
+<tr><td>2026E</td><td>25,110</td><td>~18,000</td><td class="down">-7,110</td><td>-28%</td></tr>
+<tr><td><strong>2027E</strong></td><td><strong>61,631</strong></td><td><strong>~35,000</strong></td><td class="down"><strong>-26,631</strong></td><td><strong>-43%</strong></td></tr>
+<tr><td>2028E</td><td>89,381</td><td>~65,000</td><td class="down">-24,381</td><td>-27%</td></tr>
+</tbody>
+</table>
+<p class="footnote">數據來源：CLSA 4/30, BofA 4/24, JPM 4/27。缺口峰值在 2027 年（+145% YoY 需求），非市場預期的 2026Q4。</p>
+
+<div class="alert">
+<strong>⚠️ BofA 結構性預警：</strong>存儲廠對 HBM 擴產意願降溫——傳統 DRAM（DDR5/LPDDR5）比 HBM 更盈利。若存儲廠主動放緩擴產，2027 年實際缺口可能比 CLSA 模型更大。
+</div>
+
+<!-- ===== Section 3: CSP Deep Dive ===== -->
+<h2>3️⃣ CSP Deep Dive（雲服務商專題）</h2>
+
+<h3>本期焦點：Big Tech AI 支出「不能手軟」</h3>
+<p>CNBC 報導 Jim Cramer 強調「Big Tech cannot afford to be cheap on AI spending」——在競爭對手持續加碼的環境下，削減 AI 投入等於讓出市場份額。BofA 分析師 Vivek Arya 更明確指出：<strong>「我們正處於 AI 第三代的起點」</strong>（5/6），暗示 Gen-1（ChatGPT 引爆）→ Gen-2（Copilot/基礎設施建設）→ <strong>Gen-3（Agent/推理/邊緣 AI）</strong>的轉型正在發生。</p>
+
+<h3>CSP 自研 ASIC vs 外購 GPU 策略演變</h3>
+<table>
+<thead>
+<tr><th>CSP</th><th>自研 ASIC</th><th>外購 GPU</th><th>策略觀察</th></tr>
+</thead>
+<tbody>
+<tr><td>Google</td><td>TPU v7 → v8 → v9</td><td>NVIDIA GB200/Rubin</td><td>雙線並行，TPU 為主（自研比例持續提升）</td></tr>
+<tr><td>Amazon</td><td>Trainium 2</td><td>NVIDIA + AMD</td><td>Trainium 2 爬坡中，Marvell 代工</td></tr>
+<tr><td>Meta</td><td>MTIA (自研)</td><td>NVIDIA 為主</td><td>MTIA 用於推理，訓練仍依賴 NVIDIA</td></tr>
+<tr><td>Microsoft</td><td>Maia 100</td><td>NVIDIA + AMD</td><td>深度綁定 OpenAI，算力需求最大</td></tr>
+<tr><td>Tesla</td><td>Dojo D2 + Terafab</td><td>NVIDIA H100/B200</td><td>Terafab 計劃投資 $119B，野心最大</td></tr>
+</tbody>
+</table>
+
+<h3>中國 CSP 觀察</h3>
+<p>EU 考慮限制敏感政府數據使用美國雲服務（5/7 CNBC），疊加美國芯片出口管制持續收緊，中國 CSP（ByteDance 火山引擎、騰訊、阿里）的 AI 投資節奏面臨雙重約束：既要應對芯片限制，又需追趕全球 AI 發展步伐。華為 Ascend 910B/920 在國內替代中扮演關鍵角色，但受制裁影響性能仍有差距。</p>
+
+<!-- ===== Section 4: Interconnect & Cooling ===== -->
+<h2>4️⃣ Interconnect & Cooling（光互連 / 溫控）</h2>
+
+<h3>光模塊 / 光纖：NVIDIA-Corning 交易的深層含義</h3>
+<p>NVIDIA 宣佈投資 Corning 高達 $32 億用於 AI 光纖基礎設施——這不是普通的光模塊訂單，而是 NVIDIA 首次 <strong>垂直整合光互連供應鏈</strong>。解讀：</p>
+<ul>
+<li><strong>800G → 1.6T 過渡加速</strong>：Rubin 時代的集群需要更高帶寬的光互連</li>
+<li><strong>長距離光纖需求爆發</strong>：跨數據中心的 AI 訓練集群（如 Stargate）需要專用光纖</li>
+<li><strong>Coherent / Lumentum / Fabrinet 受益</strong>：NVIDIA 的光纖投資將帶動上游光模塊供應鏈</li>
+</ul>
+
+<h3>溫控系統</h3>
+<p>Vertiv 液冷訂單維持強勁。隨着 AI 芯片功耗持續攀升（GB200 NVL72 系統功耗 >120kW/rack），液冷從「可選」變為「必選」。冷板式液冷渗透率在新建 AI 數據中心已接近 100%。</p>
+
+<h3>AI 基礎設施資本開支中光/溫控佔比變化</h3>
+<table>
+<thead>
+<tr><th>組件</th><th>佔 AI Infra CapEx</th><th>趨勢</th></tr>
+</thead>
+<tbody>
+<tr><td>GPU/ASIC</td><td>~60-65%</td><td>穩定（最大項）</td></tr>
+<tr><td>網絡/光互連</td><td>~12-15%</td><td class="up">↑ NVIDIA-Corning 交易加速</td></tr>
+<tr><td>存儲 (HBM/DDR)</td><td>~10-12%</td><td class="up">↑ HBM 價格飆升</td></tr>
+<tr><td>溫控/電力</td><td>~8-10%</td><td class="up">↑ 液冷滲透率提升</td></tr>
+</tbody>
+</table>
+
+<!-- ===== Section 5: MediaTek APU/TPU ===== -->
+<h2>5️⃣ MediaTek APU / Custom ASIC Opportunity【重點】</h2>
+
+<h3>AI 加速器出貨量 × 供應商矩陣（公開數據）</h3>
+<table>
+<thead>
+<tr><th>產品</th><th>供應商</th><th>2024A</th><th>2025A</th><th>2026E</th><th>2027E</th><th>2028E</th></tr>
+</thead>
+<tbody>
+<tr><td>Blackwell</td><td>NVIDIA</td><td>1.0M</td><td>4.8M</td><td>6.0M</td><td>—</td><td>—</td></tr>
+<tr><td>Rubin</td><td>NVIDIA</td><td>—</td><td>—</td><td>1.0→7.0M</td><td>8.5M</td><td>9.0M</td></tr>
+<tr><td>MI350</td><td>AMD</td><td>—</td><td>—</td><td>0.3M</td><td>1.2M</td><td>1.6M</td></tr>
+<tr style="background: rgba(188,140,255,0.08);"><td>TPU v7</td><td>Broadcom</td><td>—</td><td>—</td><td>2.3M</td><td>0.5M</td><td>—</td></tr>
+<tr style="background: rgba(188,140,255,0.08);"><td>TPU v8</td><td>Broadcom</td><td>—</td><td>—</td><td>—</td><td>2.9M</td><td>4.0M</td></tr>
+<tr style="background: rgba(88,166,255,0.12);"><td><strong>TPU v7</strong></td><td><strong>聯發科</strong></td><td>—</td><td>—</td><td><strong>0.4M</strong></td><td><strong>0.7M</strong></td><td>—</td></tr>
+<tr style="background: rgba(88,166,255,0.12);"><td><strong>TPU v8</strong></td><td><strong>聯發科</strong></td><td>—</td><td>—</td><td>—</td><td><strong>2.0M</strong></td><td><strong>4.0M</strong></td></tr>
+<tr><td>OpenAI ASIC</td><td>Broadcom</td><td>—</td><td>—</td><td>—</td><td>2.0M</td><td>4.0M</td></tr>
+<tr style="font-weight:700;"><td>合計</td><td>—</td><td>5.7M</td><td>7.9M</td><td>~14.5M</td><td>~19.3M</td><td>~25.2M</td></tr>
+</tbody>
+</table>
+<p class="footnote">數據來源：CLSA 4/30, Bernstein 4/30。聯發科 TPU 出貨量為公開報告數據。Rubin 2026E「1.0→7.0M」= 上半年爬坡 → 下半年爆量。</p>
+
+<h3>Google TPU 供應鏈——聯發科角色評估</h3>
+<table>
+<thead>
+<tr><th>項目</th><th>狀態</th><th>關鍵信號</th></tr>
+</thead>
+<tbody>
+<tr><td>TPU v7</td><td>量產中（Broadcom 主供）</td><td>聯發科 0.4M 顆（2026E），第二供應商角色確認</td></tr>
+<tr><td>TPU v7e</td><td>驗證/樣品階段</td><td>無大規模量產證據</td></tr>
+<tr><td>TPU v8</td><td>設計驗證中</td><td>聯發科 2027E 出貨 2.0M，2028E 4.0M——佔比持續提升</td></tr>
+<tr><td>TPU v8i</td><td>無公開信息</td><td>待觀察</td></tr>
+<tr><td>TPU v9</td><td>無公開信息</td><td>機會概率待評估</td></tr>
+</tbody>
+</table>
+
+<div class="highlight">
+<strong>📈 聯發科 TPU 趨勢：</strong>從公開數據看，聯發科在 Google TPU 供應鏈中的角色持續擴大——2026E 出貨 0.4M → 2027E 2.7M（v7 + v8）→ 2028E 4.0M。若 TPU v9 亦由聯發科參與設計，長期 revenue 貢獻將顯著放大。Google 年度 CapEx ~$185B 中 TPU 相關佔比推算約 15-20%。
+</div>
+
+<h3>風險因素</h3>
+<ul>
+<li><strong>地緣政治</strong>：美國芯片出口管制持續收緊，台廠面臨政策不確定性</li>
+<li><strong>第二供應商風險</strong>：Google 是否在 TPU v9 引入更多供應商（Broadcom vs 聯發科份額分配）</li>
+<li><strong>技術路線</strong>：TPU v8 搭載 HBM4（288Gb/顆），對封裝技術要求更高</li>
+</ul>
+
+<!-- ===== Section 6: Emerging Signals ===== -->
+<h2>6️⃣ Emerging Signals & Event-Driven（事件驅動）</h2>
+
+<h3>重要事件日曆（5/8 — 5/22）</h3>
+<div class="event-row">
+  <span class="event-date">5/20</span>
+  <span class="event-text"><strong>🔴 NVIDIA Q1 FY27 財報</strong> — 預期 EPS $1.79 / 營收 $80.1B。本週期最重要催化劑，Rubin 出貨指引將決定下半年方向。</span>
+</div>
+
+<h3>過去兩週重大事件</h3>
+<table>
+<thead>
+<tr><th>日期</th><th>事件</th><th>影響</th></tr>
+</thead>
+<tbody>
+<tr><td>5/6</td><td>AMD 財報大爆發，股價 +19%，CEO 大幅上調全年預測</td><td><span class="tag tag-bull">看漲</span> AI 數據中心需求超預期</td></tr>
+<tr><td>5/6</td><td>NVIDIA 宣佈投資 Corning $32 億（光纖 AI 基礎設施）</td><td><span class="tag tag-bull">看漲</span> 光互連供應鏈受益</td></tr>
+<tr><td>5/6</td><td>半導體 ETF 創歷史收盤新高</td><td><span class="tag tag-bull">看漲</span> 週期動能強勁</td></tr>
+<tr><td>5/6</td><td>Musk Terafab 芯片工廠計劃投資 $119B</td><td><span class="tag tag-info">信息</span> AI 芯片自研野心</td></tr>
+<tr><td>5/6</td><td>CoreWeave 股價跌 10%（營收指引弱 + 支出增加）</td><td><span class="tag tag-bear">警示</span> GPU-as-a-Service 盈利壓力</td></tr>
+<tr><td>5/6</td><td>BofA Vivek Arya：「AI 第三代起點」</td><td><span class="tag tag-bull">看漲</span> Agent/推理需求新週期</td></tr>
+<tr><td>5/7</td><td>EU 考慮限制敏感政府數據使用美國雲服務</td><td><span class="tag tag-neutral">觀察</span> 數據主權 + 地緣政治</td></tr>
+<tr><td>5/7</td><td>SoftBank 股價 +18%，日經 225 創歷史新高</td><td><span class="tag tag-info">信息</span> 全球 AI 投資擴散</td></tr>
+<tr><td>5/7</td><td>Arm 財報強勁，CPU 復興中 carve 出高利潤路徑</td><td><span class="tag tag-info">信息</span> ARM 生態持續擴張</td></tr>
+<tr><td>5/7</td><td>選擇權市場對半導體看多情緒略有降溫</td><td><span class="tag tag-neutral">觀察</span> 短線回調可能</td></tr>
+<tr><td>5/7</td><td>Cloudflare 裁員 1,100 人（AI 替代）</td><td><span class="tag tag-neutral">觀察</span> AI 對傳統 IT 的衝擊</td></tr>
+<tr><td>5/7</td><td>美伊霍爾木茲海峽交火</td><td><span class="tag tag-bear">警示</span> 油價 $96.88，地緣風險升級</td></tr>
+</tbody>
+</table>
+
+<h3>供應鏈全景圖</h3>
+<div class="supply-chain">
+CSP CapEx ($800Bn+ CY26)
+    │
+    ├── GPU/ASIC 採購
+    │   ├── NVIDIA (Blackwell → Rubin)    ← 最大受益者，$211.50
+    │   ├── AMD (MI350)                    ← 財報超預期，$408.46
+    │   └── Huawei Ascend (國內替代)       ← 受制於出口管制
+    │
+    ├── Custom ASIC
+    │   ├── Google TPU → Broadcom / 聯發科  ← 重點追蹤
+    │   ├── Amazon Trainium → Marvell
+    │   └── Meta MTIA → 自研
+    │
+    ├── Interconnect / 光纖
+    │   ├── Corning (NVIDIA $3.2B 投資)    ← 本週新催化劑
+    │   ├── Coherent (800G/1.6T 光模塊)
+    │   ├── Lumentum (YVO4 晶體)
+    │   └── Fabrinet (光模塊代工)
+    │
+    ├── Memory / HBM
+    │   ├── SK Hynix (HBM3e ~55% 份額)     ← ₩1,654,000
+    │   ├── Samsung (HBM4 已首發出貨)       ← ₩271,500
+    │   └── Micron (HBM3e 爬坡)            ← $646.63
+    │
+    └── Cooling
+        └── Vertiv (液冷)                   ← AI 數據中心必選
+</div>
+
+<h3>估值參考</h3>
+<table>
+<thead>
+<tr><th>標的</th><th>當前價</th><th>52週區間</th><th>機構目標價</th><th>來源</th></tr>
+</thead>
+<tbody>
+<tr><td>NVIDIA</td><td>$211.50</td><td>$115.21 - $216.83</td><td>待更新</td><td>—</td></tr>
+<tr><td>台積電</td><td>$414.15</td><td>$173.66 - $420.00</td><td>待更新</td><td>—</td></tr>
+<tr><td>AMD</td><td>$408.46</td><td>$101.56 - $430.60</td><td>待更新</td><td>—</td></tr>
+<tr><td>博通</td><td>$412.56</td><td>—</td><td>待更新</td><td>—</td></tr>
+<tr><td>美光</td><td>$646.63</td><td>$83.36 - $683.09</td><td>待更新</td><td>—</td></tr>
+<tr><td>聯發科</td><td>NT$3,420</td><td>—</td><td>待更新</td><td>—</td></tr>
+</tbody>
+</table>
+<p class="footnote">⚠️ 機構目標價需確認具體研報來源後更新。禁止無來源目標價。</p>
+
+<h3>風險因素</h3>
+<table>
+<thead>
+<tr><th>風險</th><th>概率</th><th>影響</th><th>監測信號</th></tr>
+</thead>
+<tbody>
+<tr><td>AI CapEx 放緩</td><td>低</td><td>高</td><td>CSP 季度指引調整、CoreWeave 類事件</td></tr>
+<tr><td>半導體估值修正</td><td>中</td><td>中</td><td>選擇權看多降溫、VIX 上升</td></tr>
+<tr><td>地緣衝突升級</td><td>中</td><td>高</td><td>美伊衝突、油價、霍爾木茲海峽</td></tr>
+<tr><td>HBM 供給不足</td><td>高</td><td>高</td><td>存儲廠擴產意願、合約價趨勢</td></tr>
+<tr><td>美國芯片管制升級</td><td>中</td><td>中</td><td>BIS 新規、華為/中芯限制</td></tr>
+<tr><td>NVIDIA 財報低於預期</td><td>低</td><td>極高</td><td>5/20 Q1 FY27 財報</td></tr>
+</tbody>
+</table>
+
+<hr class="divider">
+
+<div class="footer">
+<p>📊 AI / Data Center 雙週刊 | Hermes Agent | 2026-05-08 08:00 CST</p>
+<p>數據來源：Yahoo Finance, CNBC, BofA, JPM, CLSA, Bernstein, TrendForce, DRAMeXchange</p>
+<p>本報告僅供內部研究參考，不構成投資建議。</p>
+</div>
+
+</div>
+</body>
+</html>
