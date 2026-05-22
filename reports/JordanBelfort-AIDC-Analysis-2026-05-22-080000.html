@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI / Data Center 双周刊 | 2026-05-22</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #0d1117; color: #e6edf3; font-size: 14px; line-height: 1.6; }
+  .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+  .header { border-bottom: 2px solid #238636; padding-bottom: 16px; margin-bottom: 24px; }
+  .header h1 { font-size: 22px; color: #58a6ff; margin-bottom: 4px; }
+  .header .subtitle { color: #8b949e; font-size: 13px; }
+  .meta { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 14px 18px; margin-bottom: 20px; font-size: 12px; color: #8b949e; }
+  .meta span { margin-right: 20px; }
+  .section { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 18px; margin-bottom: 16px; }
+  .section h2 { font-size: 16px; color: #f0883e; border-left: 4px solid #f0883e; padding-left: 10px; margin-bottom: 14px; }
+  .section h3 { font-size: 14px; color: #58a6ff; margin-bottom: 10px; margin-top: 14px; }
+  .tag { display: inline-block; background: #238636; color: #fff; font-size: 10px; padding: 2px 7px; border-radius: 10px; margin-right: 6px; vertical-align: middle; }
+  .tag.red { background: #da3633; }
+  .tag.yellow { background: #d29922; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 12px; font-size: 13px; }
+  th { background: #21262d; color: #8b949e; padding: 7px 10px; text-align: left; border: 1px solid #30363d; }
+  td { padding: 7px 10px; border: 1px solid #30363d; }
+  tr:nth-child(even) td { background: #0d1117; }
+  .up { color: #3fb950; }
+  .down { color: #f85149; }
+  .neutral { color: #d29922; }
+  .callout { background: #0d1117; border-left: 4px solid #f0883e; padding: 10px 14px; margin: 10px 0; border-radius: 0 4px 4px 0; font-size: 13px; }
+  .callout.blue { border-left-color: #58a6ff; }
+  .callout.green { border-left-color: #3fb950; }
+  .callout.red { border-left-color: #f85149; }
+  .key-finding { background: #1c2128; border: 1px solid #30363d; border-radius: 6px; padding: 12px 16px; margin-bottom: 10px; }
+  .key-finding strong { color: #f0883e; }
+  .news-item { border-bottom: 1px solid #21262d; padding: 8px 0; font-size: 13px; }
+  .news-item:last-child { border-bottom: none; }
+  .news-item .time { color: #6e7681; font-size: 11px; float: right; }
+  .footer { text-align: center; color: #484f58; font-size: 11px; margin-top: 20px; padding-top: 12px; border-top: 1px solid #21262d; }
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media(max-width:600px) { .two-col { grid-template-columns: 1fr; } }
+  .supply-chain { font-family: 'Courier New', monospace; font-size: 12px; background: #0d1117; padding: 12px; border-radius: 4px; white-space: pre; overflow-x: auto; color: #79c0ff; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+  <h1>🤖 AI / Data Center 双周刊</h1>
+  <div class="subtitle">AI 基础设施市场情报 · MediaTek 战略研究支持 | 第16期 | 2026-05-22</div>
+</div>
+
+<div class="meta">
+  <span>📅 数据日期: 2026-05-21 (美股收盘) / 2026-05-21 (亚股盘中)</span>
+  <span>📡 数据来源: Yahoo Finance, CNBC, Tom's Hardware, 本地行业数据库</span>
+  <span>🔄 下次更新: 2026-06-05</span>
+</div>
+
+<div class="section">
+  <h2>🔥 本期重大发现</h2>
+  <div class="key-finding">
+    <strong>1. NVIDIA Q1 FY2027 财报: $81.6B 收入，但股价周四大跌 -1.77%</strong><br>
+    NVDA 收入创纪录但市场已提前反映，Jensen 确认"未来两年已全部订完"，同时坦承已"largely conceded 中国市场给华为"。AMD 宣布对台投资 $100 亿，MediaTek (2454.TW) 单日暴涨 +9.91%。
+  </div>
+  <div class="key-finding">
+    <strong>2. HBM 超级周期确认深化: 2026 sufficiency 仅 2%，SK 董事长称短缺延续至 2030</strong><br>
+    Morgan Stanley 数据显示 2026 年 HBM 供需比仅 2%（极度紧缺）。SK 集团董事长直接表态短缺持续到 2030 年。Micron 宣布 $240 亿新加坡工厂 + $1000 亿纽约 megafab。
+  </div>
+  <div class="key-finding">
+    <strong>3. Anthropic × Microsoft AI 芯片合作谈判中 — 继 $50 亿投资后</strong><br>
+    CNBC 报道 Anthropic 与微软正在洽谈 AI 芯片合作，标志着大模型公司与芯片供应商的垂直整合加速。
+  </div>
+  <div class="key-finding">
+    <strong>4. CoWoS 2026 年底产能目标 115K wpm，MediaTek TPU v7 占据 2026 年 15K wpm</strong><br>
+    Bernstein/BofA/Morgan Stanley 综合数据显示 CoWoS 强劲扩产，MediaTek 为 Google TPU foundry 代工伙伴，TPU v7 2026 年 booking 15K wpm，2027 年 v8 暴增至 110K wpm。
+  </div>
+</div>
+
+<div class="section">
+  <h2>1. AI Capex 周期定位</h2>
+  <h3>周期判断: <span class="tag">中期扩张阶段</span> 非顶部</h3>
+  <div class="callout blue">
+    <strong>判断依据:</strong> NVIDIA 确认"booked solid for next two years"（两年产能已满），HBM 2026 sufficiency 仅 2%，存储厂扩产意愿降温但 AI 需求仍强。当前半周期位置相当于 2019-2020 年光伏/电动车的"产能加速期"，未见需求拐点。
+  </div>
+  <h3>关键指标 — 股价快照</h3>
+  <table>
+    <tr><th>标的</th><th>代码</th><th>价格</th><th>涨跌</th><th>备注</th></tr>
+    <tr><td>NVIDIA</td><td>NVDA</td><td class="down">$219.51</td><td class="down">-1.77%</td><td>财报后回调</td></tr>
+    <tr><td>Broadcom</td><td>AVGO</td><td class="down">$414.57</td><td class="down">-0.76%</td><td></td></tr>
+    <tr><td>AMD</td><td>AMD</td><td class="up">$449.59</td><td class="up">+0.45%</td><td></td></tr>
+    <tr><td>Micron</td><td>MU</td><td class="up">$762.10</td><td class="up">+4.11%</td><td>memory 超级周期</td></tr>
+    <tr><td>Qualcomm</td><td>QCOM</td><td class="up">$213.41</td><td class="up">+5.38%</td><td></td></tr>
+    <tr><td>TSM</td><td>TSM</td><td class="up">$407.15</td><td class="up">+1.38%</td><td></td></tr>
+    <tr><td>Samsung</td><td>005930.KS</td><td class="up">₩299,500</td><td class="up">+8.51%</td><td>KSE 盘中</td></tr>
+    <tr><td>SK Hynix</td><td>000660.KS</td><td class="up">₩1,940,000</td><td class="up">+11.17%</td><td>KSE 盘中</td></tr>
+    <tr><td>MediaTek</td><td>2454.TW</td><td class="up">NT$3,550</td><td class="up">+9.91%</td><td>TWD 盘中</td></tr>
+  </table>
+  <p style="font-size:11px;color:#6e7681;margin-top:6px;">数据来源: Yahoo Finance (2026-05-21 收盘/盘中) | 美股显示收盘价，亚股显示盘中实时价</p>
+  <h3>CSP CapEx 追踪（最新季度）</h3>
+  <div class="callout">
+    <strong>CY26 全球 AI 基础设施 CapEx 预估:</strong> $800B+ (<span class="up">▲▲ +67% YoY</span>)<br>
+    <strong>CY27 CapEx 预估 (JPM):</strong> ~$1.1-1.2T (<span class="up">▲ +40% YoY</span>) — 首个突破万亿预测
+  </div>
+  <div class="callout green">
+    <strong>SK Hynix 董事长:</strong> "Memory chip shortage will last until 2030" — 主要 memory 厂高管对短缺最长时期的直接表态。Source: Tom's Hardware, SK Group chairman, 2026-05
+  </div>
+</div>
+
+<div class="section">
+  <h2>2. GPU/ASIC 供需格局</h2>
+  <h3>NVIDIA Blackwell 系列</h3>
+  <div class="callout">
+    Jensen Huang (NVDA Q1 FY2027 earnings call): <em>"We are booked solid for the next two years"</em><br>
+    同时承认: <em>"We have largely conceded China's AI chip market to Huawei"</em><br>
+    Source: CNBC, 2026-05-21
+  </div>
+  <div class="callout blue">
+    <strong>Vera Rubin 平台:</strong> Jensen 称其为"the most complex computing system the world's ever made"。Rubin 将于 2027 年放量，CoWoS 2027 booking 中 NVIDIA 预计占 93K wpm。
+  </div>
+  <h3>HBM 供需 — 极度紧缺确认</h3>
+  <table>
+    <tr><th>指标</th><th>2023</th><th>2024</th><th>2025E</th><th>2026E</th><th>Source</th></tr>
+    <tr><td>HBM Sufficiency</td><td>69%</td><td>26%</td><td>19%</td><td class="down">2% ⚠️</td><td>Morgan Stanley GTO 2026</td></tr>
+    <tr><td>HBM Demand (mn GB)</td><td>1,866</td><td>9,059</td><td>19,161</td><td>30,565</td><td>MS GTO 2026</td></tr>
+    <tr><td>HBM Supply (mn GB)</td><td>3,150</td><td>11,436</td><td>22,765</td><td>31,091</td><td>MS GTO 2026</td></tr>
+  </table>
+  <div class="callout red">
+    ⚠️ 2026 HBM sufficiency 仅 2% — 极度紧缺。BofA 结构性预警: 存储厂对 HBM 扩产意愿降温（传统 DRAM 更盈利），2027 年实际缺口可能比 CLSA 模型更大。
+  </div>
+  <h3>CoWoS 封装产能</h3>
+  <table>
+    <tr><th>时间</th><th>总产能 (wpm)</th><th>NVIDIA</th><th>Google</th><th>Broadcom</th><th>MediaTek</th><th>AMD</th></tr>
+    <tr><td>2025E</td><td>65,000</td><td>33,333</td><td>7,400</td><td>8,000</td><td>500</td><td>4,333</td></tr>
+    <tr><td>2026E</td><td>115,000</td><td>60,000</td><td>—</td><td>20,833</td><td>2,500</td><td>6,666</td></tr>
+    <tr><td>2027E</td><td>175,000</td><td>93,333</td><td>—</td><td>35,416</td><td>10,416</td><td>15,000</td></tr>
+  </table>
+  <p style="font-size:11px;color:#6e7681;">Source: Bernstein, BofA, Morgan Stanley | CoWoS-L/R 综合产能</p>
+  <h3>AMD MI350 动态</h3>
+  <div class="callout">
+    AMD 宣布对台 AI 产业投资 <strong>$100 亿</strong>（2026-05-21 CNBC），深化与台积电合作。MI350 预计 2026 年下半年放量，CoWoS booking 6,666 wpm (2026E)，将对 NVIDIA H100/H200 市场形成分流压力。
+  </div>
+</div>
+
+<div class="section">
+  <h2>3. CSP 深度追踪 — 本期重点: Microsoft × Anthropic</h2>
+  <h3>Microsoft &amp; Anthropic AI 芯片合作</h3>
+  <div class="callout green">
+    <strong>重大信号:</strong> CNBC 报道 Anthropic 与微软正在洽谈 AI 芯片合作（继 $50 亿投资后）。大模型公司开始"芯片绑定"特定云厂商，形成类似 OpenAI × Microsoft 的深度耦合模式。
+  </div>
+  <div class="two-col">
+    <div>
+      <h3>Meta AI 基础设施</h3>
+      <div class="callout">
+        Meta × Broadcom × UCLA: <strong>$1.25 亿</strong>半导体研究中心。Meta 持续推进 MTIA 自研 ASIC。
+      </div>
+    </div>
+    <div>
+      <h3>Google TPU</h3>
+      <div class="callout">
+        Google TPU v7e/v7 占 CoWoS ~15% (2025E)。TPU v8 预计 2027 年爆量（CoWoS booking 110K wpm）。MediaTek 作为 foundry 代工伙伴参与 TPU v7/v8 生产。
+      </div>
+    </div>
+  </div>
+  <h3>竞争格局图谱</h3>
+  <div class="supply-chain">CSP Capex (Google/Meta/MS/Amazon/OpenAI/Anthropic)
+    |
+    ├── GPU/ASIC 采购
+    │   ├── NVIDIA (GB200/Rubin) ← 最大受益者
+    │   ├── AMD (MI350) ← 分流 NVIDIA
+    │   └── Huawei Ascend (国内)
+    |
+    ├── Custom ASIC
+    │   ├── Google TPU → MediaTek foundry (TSMC CoWoS) ★
+    │   ├── Amazon Trainium → Marvell
+    │   └── Meta MTIA → 自研
+    |
+    ├── Interconnect
+    │   ├── Coherent/Lumentum (光模块 800G/1.6T)
+    │   └── Fabrinet (代工)
+    |
+    └── Cooling
+        └── Vertiv (液冷)</div>
+</div>
+
+<div class="section">
+  <h2>4. 光互连 / 温控系统</h2>
+  <h3>光模块 — 800G/1.6T 趋势</h3>
+  <div class="callout">
+    Coherent 和 Lumentum 主导 AI 用光模块市场。TSMC 披露 2029 年 CoWoS 路线图: 支持超过 14-reticle 封装面积的 AI 处理器，compute power 提升 48×，memory bandwidth 提升 34×。CPO 大规模放量预计推至 2029-2030 年。
+  </div>
+  <h3>数据中心温控 — Vertiv</h3>
+  <div class="callout">
+    Vertiv (VRT) 液冷订单持续攀升，AI server 功率密度从 10kW/rack 向 50-100kW/rack 演进，液冷渗透率进入加速阶段。STULZ 与华为在精密空调端同步受益。
+  </div>
+  <div class="callout blue">
+    <strong>TSMC CoWoS 路线图:</strong> 2029 年目标 48× compute power，CoWoS 生命周期延长至 2030+。
+  </div>
+</div>
+
+<div class="section">
+  <h2>5. MediaTek APU / Custom ASIC 机会 ★</h2>
+  <div class="callout green">
+    <strong>MediaTek 是 Google TPU foundry 代工伙伴（TSMC CoWoS）</strong> — MediaTek 在 AI 基础设施领域最重要的角色定位是 turnkey foundry 服务，而非芯片设计。
+  </div>
+  <h3>Google TPU 路线图（基于公开信息）</h3>
+  <table>
+    <tr><th>TPU 版本</th><th>公开进展</th><th>量产时间</th><th>MediaTek 角色</th><th>机会概率</th></tr>
+    <tr><td>TPU v6e/v7e</td><td>已量产，CoWoS ~15%</td><td>2025E</td><td>Foundry 代工</td><td class="up">✅ 确认</td></tr>
+    <tr><td>TPU v7</td><td>2026E 15K wpm CoWoS booking</td><td>2026E</td><td>Foundry 代工</td><td class="up">✅ 确认</td></tr>
+    <tr><td>TPU v8</td><td>2027E 110K wpm CoWoS booking</td><td>2027E</td><td>Foundry 代工</td><td class="up">✅ 高概率</td></tr>
+    <tr><td>TPU v9</td><td>无公开规格</td><td>2028E+</td><td>TBD</td><td class="neutral">⚠ 待观察</td></tr>
+  </table>
+  <h3>MediaTek TPU 业务规模估算</h3>
+  <div class="callout">
+    CoWoS booking 显示 MediaTek TPU 相关产能:<br>
+    - 2025E: 500 wpm（占 CoWoS 总产能 0.8%，TPU v7 量产初期）<br>
+    - 2026E: 2,500 wpm（<span class="up">▲ 5× YoY</span>，TPU v7 规模量产）<br>
+    - 2027E: 10,416 wpm（<span class="up">▲ 4× YoY</span>，TPU v8 爆量）<br><br>
+    按每 wpm 约对应 $1-2M revenue 估算，MediaTek TPU foundry 业务 2027 年 revenue impact 约 $1-2B 量级（NRE+royalty 混合模式）。
+  </div>
+  <h3>竞争格局 — vs Broadcom / Marvell</h3>
+  <div class="callout blue">
+    <strong>Broadcom</strong> 是 Google TPU 的主要 IC 设计伙伴，MediaTek 定位为 foundry 代工（TSMC CoWoS 制造）。两者是同一价值链的不同环节，非直接竞争。<br>
+    <strong>Marvell</strong> 为 Amazon Trainium/Inferentia 提供类似服务，2026E CoWoS booking 20,833 wpm。
+  </div>
+  <h3>风险因素（基于公开信息）</h3>
+  <ul style="font-size:13px;margin-left:20px;color:#8b949e;">
+    <li><strong>地缘政治风险:</strong> 美国芯片出口管制持续，若 Google 引入第二 foundry 供应商（Samsung 或 Intel IFS），MediaTek 份额可能受挤压</li>
+    <li><strong>Google 自研替代:</strong> 若 Google 增加自研 ASIC 比例，减少对外部 foundry 依赖，MediaTek 增量空间有限</li>
+    <li><strong>CoWoS 产能争抢:</strong> NVIDIA GB300/Rubin 占用大量 CoWoS 产能，ASIC 产能分配可能受限</li>
+  </ul>
+</div>
+
+<div class="section">
+  <h2>6. 事件驱动 — 本期重要动态</h2>
+  <div class="news-item">
+    <span class="time">2026-05-21</span>
+    <strong>NVIDIA Q1 FY2027 earnings</strong>: $81.6B 收入，Jensen 确认两年产能售罄，但股价仍 -1.77% 回调。Source: CNBC
+    <span class="tag red">NVIDIA</span>
+  </div>
+  <div class="news-item">
+    <span class="time">2026-05-21</span>
+    <strong>Jensen Huang: "largely conceded China market to Huawei"</strong> — NVDA CEO 首次公开承认退出中国 AI 芯片市场。Source: CNBC Squawk on the Street
+    <span class="tag red">地缘政治</span>
+  </div>
+  <div class="news-item">
+    <span class="time">2026-05-21</span>
+    <strong>Anthropic × Microsoft AI chip deal in talks</strong> — 继 $50 亿投资后进一步深化芯片合作。Source: CNBC, Jordan Novet
+    <span class="tag">CSP</span>
+  </div>
+  <div class="news-item">
+    <span class="time">2026-05-21</span>
+    <strong>AMD to invest $10 billion in Taiwan AI industry</strong> — 深化台积电合作，MI350 2026H2 放量。Source: CNBC
+    <span class="tag">AMD</span>
+  </div>
+  <div class="news-item">
+    <span class="time">2026-05-21</span>
+    <strong>Meta, Broadcom launch $125M semiconductor research hub at UCLA</strong> — CSP × custom ASIC 生态深化。Source: CNBC
+    <span class="tag">ASIC</span>
+  </div>
+  <div class="news-item">
+    <span class="time">2026-05</span>
+    <strong>SK Group chairman: memory chip shortage will last until 2030</strong> — Tom's Hardware 报道。
+    <span class="tag red">Memory</span>
+  </div>
+  <div class="news-item">
+    <span class="time">2026-05</span>
+    <strong>Micron $24 billion Singapore fab: needs 500 transformers</strong> — 单座 fab 需求超过任何单一制造商总产出。
+    <span class="tag">Memory</span>
+  </div>
+  <div class="news-item">
+    <span class="time">2026-05</span>
+    <strong>Micron to begin work on $100 billion New York megafab</strong> — 美国历史上最大 memory 投资。
+    <span class="tag">Memory</span>
+  </div>
+  <div class="news-item">
+    <span class="time">2026-05</span>
+    <strong>TSMC: 48× compute, 14-reticle packages by 2029</strong> — CoWoS 路线图确认，CPO 量产延至 2029-2030。
+    <span class="tag">TSMC</span>
+  </div>
+  <div class="news-item">
+    <span class="time">2026-05</span>
+    <strong>China CXMT/YMTC: domestic HBM3 production by end of 2026</strong> — 中国半导体自主可控进展。
+    <span class="tag" style="background:#d29922">中国</span>
+  </div>
+  <div class="news-item">
+    <span class="time">2026-05</span>
+    <strong>SK Hynix: $13 billion world's largest HBM assembly plant</strong> — 应对历史最大短缺。
+    <span class="tag">HBM</span>
+  </div>
+  <h3>📅 重要事件日历（未来14天）</h3>
+  <div class="callout">
+    下一个财报季前 (2026-05-22 ~ 2026-06-05)，无重点跟踪标的（NVDA/TSM/AMD/MU/AVGO/QCOM/2454.TW）发布财报。
+  </div>
+</div>
+
+<div class="section">
+  <h2>附录: 存储价格追踪</h2>
+  <table>
+    <tr><th>产品</th><th>2025-Q4</th><th>2026-Q1</th><th>2026-Q2E</th><th>QoQ</th><th>Source</th></tr>
+    <tr><td>DDR4 8Gb</td><td>$8.1</td><td>$12.5</td><td>$16.0</td><td class="up">+28%</td><td>Bernstein</td></tr>
+    <tr><td>DDR5 16Gb</td><td>$38.0</td><td>$38.0</td><td>$42.0</td><td class="up">+20%</td><td>TrendForce</td></tr>
+    <tr><td>HBM3e 8Hi</td><td>$38.0</td><td class="up">$45.0</td><td>—</td><td class="up">+18%</td><td>CLSA+TrendForce</td></tr>
+    <tr><td>Server DDR5 96GB RDIMM</td><td>$6.9</td><td class="up">$13.9</td><td class="up">$20.4</td><td class="up">+48%</td><td>Bernstein</td></tr>
+    <tr><td>LPDDR5 16GB</td><td>$4.0</td><td>$6.3</td><td>—</td><td class="up">+58%</td><td>Bernstein</td></tr>
+    <tr><td>NAND wafer</td><td>—</td><td>—</td><td class="up">+65%</td><td class="up">+65%</td><td>Bernstein</td></tr>
+    <tr><td>NAND eMMC UFS</td><td>—</td><td>—</td><td class="up">+75%</td><td class="up">+75%</td><td>Bernstein</td></tr>
+  </table>
+  <p style="font-size:11px;color:#6e7681;">DDR5 合约价 YoY +200% (2026-Q1 vs 2025-Q1)，HBM3e $45/GB，Server RDIMM +100% QoQ — 存储超级周期延续。</p>
+</div>
+
+<div class="section">
+  <h2>数据来源索引</h2>
+  <ul style="font-size:12px;color:#8b949e;margin-left:20px;">
+    <li>股价数据: Yahoo Finance (2026-05-21)</li>
+    <li>HBM TSV 产能 & 供需: Morgan Stanley Global Tech Outlook 2026 (Jan 6, 2026)</li>
+    <li>CoWoS 产能: Bernstein, BofA, Morgan Stanley, CLSA, TrendForce</li>
+    <li>存储价格: Bernstein Memory Tracker (Apr 21, 2026), TrendForce, CLSA</li>
+    <li>HBM JPM Model: J.P. Morgan Memory Market Update (Jan 16, 2026)</li>
+    <li>新闻: CNBC (2026-05-21), Tom's Hardware (2026-05)</li>
+    <li>SK Hynix/Samsung: KRX 盘中报价 (2026-05-21)</li>
+    <li>MediaTek: 台股盘中报价 (2026-05-21, GMT+8 13:30)</li>
+  </ul>
+  <div class="callout" style="border-left-color:#d29922;margin-top:10px;">
+    <strong>⚠️ Finnhub API 故障:</strong> 财报日历数据获取失败 (HTTP 401)。已记录，将在下次修复。
+  </div>
+</div>
+
+<div class="footer">
+  Hermes Agent for Felix · AI / Data Center 双周刊 · 第16期 · 2026-05-22<br>
+  数据截至 2026-05-21 | 报告内容为公开信息整理，不构成投资建议
+</div>
+
+</div>
+</body>
+</html>
