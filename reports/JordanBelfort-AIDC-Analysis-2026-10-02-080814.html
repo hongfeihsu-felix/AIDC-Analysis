@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI / Data Center 双周分析 | 2026-10-02</title>
+<style>
+:root{--bg:#0d1117;--fg:#e6edf3;--muted:#8b949e;--accent:#58a6ff;--border:#30363d;--card:#161b22;--up:#3fb950;--down:#f85149;--warn:#d29922;}
+*{box-sizing:border-box;}
+body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;margin:0;line-height:1.65;font-size:15px;}
+.wrap{max-width:980px;margin:0 auto;padding:32px 20px 80px;}
+.header{background:linear-gradient(135deg,#1a2332 0%,#0d1117 100%);border:1px solid var(--border);border-radius:12px;padding:28px 30px;margin-bottom:24px;}
+.header h1{font-size:24px;margin:0 0 6px;color:#fff;}
+.header .sub{color:var(--accent);font-size:14px;font-weight:600;margin:4px 0 8px;}
+.header .meta{color:var(--muted);font-size:12px;line-height:1.8;}
+.badge{display:inline-block;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:700;margin-right:6px;}
+.badge-hot{background:#3d1f1f;color:#f85149;}
+.badge-warn{background:#3d2f0f;color:#d29922;}
+.badge-ok{background:#1f3d2f;color:#3fb950;}
+.badge-blue{background:#1f2f3d;color:#58a6ff;}
+h2{font-size:19px;color:#fff;border-bottom:2px solid var(--accent);padding-bottom:8px;margin:34px 0 14px;}
+h3{font-size:15px;color:var(--accent);margin:20px 0 8px;}
+p{margin:8px 0;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin:14px 0;}
+.exec{background:linear-gradient(135deg,#1f2f1f 0%,#161b22 100%);border:1px solid #2ea043;}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 20px;}
+th{background:#1c2430;color:var(--muted);font-weight:600;text-align:left;padding:9px 11px;border:1px solid var(--border);font-size:12px;}
+td{padding:8px 11px;border:1px solid var(--border);vertical-align:top;}
+tr:nth-child(even) td{background:rgba(255,255,255,0.02);}
+.up{color:var(--up);font-weight:600;}
+.down{color:var(--down);font-weight:600;}
+.warn{color:var(--warn);font-weight:600;}
+.blue{color:var(--accent);font-weight:600;}
+ul,ol{margin:8px 0;padding-left:22px;}
+li{margin:5px 0;}
+strong{color:#fff;}
+.hl{background:#2d3a1f;color:#d0e8a0;padding:1px 6px;border-radius:4px;font-weight:600;}
+.src{color:var(--muted);font-size:11px;font-style:italic;}
+.chain{background:#0a0e14;border:1px solid var(--border);border-radius:8px;padding:16px 18px;font-family:'SF Mono',Menlo,Consolas,monospace;font-size:12.5px;line-height:1.8;white-space:pre;overflow-x:auto;color:#9ecbff;margin:14px 0;}
+.kpi{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0;}
+.kpi-box{flex:1 1 180px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+.kpi-box .num{font-size:22px;font-weight:800;color:var(--accent);}
+.kpi-box .lbl{font-size:12px;color:var(--muted);margin-top:2px;}
+.conf{color:var(--warn);font-weight:700;}
+.risk{color:var(--down);font-weight:600;}
+.opp{color:var(--up);font-weight:600;}
+.footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;text-align:center;}
+a{color:var(--accent);}
+.note{font-size:12px;color:var(--muted);background:#1c2128;border-left:3px solid var(--warn);padding:8px 12px;border-radius:4px;margin:10px 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="header">
+<h1>🤖 AI / Data Center 双周市场分析</h1>
+<div class="sub">AI 基础设施投资周期 · GPU/ASIC · 光互连 · 温控 · MediaTek TPU 机会</div>
+<div class="meta">
+报告日期：<strong>2026-10-02（周五）</strong> · 覆盖周期：2026-09-19 至 2026-10-02<br>
+数据来源：Morgan Stanley / J.P. Morgan / BofA / Citi / Goldman Sachs / Nomura（卖方研报，2026-09-28 至 09-30）<br>
+作者：Hermes Agent（Felix 的研究助理） · 面向 MediaTek 战略规划
+</div>
+</div>
+
+<div class="card exec">
+<h2 style="margin-top:0;border:none;">📌 执行摘要（本期三大判断）</h2>
+
+<h3>① <span class="hl">MediaTek TPU v8 延迟传闻被管理层证伪，4Q26 收入指引 &gt;US$20亿 无延迟</span></h3>
+<p>《经济日报》9/29 报道 TPU v8 生产延迟至 2Q27，引发联发科股价单日 <strong class="down">-7.1%</strong>（台指仅 -0.82%）。摩根士丹利（9/30）与管理层沟通后确认：<strong>TPU v8 收入按计划推进，4Q26 来自 TPU 的收入指引 &gt;US$20亿，已开始出货，不存在延迟</strong>。MS 维持 Overweight，目标价 <strong>NT$6,188（+26%）</strong>，并建议「逢低买入」。这是本期最核心的 alpha 信号。</p>
+
+<h3>② <span class="hl">Agentic AI 竞赛将 AI 数据中心 TAM 上调至 $2.2 万亿，云 Capex 2026 年逼近 $1 万亿</span></h3>
+<p>BofA（9/29）将 CY30E AI 数据中心系统 TAM 从 $1.8Tn 上调至 <strong>$2.2Tn（+40% CAGR）</strong>。Top 美国超大规模/Neocloud + 中国云 2026E capex 合计 <strong>~$1.0Tn（同比近 2 倍）</strong>，2027E ~$1.4Tn（+37%）。前四大 hyperscaler 积压订单 ~$2.3Tn。四巨头（Amazon $200bn / Alphabet $175-185bn / Meta $115-135bn / Microsoft ~$190bn）2026 年 capex 合计 <strong>~$725bn（+77% YoY）</strong>。</p>
+
+<h3>③ <span class="hl">自研 ASIC 在 HBM 消费与封装两条战线同时超车 NVIDIA</span></h3>
+<p>J.P. Morgan（9/22）预测 <strong>2027 年 ASIC 占 HBM bit 需求 48%，首次超越 NVIDIA（43%）</strong>，ASIC 系统销量 2027 年 +102% YoY vs NVIDIA +15%。同时，TPU v9（HumuFish）确认采用 <strong>Intel EMIB-T 而非 TSMC CoWoS</strong>（MS 9/30）——这对 MediaTek 中性、对 Intel 封装利好、对 TSMC CoWoS 短期略空，是先进封装格局的重要转折信号。</p>
+</div>
+
+<div class="kpi">
+<div class="kpi-box"><div class="num">$2.2Tn</div><div class="lbl">CY30E AI DC TAM（BofA，+40% CAGR）</div></div>
+<div class="kpi-box"><div class="num">~$725bn</div><div class="lbl">四大 Hyperscaler 2026 capex（+77% YoY）</div></div>
+<div class="kpi-box"><div class="num">&gt;US$20亿</div><div class="lbl">MediaTek 4Q26 TPU 收入指引</div></div>
+<div class="kpi-box"><div class="num">$110亿</div><div class="lbl">2030 OCS TAM（Citi 首次建模）</div></div>
+<div class="kpi-box"><div class="num">175K wpm</div><div class="lbl">CoWoS 2027E 产能（2026E 115K）</div></div>
+</div>
+
+<!-- ==================== 1. 周期定位 ==================== -->
+<h2>1. AI Capex 周期定位</h2>
+
+<div class="card">
+<h3>1.1 全球 AI 基础设施投资总量</h3>
+<table>
+<tr><th>指标</th><th>数值</th><th>来源/日期</th></tr>
+<tr><td>四大 Hyperscaler 2026 capex 合计</td><td><strong>~$725bn（+77% YoY，vs 2025 $410bn）</strong></td><td>Goldman/Yahoo Finance（2026-10 报道）</td></tr>
+<tr><td>其中 Amazon / Alphabet / Meta / Microsoft</td><td>$200bn / $175-185bn / $115-135bn / ~$190bn</td><td>同上</td></tr>
+<tr><td>Top US+中国云 2026E capex</td><td><strong>~$1.0Tn（同比近 2 倍）</strong></td><td>BofA（2026-09-29）</td></tr>
+<tr><td>Top US+中国云 2027E capex</td><td><strong>~$1.4Tn（+37% YoY）</strong></td><td>BofA（2026-09-29）</td></tr>
+<tr><td>前四大 Hyperscaler 积压订单（backlog）</td><td><strong>~$2.3Tn</strong></td><td>BofA（2026-09-29）</td></tr>
+<tr><td>2026 YTD 前五大融资</td><td>~$370bn（以 3-40 年长期债务为主）</td><td>BofA（2026-09-29）</td></tr>
+<tr><td>H1 2026 四大 capex 实际</td><td>已达 $301bn → 全年指向 $732.5bn</td><td>I/O Fund（2026-10）</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>1.2 周期判断：<span class="badge badge-ok">中期扩张（mid-cycle expansion）</span></h3>
+<p>当前处于 <strong>「资本开支维持高位、产能逐步跟上」</strong>的中期阶段：</p>
+<ul>
+<li><strong>早期信号（算力饥饿）已消退</strong>：CoWoS 产能 2026E 115K → 2027E 175K wpm，瓶颈从「绝对短缺」转向「结构性紧张」（N3 先进逻辑仍紧）。</li>
+<li><strong>高位资本开支持续</strong>：2026-2028 capex 指引持续上调（TSMC 上调至 $640亿/$860亿/$1000亿），未见拐点。</li>
+<li><strong>⚠️ 需警惕的边际信号</strong>：云 capex/经营现金流比率 2026-28E 预计达 <span class="warn">105-110%</span>（vs 2018-24 年 35-50%），FCF Margin 转负（-2.2%）。BofA 认为「短期仍可持续（几乎完全由经营现金流覆盖）」，但这是周期后期最需要盯的指标。</li>
+</ul>
+<p class="src">数据来源：BofA Global Research「Accelerating the Frontier」（2026-09-29）；J.P. Morgan TSMC 报告（2026-09-30）</p>
+</div>
+
+<!-- ==================== 2. 供需 ==================== -->
+<h2>2. GPU / ASIC 供需</h2>
+
+<div class="card">
+<h3>2.1 GPU 租赁价格：新代反弹，旧代承压（J.P. Morgan Data Center Watch，09-29）</h3>
+<table>
+<tr><th>GPU</th><th>9月均价</th><th>MoM</th><th>信号</th></tr>
+<tr><td>B200</td><td>$5.70/GPU-小时</td><td class="up">+1.3%</td><td>8月首跌后反弹，新一代供需健康</td></tr>
+<tr><td>H100</td><td>$2.64/GPU-小时</td><td class="down">-2.6%</td><td>旧代贬值加速</td></tr>
+<tr><td>A100</td><td>$1.59/GPU-小时</td><td class="down">-2.8%</td><td>旧代贬值加速</td></tr>
+</table>
+<p>B200/H100 价格比升至 <strong>2.16x</strong>，代际价差扩大。对持有大量 A100/H100 的 Neocloud（如 CoreWeave）构成资产减值压力，利好 NVIDIA 及 B200 供应链。</p>
+</div>
+
+<div class="card">
+<h3>2.2 先进逻辑/封装供给</h3>
+<ul>
+<li><strong>N3 供给紧张持续至 2028</strong>：N3 供需缺口从 2026 年 ~60万片扩大至 2027；NVIDIA 占 2027 N3 出货 <strong>55-60%</strong>（J.P. Morgan 09-30）。</li>
+<li><strong>CoWoS 产能爬坡</strong>：2026E <strong>115K</strong> → 2027E <strong>175K</strong> → 2028E <strong>220K</strong> wpm（Dashboard，多源：Bernstein/BofA/MS/JPM）。Booking 分布：NVIDIA 2026E 60K / 2027E 93.3K；Broadcom 2026E 20.8K / 2027E 35.4K；<strong>MediaTek 2026E 2.5K → 2027E 10.4K</strong>。</li>
+<li><strong>封装格局转折</strong>：非台积电 CoWoS/类 CoWoS 产能 2027/28 年底达 23%/30%；Intel EMIB-T 为大尺寸封装提供低成本方案（但基板良率仅 55-60% 限制普及）。TPU v9 已转用 EMIB-T。</li>
+<li><strong>1.6T 光模块供需错配</strong>：2026 需求 &gt;3000万只，实际出货仅 1000-1500万只，<span class="warn">缺口 50-67%</span>（3nm DSP FR 版本短缺，Nomura 09-29）。</li>
+</ul>
+<p class="src">数据来源：J.P. Morgan TSMC（09-30）；Hermes Industry Dashboard（2026-10-02）；Nomura Expert Call #74（09-29）</p>
+</div>
+
+<!-- ==================== 3. CSP 专题 ==================== -->
+<h2>3. Cloud Service Provider 专题</h2>
+
+<div class="card">
+<h3>3.1 四大 CSP 2026 capex 指引</h3>
+<table>
+<tr><th>CSP</th><th>2026 capex</th><th>自研 ASIC 进展</th><th>信号</th></tr>
+<tr><td><strong>Amazon</strong></td><td>$200bn（超市场一致预期 $147bn）</td><td>Trainium 3（Trn3，散热 ~$86k/rack，高于 GPU 系统）</td><td>最激进，capex 领跑</td></tr>
+<tr><td><strong>Alphabet</strong></td><td>$175-185bn</td><td>TPU v8 放量（MediaTek 代工），OCS 需求 2027 年 35-40k 台</td><td>TPU + OCS 双自研</td></tr>
+<tr><td><strong>Meta</strong></td><td>$115-135bn</td><td>MTIA 自研（MediaTek 视为乐观情境）</td><td>Llama 生态拉动</td></tr>
+<tr><td><strong>Microsoft</strong></td><td>~$190bn</td><td>Maia + OpenAI 绑定（OCS 采用最保守，仅 R&D）</td><td>OpenAI 算力需求主导</td></tr>
+</table>
+<p class="src">数据来源：Goldman/Yahoo Finance（2026-10）；BofA（09-29）；J.P. Morgan Taiwan Cooling（09-30）；Citi（09-28）</p>
+</div>
+
+<div class="card">
+<h3>3.2 自研 ASIC 策略变化：ASIC 正成为 HBM 与先进封装的最大变量</h3>
+<ul>
+<li><strong>HBM 消费方易主</strong>：2027 年 ASIC 占 HBM bit 需求 48%，超越 NVIDIA 43%（J.P. Morgan 09-22）。Google TPU 是 ASIC 阵营最大单体。</li>
+<li><strong>三星 HBM 深度绑定 ASIC</strong>：2027E HBM 营收 US$74bn（+274% YoY），需求驱动明确点名「ASIC 客户（尤其 Google TPU 强势定位）+ NVIDIA HBM4 份额提升」（Goldman Sachs 09-30）。</li>
+<li><strong>散热：ASIC 设计比 GPU 更激进</strong>：AWS Trn3 虽 TDP 仅 700W，单机柜散热内容 ~US$86,000 高于 NVIDIA VR（~$66,250）（J.P. Morgan 09-30）。</li>
+</ul>
+</div>
+
+<!-- ==================== 4. 光互连/温控 ==================== -->
+<h2>4. Interconnect &amp; Cooling（光互连 / 温控）</h2>
+
+<div class="card">
+<h3>4.1 OCS（光电路交换）：从 Google 独门项目变为 $110亿 商业化品类</h3>
+<ul>
+<li><strong>Citi 首次发布 OCS TAM 模型（09-28）</strong>：2030 年商户 OCS TAM 达 <strong>$110亿</strong>（Bucket 1 XPU Scale-Up ~$50亿 + Bucket 2 Spine ~$20亿 + Bucket 3 NVDA 重配置 ~$40亿）。</li>
+<li><strong>Lumentum（LITE）</strong>：~$4亿 OCS 订单积压（三个客户），2H26 OCS 收入指引 $4亿，目标价上调至 <strong>$1,400（+16.7%）</strong>，预计与 Coherent 合计占商户 OCS 份额 80%+。</li>
+<li><strong>Coherent（COHR）</strong>：OCS 可寻址机会「&gt;$40亿」（较 3月 OFC 翻倍），含 CPO $150亿 + OCS $40亿 + 热管理 $20亿的 $230亿框架。</li>
+<li><strong>Nomura 专家口径（09-29）</strong>：Google OCS 需求 2025 12-15k 台 → 2026E 18-20k 台 → 2027F 35-40k 台；全市场 2027 年 40-50k 台。MEMS 路线 2026 年占 80-85%，长期降至 40-50%。</li>
+</ul>
+<div class="note">⚠️ 风险：OCS 需求仍高度依赖 Google 单一客户（唯一完全确认的多代生产部署平台）；Bucket 3（NVDA 重配置）基于未验证的管理层评论（「~10x Google 规模」），时间线远至 2028/2029。</div>
+</div>
+
+<div class="card">
+<h3>4.2 温控：VRU 散热内容被市场显著低估</h3>
+<ul>
+<li><strong>NVIDIA VRU（Vera Rubin Ultra）NVL72 单机柜散热内容 ~US$98,500</strong>，较 VR（~$66,250）+49%，较 GB300（~$48,250）翻倍（J.P. Morgan 09-30）。</li>
+<li>三大升级路径：冷板双面设计 + 金刚石铜（计算托盘 +30-50%）、快接头 QD 升级 ZQD（单机柜 +100%）、均热盖 3 片式可拆卸（内容 +4-5x）。</li>
+<li><strong>受益标的</strong>：AVC 奇鋐（冷板龙头，TP NT$5,200，+46%）、Fositek 富世达（QD 龙头，TP NT$4,000，+58%）、Jentech 健策（热扩散盖）。</li>
+<li>下一驱动力：1.6T/3.2T 世代起 CPO/NPO 交换机液冷主流化（J.P. Morgan 预判 1.5-2 年内）。</li>
+</ul>
+</div>
+
+<!-- ==================== 5. MediaTek 重点 ==================== -->
+<h2>5. MediaTek APU / Custom ASIC 机会 <span class="badge badge-hot">【重点章节】</span></h2>
+
+<div class="card exec">
+<h3 style="margin-top:0;">5.1 核心结论：TPU v8 无延迟，v9 转 Intel EMIB-T，v10 或回 TSMC CoWoS</h3>
+<table>
+<tr><th>项目</th><th>关键信息</th><th>来源</th></tr>
+<tr><td><strong>TPU v8</strong></td><td>4Q26 收入指引 <strong>&gt;US$20亿</strong>，已出货，<strong>无延迟至 2Q27</strong>（证伪《经济日报》报道）</td><td>管理层口径，MS 09-30</td></tr>
+<tr><td><strong>TPU v9（HumuFish）</strong></td><td>采用 <strong>Intel EMIB-T 基板</strong>，无需 TSMC CoWoS；2028 年出货预测 300万台</td><td>MS 行业调研 09-30</td></tr>
+<tr><td><strong>TPU v10（IceFish）</strong></td><td>可能采用 TSMC CoWoS-L（MS 推测）</td><td>MS 推测 09-30</td></tr>
+<tr><td><strong>Tesla AI6</strong></td><td>MS 认为仍留在 GUC（世芯）</td><td>MS 观点 09-30</td></tr>
+<tr><td><strong>中国 CSP（字节跳动等）</strong></td><td>MediaTek 可能考虑，需符合美国设计指南 + TSMC 生产指南</td><td>管理层表述，MS 09-30</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>5.2 财务影响：TPU 驱动 FY2027-28 营收/盈利爆发</h3>
+<table>
+<tr><th>财年</th><th>营收（NT$ bn）</th><th>YoY</th><th>EPS（NT$）</th><th>ROE</th></tr>
+<tr><td>12/25</td><td>596.0</td><td>—</td><td>66.17</td><td>26.0%</td></tr>
+<tr><td>12/26e</td><td>671.9</td><td>+12.7%</td><td>73.35</td><td>28.5%</td></tr>
+<tr><td><strong>12/27e</strong></td><td><strong>1,095.6</strong></td><td class="up">+63.1%</td><td><strong>146.97</strong></td><td>48.8%</td></tr>
+<tr><td><strong>12/28e</strong></td><td><strong>2,315.2</strong></td><td class="up">+111.3%</td><td><strong>342.37</strong></td><td>78.6%</td></tr>
+</table>
+<p class="src">Morgan Stanley Research estimates（2026-09-30）。估值：剩余收益模型，股权成本 9.2%，中期增长 12.0%，终端增长 3.0%。目标价 NT$6,188（+26%）。</p>
+<div class="note">⚠️ 客观风险提示：上述 FY2027/28 预测极为激进（营收翻倍以上），高度依赖 Google 单一客户 + TPU v9/v10 执行。若《经济日报》延迟传闻成真或 v9 需求不及预期，下行空间大。现价 NT$4,910（09-29 收盘）对应 FY2026e EPS 的 P/E 约 67x，估值已不便宜。</div>
+</div>
+
+<div class="card">
+<h3>5.3 竞争格局：MediaTek 实质性切入，Broadcom 独供地位松动</h3>
+<ul>
+<li><strong>CoWoS Booking 显示 MediaTek 快速起量</strong>：2026E 2,500 wpm → 2027E <strong>10,416 wpm</strong>（Dashboard，多源）。BofA 口径「MTK TPU v7 2026E 15K wpm → v8 2027E 110K wpm」。</li>
+<li><strong>市场观点（cmoney 论坛，10 月初）</strong>：MediaTek 已实质性切入 Google TPU 供应链，Broadcom 独供地位松动；部分观点预估 Broadcom 在 Google TPU 相关营收占比将从 2026 年约 95% 下降。</li>
+<li><strong>BofA AI 加速器格局（09-29）</strong>：2030E Broadcom 隐含份额 17%（$251.8bn），Marvell 仅 1%（$15.1bn），「其他/TBD」6%（$89.9bn）——MediaTek 的机会空间落在「其他」与 Broadcom 份额的再分配。</li>
+</ul>
+</div>
+
+<!-- ==================== 6. 事件驱动 ==================== -->
+<h2>6. 事件驱动 &amp; 新兴信号</h2>
+
+<div class="card">
+<table>
+<tr><th>日期</th><th>事件</th><th>对算力/供应链影响</th></tr>
+<tr><td>09-29</td><td>《经济日报》报道 TPU v8 延迟 → 联发科 -7.1%</td><td class="down">短期情绪冲击，已被管理层证伪</td></tr>
+<tr><td>09-29</td><td>BofA 上调 AI DC TAM 至 $2.2Tn</td><td class="up">Agentic AI 竞赛，CPU/XPU 比率升至 149%（CY30E）</td></tr>
+<tr><td>09-30</td><td>J.P. Morgan 上调 TSMC 目标价至 NT$3,300，capex 大幅上调</td><td class="up">N3/N2/A14 产能加速，A14 提前 2-3 季度量产</td></tr>
+<tr><td>09-30</td><td>三星 2027E HBM 营收 US$74bn（+274%）</td><td class="up">HBM 超级周期延续，ASP +130%</td></tr>
+<tr><td>09-29</td><td>1.6T 光模块供需缺口 50-67% 确认</td><td class="warn">3nm DSP 短缺，供应链瓶颈</td></tr>
+<tr><td>10-01</td><td>联发科股价回升至 ~NT$4,980</td><td class="up">市场消化证伪信号，估值修复</td></tr>
+</table>
+</div>
+
+<!-- ==================== 供应链图 ==================== -->
+<h2>7. AI 供应链全景图</h2>
+<div class="chain">CSP Capex (~$725bn 四大 / ~$1.0Tn 含中国云, 2026E)
+    │
+    ├── GPU 采购
+    │   ├── NVIDIA (B200/H100) ← 租赁价 B200 +1.3%, 旧代 -2.6~-2.8%
+    │   ├── AMD (MI350/MI450)
+    │   └── Huawei Ascend (国内, 受出口管制)
+    │
+    ├── Custom ASIC ← 2027 年成 HBM 最大消费方 (48%)
+    │   ├── Google TPU v8 → MediaTek (4Q26 >US$20亿) ★重点
+    │   ├── Google TPU v9 → Intel EMIB-T (非 CoWoS)
+    │   ├── Amazon Trainium 3 → Alchip
+    │   └── Meta MTIA → 自研 / (MediaTek 乐观情境)
+    │
+    ├── 先进封装
+    │   ├── TSMC CoWoS 115K→175K→220K wpm (2026-28E)
+    │   └── Intel EMIB-T (TPU v9, 基板良率 55-60%)
+    │
+    ├── Interconnect / Optical
+    │   ├── OCS: Lumentum + Coherent (80%+ 份额, TAM $110亿 2030)
+    │   ├── 1.6T 光模块: 缺口 50-67% (3nm DSP 短缺)
+    │   └── HBM: 三星 2027E $74bn (+274%)
+    │
+    └── Cooling
+        ├── NVIDIA VRU ~$98.5k/rack (+49%)
+        └── AVC / Fositek / Jentech</div>
+
+<!-- ==================== 估值 ==================== -->
+<h2>8. 估值参考（股价 &amp; 目标价）</h2>
+<div class="card">
+<table>
+<tr><th>公司</th><th>代码</th><th>现价（日期）</th><th>评级</th><th>目标价</th><th>机构/日期</th><th>上行</th></tr>
+<tr><td>MediaTek</td><td>2454.TW</td><td>NT$4,910（09-29 收）<br>近日 ~NT$4,980</td><td>OW</td><td><strong>NT$6,188</strong></td><td>Morgan Stanley / 09-30</td><td class="up">+26%</td></tr>
+<tr><td>TSMC</td><td>2330.TW</td><td>NT$2,475（09-29 收）</td><td>OW</td><td><strong>NT$3,300</strong></td><td>J.P. Morgan / 09-30</td><td class="up">+33%</td></tr>
+<tr><td>Lumentum</td><td>LITE</td><td>$941.65（09-25 收）</td><td>Buy</td><td><strong>$1,400</strong></td><td>Citi / 09-28</td><td class="up">+49%</td></tr>
+<tr><td>Coherent</td><td>COHR</td><td>$295.83（09-25 收）</td><td>Buy</td><td>$420</td><td>Citi / 09-28</td><td class="up">+42%</td></tr>
+<tr><td>AVC 奇鋐</td><td>3017.TW</td><td>NT$3,555（09-29 收）</td><td>OW</td><td><strong>NT$5,200</strong></td><td>J.P. Morgan / 09-30</td><td class="up">+46%</td></tr>
+<tr><td>Fositek 富世达</td><td>6805.TW</td><td>NT$2,530（09-29 收）</td><td>OW</td><td><strong>NT$4,000</strong></td><td>J.P. Morgan / 09-30</td><td class="up">+58%</td></tr>
+<tr><td>Samsung</td><td>005930.KS</td><td>₩268,500（09-30）</td><td>Buy</td><td>₩490,000</td><td>Goldman Sachs / 09-30</td><td class="up">+83%</td></tr>
+<tr><td>SK Hynix</td><td>000660.KS</td><td>ADR $188.86（09-21 收）</td><td>OW</td><td>₩1,842,000 / ADR $245</td><td>J.P. Morgan / 09-22</td><td class="up">—</td></tr>
+<tr><td>NVIDIA</td><td>NVDA</td><td>$231.42（10-01）</td><td>—</td><td>BofA Top Pick</td><td>BofA / 09-29</td><td>—</td></tr>
+<tr><td>Broadcom</td><td>AVGO</td><td>~$355（10-01）</td><td>Buy</td><td>—</td><td>BofA / 09-29</td><td>—</td></tr>
+<tr><td>Marvell</td><td>MRVL</td><td>~$269（10-01）</td><td>—</td><td>BofA Top Pick</td><td>BofA / 09-29</td><td>—</td></tr>
+<tr><td>AMD</td><td>AMD</td><td>~$615（10-01）</td><td>—</td><td>持续看好</td><td>BofA / 09-29</td><td>—</td></tr>
+<tr><td>Micron</td><td>MU</td><td>~$1,088（10-01）</td><td>—</td><td>BofA Top Pick</td><td>BofA / 09-29</td><td>—</td></tr>
+</table>
+<p class="src">⚠️ 股价 Freshness 声明：台股/韩股为报告日前一交易日收盘价（09-29/09-30），美股为 09-25 收盘或 10-01 盘中/收盘。所有目标价均来自标注的卖方研报，未自行推算。美股（NVDA/AVGO/MRVL/AMD/MU）现价为 Morningstar/Robinhood 抓取的 10-01 数据，仅供方向参考，无对应目标价则不标注上行空间。</p>
+</div>
+
+<!-- ==================== 风险 ==================== -->
+<h2>9. 关键风险（上行 &amp; 下行）</h2>
+<div class="card">
+<h3 class="risk">下行风险</h3>
+<ul>
+<li><strong>云 capex 可持续性</strong>：capex/CFO 比率 105-110%、FCF 转负，若融资条件收紧或需求证伪，周期拐点风险。</li>
+<li><strong>MediaTek 执行风险</strong>：FY2027/28 预测依赖 Google 单一客户 + TPU v9/v10 执行；《经济日报》延迟传闻虽被证伪，但仍是悬顶之剑。</li>
+<li><strong>旧代 GPU 贬值</strong>：A100/H100 租赁价持续下行，Neocloud 资产减值风险。</li>
+<li><strong>1.6T 供应链瓶颈</strong>：3nm DSP 短缺导致出货缺口 50-67%，压制光模块收入确认。</li>
+<li><strong>地缘政治</strong>：美国芯片管制对台厂 ASIC 出口（尤其中国 CSP 项目）的合规风险。</li>
+</ul>
+<h3 class="opp">上行风险</h3>
+<ul>
+<li><strong>Agentic AI 需求超预期</strong>：每工作流 token 消耗比 chat 高 10-1000x，AI CPU/XPU 比率升至 149%（CY30E）。</li>
+<li><strong>MediaTek 新客户获取</strong>：全球 ASIC 请求增加，中国 CSP 项目若合规可打开第二增长曲线。</li>
+<li><strong>OCS 商业化加速</strong>：若 NVDA 2028/29 采用 OCS rack-scale 重配置，TAM 或达 Google 规模 10 倍。</li>
+<li><strong>HBM 超级周期</strong>：供需缺口贯穿 2028，ASP +130%（三星 2027E）。</li>
+</ul>
+</div>
+
+<!-- ==================== 数据来源 ==================== -->
+<h2>10. 数据来源索引</h2>
+<div class="card">
+<ul>
+<li>Morgan Stanley —「MediaTek: Management Clarifies TPU production timing and TSMC's CoWoS Support」，2026-09-30</li>
+<li>J.P. Morgan —「TSMC: Expect strong 3Q26, healthy 4Q26 guidance, faster capacity ramp, Raise PT to NT$3,300」，2026-09-30</li>
+<li>J.P. Morgan —「Taiwan Cooling Components: Accelerating cooling upgrades in Nvidia VRU and ASICs」，2026-09-30</li>
+<li>J.P. Morgan —「Hardware &amp; Networking: Data Center Watch（Token Spend Accelerates）」，2026-09-29</li>
+<li>J.P. Morgan —「Memory Market Update: HBM S-D update」，2026-09-22</li>
+<li>BofA Securities —「US Semiconductors: Accelerating the Frontier, Agentic race expands AI TAM to $2.2Tn」，2026-09-29</li>
+<li>Citi —「US Communications Equipment: OCS an $11B Opportunity, Raising LITE TP to $1,400」，2026-09-28</li>
+<li>Goldman Sachs —「Samsung Electronics: Expect W100tn for 3Q26 OP and 2027 HBM revenue」，2026-09-30</li>
+<li>Nomura —「Global AI Trend Tracker: Expert Call #74, OCS/CPO/optical transceivers update」，2026-09-29</li>
+<li>Hermes Industry Dashboard（CoWoS Capacity &amp; Booking），2026-10-02</li>
+<li>Yahoo Finance / I/O Fund — 2026 hyperscaler capex 汇总（2026-10）</li>
+</ul>
+<p class="src">注：本报告基于公开卖方研报与公开新闻，不含任何公司内部信息。所有数据可追溯至机构 + 日期。</p>
+</div>
+
+<div class="footer">
+🤖 Hermes Agent 自动生成 · AI / Data Center 双周分析 · 2026-10-02<br>
+面向 MediaTek 战略规划 · 数据源：Morgan Stanley / J.P. Morgan / BofA / Citi / Goldman Sachs / Nomura
+</div>
+
+</div>
+</body>
+</html>
