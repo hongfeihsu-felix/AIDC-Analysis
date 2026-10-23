@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI / Data Center 双周分析 | 2026-10-23</title>
+<style>
+:root{--bg:#0d1117;--fg:#e6edf3;--muted:#8b949e;--accent:#58a6ff;--border:#30363d;--card:#161b22;--up:#3fb950;--down:#f85149;--warn:#d29922;}
+*{box-sizing:border-box;}
+body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;margin:0;line-height:1.65;font-size:15px;}
+.wrap{max-width:980px;margin:0 auto;padding:32px 20px 80px;}
+.header{background:linear-gradient(135deg,#1a2332 0%,#0d1117 100%);border:1px solid var(--border);border-radius:12px;padding:28px 30px;margin-bottom:24px;}
+.header h1{font-size:24px;margin:0 0 6px;color:#fff;}
+.header .sub{color:var(--accent);font-size:14px;font-weight:600;margin:4px 0 8px;}
+.header .meta{color:var(--muted);font-size:12px;line-height:1.8;}
+.badge{display:inline-block;padding:2px 10px;border-radius:12px;font-size:11px;font-weight:700;margin-right:6px;}
+.badge-hot{background:#3d1f1f;color:#f85149;}
+.badge-warn{background:#3d2f0f;color:#d29922;}
+.badge-ok{background:#1f3d2f;color:#3fb950;}
+.badge-blue{background:#1f2f3d;color:#58a6ff;}
+h2{font-size:19px;color:#fff;border-bottom:2px solid var(--accent);padding-bottom:8px;margin:34px 0 14px;}
+h3{font-size:15px;color:var(--accent);margin:20px 0 8px;}
+p{margin:8px 0;}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin:14px 0;}
+.exec{background:linear-gradient(135deg,#1f2f1f 0%,#161b22 100%);border:1px solid #2ea043;}
+table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0 20px;}
+th{background:#1c2430;color:var(--muted);font-weight:600;text-align:left;padding:9px 11px;border:1px solid var(--border);font-size:12px;}
+td{padding:8px 11px;border:1px solid var(--border);vertical-align:top;}
+tr:nth-child(even) td{background:rgba(255,255,255,0.02);}
+.up{color:var(--up);font-weight:600;}
+.down{color:var(--down);font-weight:600;}
+.warn{color:var(--warn);font-weight:600;}
+.blue{color:var(--accent);font-weight:600;}
+ul,ol{margin:8px 0;padding-left:22px;}
+li{margin:5px 0;}
+strong{color:#fff;}
+.hl{background:#2d3a1f;color:#d0e8a0;padding:1px 6px;border-radius:4px;font-weight:600;}
+.src{color:var(--muted);font-size:11px;font-style:italic;}
+.chain{background:#0a0e14;border:1px solid var(--border);border-radius:8px;padding:16px 18px;font-family:'SF Mono',Menlo,Consolas,monospace;font-size:12.5px;line-height:1.8;white-space:pre;overflow-x:auto;color:#9ecbff;margin:14px 0;}
+.kpi{display:flex;flex-wrap:wrap;gap:12px;margin:14px 0;}
+.kpi-box{flex:1 1 180px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:14px 16px;}
+.kpi-box .num{font-size:22px;font-weight:800;color:var(--accent);}
+.kpi-box .lbl{font-size:12px;color:var(--muted);margin-top:2px;}
+.conf{color:var(--warn);font-weight:700;}
+.risk{color:var(--down);font-weight:600;}
+.opp{color:var(--up);font-weight:600;}
+.footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;text-align:center;}
+a{color:var(--accent);}
+.note{font-size:12px;color:var(--muted);background:#1c2128;border-left:3px solid var(--warn);padding:8px 12px;border-radius:4px;margin:10px 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="header">
+<h1>🤖 AI / Data Center 双周市场分析</h1>
+<div class="sub">AI 基础设施投资周期 · GPU/ASIC · 光互连 · 温控 · MediaTek TPU 机会</div>
+<div class="meta">
+报告日期：<strong>2026-10-23（周五）</strong> · 覆盖周期：2026-10-17 至 2026-10-23<br>
+数据来源：Goldman Sachs / Morgan Stanley / J.P. Morgan / Bernstein / Nomura / BofA / UBS（卖方研报，2026-10-19 至 10-22）；META 3Q26 财报（10-21 盘后）；NVIDIA GTC Berlin（10-20/21）；Yahoo Finance（股价，10-22 收盘）<br>
+作者：Hermes Agent（Felix 的研究助理） · 面向 MediaTek 战略规划<br>
+<span class="warn">⚠️ 股价数据日期：美股为 2026-10-22（周四）收盘价；台股为 2026-10-22 收盘价。报告生成时（10-23 08:00 CST）台股尚未开盘。</span>
+</div>
+</div>
+
+<div class="card exec">
+<h2 style="margin-top:0;border:none;">📌 执行摘要（本期三大判断）</h2>
+
+<h3>① <span class="hl">META 3Q26 营收/利润双超预期、capex 指引下限上修至 $135bn——但财报反跌 -7%，"AI 资本开支融资焦虑"已取代"需求质疑"成为主导定价变量</span></h3>
+<p>META 10/21 财报：3Q26 营收 <strong>$64.6bn（+26.1% YoY）</strong>、净利润 <strong>$9.86bn（+264% YoY）</strong>、广告收入 $63.06bn（+25.9%），全线超预期；2026E capex 指引 <strong>$135–145bn</strong>（下限由 $130bn 上修），单季 capex <strong>$33.9bn（+80.3% YoY）</strong>。但财报次日股价 <strong class="down">-6.98%</strong>——核心矛盾是 AI 费用超预期（GAAP EPS $3.83 vs 预期 $6.49）、资本密度 2026E 54.9% 升至 2027E 72.9%，叠加 META 宣布发无投票权新股融资的"资本筹措 overhang"。<strong>市场正在用脚投票：在利率上行（Fed 3.75–4%）环境下，"AI 债务融资能否持续"取代"AI 需求是否真实"成为定价主轴。</strong>（来源：Goldman Sachs 10/22、Nomura 10/22、Yahoo Finance 10/22）</p>
+
+<h3>② <span class="hl">NVIDIA GTC Berlin 密集披露供应链扩产（基板 2.5x、CoWoS-R +300%、CPO 15x、测试 2x、KYEC $11亿）——但 10/22 Lam Research "供给约束"警告触发全板块半导体抛售，供给确定性反转为估值压力</span></h3>
+<p>GTC Berlin 释放本轮周期最强供给扩张信号：基板产能 3 年 2.5 倍（Ibiden/SEMCO/Unimicron）、Amkor CoWoS-R 至 2028 扩产 300%+、CPO（SPIL）至 2027 中扩产 15 倍、后端测试产能 2026→2027 翻倍、KYEC 预留 <strong>$11 亿</strong>（2027/4 HVM）；1HFY27 物理 AI 收入 <strong>$110 亿（超 FY26 全年 ~30%）</strong>。然而 10/22 Lam Research 发布"supply chain constraints"警告后，NVDA <strong class="down">-4.4%</strong>、AMD <strong class="down">-8.1%</strong>、MRVL <strong class="down">-8.7%</strong>、COHR <strong class="down">-17.1%</strong>、CRWV <strong class="down">-10.1%</strong>——"供给约束"本是利空 GPU 供应商出货的变量，叠加估值已高，成为全板块获利了结的导火索。（来源：Goldman Sachs 10/21、Morgan Stanley 10/22、Yahoo Finance 10/22）</p>
+
+<h3>③ <span class="hl">CoreWeave 融资缺口 $76bn 成 NeoCloud 压力测试标本——Bernstein 目标价 $74→$51（Underperform），资金正从"高杠杆 NeoCloud"向"垂直整合/自有电力"（SpaceX SI）迁移</span></h3>
+<p>Bernstein（10/22）测算 CRWV 交付已签约积压订单需融资 ~$85bn、缺口 ~$76bn，无担保债收益率 ~15%、DDTL 5.5 = SOFR+5.5%，目标价 <strong>$74→$51</strong>（Underperform）；Goldman（10/21）则维持 Buy（TP $106，下调自 $139），分歧本质是"AI 算力债务能否自我清偿"。对照之下，垂直整合的 <strong>SpaceX/Super Intelligence 逆势翻倍</strong>：3Q26 营收 +161%、2027 新增算力 10GW、JPM 目标价 <strong>$240→$500</strong>（+108%）。资金正从"高杠杆、短合约、弱信用"的 NeoCloud 向"自有火箭/电力/模块化"的整合型玩家集中。（来源：Bernstein 10/22、Goldman 10/21、J.P. Morgan 10/21）</p>
+</div>
+
+<div class="kpi">
+<div class="kpi-box"><div class="num">$135–145bn</div><div class="lbl">META 2026E capex（下限 $130→135bn 上修）</div></div>
+<div class="kpi-box"><div class="num">+80.3%</div><div class="lbl">META 3Q26 单季 capex YoY</div></div>
+<div class="kpi-box"><div class="num">$76bn</div><div class="lbl">CoreWeave 积压订单融资缺口（Bernstein）</div></div>
+<div class="kpi-box"><div class="num">~15%</div><div class="lbl">CoreWeave 无担保债收益率</div></div>
+<div class="kpi-box"><div class="num">2.5x / 300%</div><div class="lbl">基板 2.5x · CoWoS-R +300%（GTC Berlin）</div></div>
+<div class="kpi-box"><div class="num">NT$4,010</div><div class="lbl">MediaTek 股价（10/22，1y target NT$6,033）</div></div>
+</div>
+
+<!-- ==================== 1. 周期定位 ==================== -->
+<h2>1. AI Capex 周期定位</h2>
+
+<div class="card">
+<h3>1.1 全球 AI 基础设施投资总量（最新数据）</h3>
+<table>
+<tr><th>指标</th><th>数值</th><th>来源/日期</th></tr>
+<tr><td>META 2026E capex 指引</td><td><strong>$135–145bn</strong>（下限由 $130bn 上修）；3Q26 单季 $33.9bn（+80.3% YoY）</td><td>META 3Q26 财报 / Nomura 10/22</td></tr>
+<tr><td>META 资本密度</td><td>2026E <strong>54.9%</strong> → 2027E <strong>72.9%</strong>（GS 模型）</td><td>Goldman Sachs 10/22</td></tr>
+<tr><td>SpaceX/SI 2027E capex</td><td>~<strong>$295bn</strong>（旧 ~$200bn，+48%）；2027 新增算力 ~10GW</td><td>J.P. Morgan 10/21</td></tr>
+<tr><td>三星 + SK海力士 capex</td><td>2026E <strong>+63%</strong>、2027E <strong>+26%</strong></td><td>BofA 10/20</td></tr>
+<tr><td>台积电 2027 capex</td><td><strong>+29%</strong></td><td>BofA 10/20</td></tr>
+<tr><td>共识云资本开支 CY26/CY27/CY28</td><td><strong>$950bn / $1.42Tn / $1.55Tn</strong>（YoY +97% / +47% / +9%）</td><td>J.P. Morgan 10/12</td></tr>
+<tr><td>微软 FY27E capex</td><td><strong>$210bn</strong>；数据中心容量 2030 至 30+GW</td><td>J.P. Morgan 10/12</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>1.2 周期位置判断：中期扩张延续，但"融资裂缝"从预警升级为全市场风险事件</h3>
+<p><strong>阶段判断：中期扩张（mid-cycle expansion）——供给端确定性本轮最强，但融资/利率端首次主导一次全板块抛售。</strong></p>
+<ul>
+<li><strong>需求侧硬数据仍强</strong>：META capex +80% YoY、指引下限上修；SpaceX 2027 capex 上修至 $295bn；三星+SK海力士 2026 capex +63%；台积电 2027 +29%。四大 hyperscaler 中 MSFT/GOOGL/AMZN 将于 10/28、10/28、10/29 披露 3Q26 capex，是下一关键验证点。</li>
+<li><strong>融资/利率端首次成为主导变量</strong>：Fed 已加息至 3.75–4%，Argus 预测年底前再加 2 次 25bp；CoreWeave 无担保债 ~15%、DDTL 5.5 = SOFR+5.5%；META 发无投票权新股融资引发"资本筹措 overhang"。10/22 的抛售是"AI 债务融资能否持续"担忧的第一次全面定价（上期报告预警的兑现）。</li>
+<li><strong>供给约束从"利好"反转为"压力"</strong>：Lam Research 10/22 警告供应链约束，直接触发 NVDA/AMD/MRVL/COHR 全线大跌。供给紧本是需求强劲的证明，但在估值高位 + 利率上行环境下，被解读为"出货节奏/利润兑现风险"。</li>
+</ul>
+<p class="src">关键监测：① MSFT（10/28）、GOOGL（10/28）、AMZN（10/29）3Q26 capex 指引；② CoreWeave/OpenAI 等 NeoCloud 债券收益率与再融资；③ Lam Research 供应链约束的具体环节与持续时长；④ 下周 FOMC/利率路径。</p>
+</div>
+
+<!-- ==================== 2. GPU/ASIC 供需 ==================== -->
+<h2>2. GPU/ASIC 供需</h2>
+
+<div class="card">
+<h3>2.1 核心公司动态与股价（10/22 收盘）</h3>
+<table>
+<tr><th>标的</th><th>收盘价</th><th>日涨跌</th><th>关键信号</th><th>最新目标价/评级</th></tr>
+<tr><td><strong>NVIDIA</strong> (NVDA)</td><td>$212.21</td><td class="down">-4.40%</td><td>GTC Berlin：基板2.5x/CoWoS-R+300%/CPO 15x/KYEC $11亿；物理AI $110亿(1HFY27)</td><td>GS Buy $300；MS OW $300（10/21-22）</td></tr>
+<tr><td><strong>AMD</strong> (AMD)</td><td>$507.93</td><td class="down">-8.10%</td><td>MI350 爬坡；Lam 供给约束拖累；Q2 数据中心收入 +107% YoY</td><td>Susquehanna Positive $550→$620（10/21）</td></tr>
+<tr><td><strong>Broadcom</strong> (AVGO)</td><td>$323.24</td><td class="down">-4.31%</td><td>AI 半导体收入 $10.8bn（+143% YoY）；Q3 指引 $29.4bn（+84%）</td><td>Tigress 首予 Buy $600（10/22）</td></tr>
+<tr><td><strong>Marvell</strong> (MRVL)</td><td>$223.47</td><td class="down">-8.70%</td><td>定制 ASIC + 光互连；FY27 收入展望上修至 $12bn</td><td>UBS Buy $335→$350（10/7）</td></tr>
+<tr><td><strong>TSMC</strong> (TSM)</td><td>$412.35</td><td class="down">-4.52%</td><td>3nm 为 NVIDIA 最大供给瓶颈；Moody's 上调至 Aa2</td><td>Barclays OW $665→$670（10/16）</td></tr>
+<tr><td><strong>Micron</strong> (MU)</td><td>$856.49</td><td class="down">-6.26%</td><td>存储 -42% 回调后，HBM 售罄/订单至 2028/29</td><td>JPM 行业 OW（10/20）</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>2.2 NVIDIA：GTC Berlin 供给扩张与物理 AI 第二曲线</h3>
+<ul>
+<li><strong>供应链扩产（本轮最实的增量）</strong>：基板产能 3 年 2.5 倍（Ibiden/SEMCO/Unimicron）、Amkor CoWoS-R 至 2028 底 +300%、CPO（SPIL）至 2027 中扩 15 倍、半导体测试总产能 2026→2027 翻倍、KYEC 预留 $11 亿（2027/4 HVM）。<strong>最大瓶颈仍是台积电 3nm 晶圆</strong>（来源：MS 10/22）</li>
+<li><strong>需求端：需求增速 100% vs CY27 收入指引 70%</strong>——30pct 缺口即上行期权，靠供应链扩张弥合（来源：MS 10/22）</li>
+<li><strong>DSX POD 模块化集装箱参考设计</strong>：部署时间"数月→两周"、2GW 部署节能 ~30%、日节水 5,600 万升，直接缓解 NeoCloud 现金流与电力痛点（来源：GS 10/21）</li>
+<li><strong>物理 AI 第二曲线</strong>：1HFY27 收入 $110 亿，超 FY26 全年 ~30%；Hyperion（AV/robotaxi）、AGILE ONE（人形机器人，2027Q1 出货）、AI RAN（与 Nokia 完成 T-Mobile CUDA 商用通话）（来源：GS 10/21）</li>
+<li><strong>资本回报</strong>：~$2,350 亿回购授权托底 EPS（来源：GS 10/21）</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>2.3 供需错配信号：供给约束 + 融资成本双裂缝</h3>
+<ul>
+<li><strong>先进封装/晶圆仍最紧</strong>：台积电 3nm 为硬约束（MS 10/22）；CoWoS dashboard 口径 2026E 115K wpm → 2027E 175K wpm → 2028E 220K wpm（行业数据库，BofA/Bernstein 聚合）；MS 口径更高（130K/200K/260K wpm，10/6）。</li>
+<li><strong>设备端首次预警</strong>：Lam Research 10/22 "supply chain constraints"——若为晶圆/封装上游缺料，将延后 GPU 出货，直接压制 2027 收入兑现。</li>
+<li><strong>存储"超跌"信号</strong>：三大存储股自 9 月高点平均 -42%（SKH -59%），JPM 判断股价已定价一个"尚未发生的 2027 下行周期"，自下而上供需（现货价稳、库存紧、订单至 2028/29）无破裂迹象，DCF 隐含 SEC/SKH 上行 272%/205%（JPM 10/20）。</li>
+</ul>
+</div>
+
+<!-- ==================== 3. CSP 专题 ==================== -->
+<h2>3. Cloud Service Provider 专题</h2>
+
+<div class="card">
+<h3>3.1 Meta（本期深挖）：AI 变现验证 + capex 强度登顶 + 融资 overhang</h3>
+<table>
+<tr><th>指标</th><th>3Q26 实际</th><th>同比</th><th>备注</th></tr>
+<tr><td>总营收</td><td>$64,601mn</td><td class="up">+26.1%</td><td>超 GS 预期 +1.4%</td></tr>
+<tr><td>Family of Apps 广告</td><td>$63,061mn</td><td class="up">+25.9%</td><td>超预期 +1.8%；>1,000万广告主用生成式 AI 工具</td></tr>
+<tr><td>净利润</td><td>$9,860mn</td><td class="up">+264%</td><td>超 Bloomberg 预期 7%（Nomura 口径）</td></tr>
+<tr><td>GAAP EPS</td><td>$3.83</td><td class="down">低于 GS $6.49</td><td>AI 费用+一次性费用超预期 +16.4%</td></tr>
+<tr><td>3Q26 capex</td><td>$33.9bn</td><td class="up">+80.3%</td><td>环比 +12.7%；含融资租赁本金 $34.9bn</td></tr>
+<tr><td>Reality Labs</td><td>$443mn / 亏损 $4.13bn</td><td class="down">-6% 收入</td><td>RL 亏损"今年见顶"，FY27 降至 ~$15bn</td></tr>
+</table>
+<ul>
+<li><strong>AI 变现量化验证</strong>：AI Business Assistant 采纳者转化率 +5%、预算 +9%；Muse（消费级 agent）UCAN 下载 ~1,000 万、>25% WAU 用购物、客单价 $200+、20% 美国 Muse 用户 FoA ARPU 已达 $1,000+。（来源：GS 10/22）</li>
+<li><strong>capex 指引下限上修至 $135bn</strong>，管理层称 2026 年后仍持续大规模投资；新 AI 业务 2027E 起贡献收入。（来源：Nomura 10/22）</li>
+<li><strong>融资 overhang</strong>：META 宣布创设无投票权新股（2:1 拆股实质，2027/1 下旬交易），市场解读为"为 AI 开支筹资、同时保住 Zuckerberg 投票权"，构成股价压制。（来源：Yahoo Finance 10/22）</li>
+<li><strong>目标价</strong>：GS 上调 $860→<strong>$885</strong>（Buy）；UBS $884→$892（Buy）；但 FY26E EPS 下调 -8.9% 至 $28.84（capex/费用上修吞噬）。</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>3.2 其他 CSP 关键信号</h3>
+<table>
+<tr><th>CSP</th><th>关键信号</th><th>财报日期</th><th>来源</th></tr>
+<tr><td><strong>Google</strong></td><td>被曝向 SpaceX 支付 <strong>$11bn/年算力费</strong>（集中度风险"无人定价"）；Gemini 4 Argon 发布重回 frontier 竞争</td><td>10/28</td><td>Yahoo 10/22</td></tr>
+<tr><td><strong>Microsoft</strong></td><td>FY27 capex ~$210bn；Q4 FY26 Azure 云 +43%、Microsoft Cloud $59.3bn</td><td>10/28</td><td>JPM 10/12 / Yahoo 10/22</td></tr>
+<tr><td><strong>Amazon</strong></td><td>AWS 收入加速驱动利润率；capex 相对克制（"contained"）；MS 上调 PT $335→$350</td><td>10/29</td><td>MS 10/19 / Yahoo 10/22</td></tr>
+<tr><td><strong>SpaceX / SI</strong></td><td>3Q26 营收 $14.6bn（+161%）；2027 新增算力 10GW（几乎全 Vera Rubin）；目标价 240→500</td><td>已披露</td><td>JPM 10/21</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>3.3 竞争格局：资金从"高杠杆 NeoCloud"向"垂直整合"迁移</h3>
+<p><strong>CoreWeave 是 NeoCloud 商业模式的压力测试标本：</strong></p>
+<ul>
+<li><strong>Bernstein（Underperform，TP $74→$51）</strong>：交付积压订单需融资 ~$85bn、缺口 ~$76bn；总债务 $42.1bn；无担保债 ~15%、DDTL 5.5 = SOFR+5.5%（~9%）；Meta 合约无杠杆 IRR 仅 9%（最好 9-12%）；契约测试 DDTL 5.0 于 2026/11/30（DSCR 1.35x）。"产能扩张后供应约束缓解，CRWV 将是首批且受冲击最严重者"。</li>
+<li><strong>Goldman（Buy，TP $106）</strong>：backlog $129bn 服务需 ~$60bn capex，扣除客户预付款后新债务需求 ~$23bn（6 年 GPU 寿命 ~$19.5bn），"缺口可测且可控"；FY2028 EPS 转正 $3.36。</li>
+<li><strong>股价反应</strong>：CRWV 10/22 <strong class="down">-10.06%</strong> 至 $55.60（Piper Sandler 10/21 下调 TP $153→$124，维持 OW）。</li>
+<li><strong>对照 SpaceX/SI</strong>：自有火箭（垂直整合）、自有电力、单 GW 建设成本 mid-$30 亿 vs 同业 $50 亿+、回收期 <1 年，JPM TP $240→<strong>$500</strong>。资金正奖励"整合型、自有能源"玩家，惩罚"高杠杆、短合约、弱信用"玩家。</li>
+</ul>
+</div>
+
+<!-- ==================== 4. 光互连/温控 ==================== -->
+<h2>4. Interconnect &amp; Cooling（光互连 / 温控）</h2>
+
+<div class="card">
+<h3>4.1 光互连：CPO 扩产 + 全板块重挫</h3>
+<table>
+<tr><th>标的</th><th>收盘价</th><th>日涨跌</th><th>关键信号</th></tr>
+<tr><td><strong>Coherent</strong> (COHR)</td><td>$207.82</td><td class="down">-17.07%</td><td>800G/1.6T 光模块；11/4 财报前估值压力；PhotonLink 牵引</td></tr>
+<tr><td><strong>Lumentum</strong> (LITE)</td><td>$752.54</td><td class="down">-11.54%</td><td>YVO4 钒酸钇 + 光模块</td></tr>
+<tr><td><strong>Credo</strong> (CRDO)</td><td>$162.77</td><td class="down">-10.70%</td><td>AEC/光 DSP</td></tr>
+<tr><td><strong>Astera Labs</strong> (ALAB)</td><td>$257.82</td><td class="down">-11.11%</td><td>PCIe/CXL 互连</td></tr>
+</table>
+<ul>
+<li><strong>CPO（共封装光学）是下一代互连主线</strong>：NVIDIA GTC 披露 SPIL CPO 产能至 2027 中扩 15 倍（再 2 倍至 2028 底）；台积电 COUPE 平台预计成主流。（来源：GS 10/21 / 行业数据库 Bernstein）</li>
+<li><strong>META capex 传导</strong>：Nomura 明确点名中际旭创（300308/3308 HK，Buy）、沪电股份（002463 CH，Buy）为 META 资本开支主要受益标的——全球 AI 基础设施投资延续直接利好光模块/PCB/CCL。</li>
+<li><strong>估值压力</strong>：COHR 单日 -17%、1M -33%，反映"AI optics"高估值在利率上行 + 财报前的获利了结；Susquehanna 下调 COHR TP $425→$350（10/21）。</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>4.2 温控：Vertiv 液冷 + 模块化部署，但被融资焦虑拖累</h3>
+<ul>
+<li><strong>Vertiv（VRT）</strong>：10/22 收盘 $195.59（<strong class="down">-7.81%</strong>），1M -22.8%；与 NVIDIA 合作 DSX 方案可将 AI 供电/冷却部署周期 <strong>缩短 10 周</strong>、首年累计 AI token 产出 <strong>+30%</strong>；推进"14 天 AI 工厂建设"模块化交付。</li>
+<li><strong>并购 UIG</strong>：~$1.45bn 首付（最高 $2.6bn）收购 Utility Innovation Group，延伸"behind-the-meter"微电网/现场发电，缩短 time-to-power。</li>
+<li><strong>基本面 vs 股价背离</strong>：Q2 调整后经营利润 +51% YoY、调整后 FCF 三倍至 $925M、全年收入指引上调至 $14bn（+37%）；但 Q2 曾因"一个迟到零件拖累整机交付"单日 -17%，Q3（10 月底）指引 ~$3.75bn（+40%）是关键验证点。</li>
+<li><strong>板块同跌</strong>：GE Vernova -11%、Bloom Energy -15%（一周），META 开支前景再燃 AI 融资担忧（VRT -7%、Eaton -6% 单日）。</li>
+</ul>
+</div>
+
+<!-- ==================== 5. MediaTek ==================== -->
+<h2>5. MediaTek APU / Custom ASIC 机会【重点章节】</h2>
+
+<div class="note">⚠️ 本章节全部基于公开数据（卖方研报 + 行业数据库 + 公开新闻），不涉及任何公司内部信息。目标价均注明机构与日期。</div>
+
+<div class="card">
+<h3>5.1 Google TPU 代工路线图：CoWoS booking 显示 MTK 2027"爆量"</h3>
+<table>
+<tr><th>CoWoS booking（wpm）</th><th>2025E</th><th>2026E</th><th>2027E</th><th>2028E</th></tr>
+<tr><td>CoWoS 总产能</td><td>65,000</td><td>115,000</td><td>175,000</td><td>220,000</td></tr>
+<tr><td>有效产能（Eff）</td><td>55,000</td><td>92,000</td><td>145,000</td><td>180,000</td></tr>
+<tr><td><strong>MediaTek booking</strong></td><td><strong>500</strong></td><td><strong>2,500</strong></td><td><strong class="up">10,416</strong></td><td>—</td></tr>
+<tr><td>MTK 阶段标注</td><td>起步</td><td>TPU v7 起步</td><td><strong>TPU v8 爆量</strong></td><td>—</td></tr>
+</table>
+<p class="src">来源：本地行业数据库（Bernstein / BofA / Morgan Stanley 卖方研报聚合，CoWoS Capacity &amp; Booking 表）</p>
+<ul>
+<li><strong>关键读数</strong>：MediaTek CoWoS 封装 booking 从 2025E 的 500 wpm → 2026E 2,500 wpm → 2027E <strong>10,416 wpm</strong>（约 4 倍环比跳升），数据库标注 <strong>"MTK TPU v7 起步"（2025-26）→ "MTK TPU v8 爆量"（2027）</strong>。这对应 Google TPU 代工从 v7 试产向 v8 量产的跨越。</li>
+<li><strong>对照 NVIDIA</strong>：NVIDIA CoWoS booking 2026E 60,000 → 2027E 93,333 wpm，MTK 2027 的 10,416 wpm 约为 NVIDIA 的 11%，量级可观但仍是"第二梯队"。</li>
+<li><strong>NVIDIA–MediaTek 战略联盟</strong>：Yahoo Finance NVDA 页"Key partnerships"明确列出 MediaTek——"strategic alliance to build next-generation AI computing platforms"（公开信息，10/22）。</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>5.2 MediaTek TPU 收入估算（公开研报口径）</h3>
+<ul>
+<li><strong>UBS（10/12 期）</strong>：2027E TPU 收入 <strong>$180 亿</strong>、2029-30 目标 >$500–600 亿；Google 加速器出货 2026E 4,167K → 2027E 10,000K（翻倍以上）；TPU v8t 4Q26 单季 >$20 亿。</li>
+<li><strong>UBS 目标价 NT$7,300</strong>（自现价隐含 +75% 以上空间，10/12 期）；<strong>JPM 目标价 NT$5,600</strong>。</li>
+<li><strong>股价现状</strong>：10/22 收盘 <strong>NT$4,010</strong>（当日 -3.7%，1M -22.6%，YTD +180%）；1y 目标价均值 <strong>NT$6,033</strong>。较 10/8 高点 NT$5,480 回撤 ~27%，主要受大盘 AI 抛售拖累，<strong>基本面（TPU booking 跳升）与股价背离</strong>。</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>5.3 vs Broadcom / Marvell 的竞争格局</h3>
+<table>
+<tr><th>维度</th><th>MediaTek</th><th>Broadcom</th><th>Marvell</th></tr>
+<tr><td>CoWoS booking 2027E</td><td>10,416 wpm（TPU v8）</td><td>35,416 wpm</td><td>—（AWS Trainium 代工，走 Marvell 自有封装协同）</td></tr>
+<tr><td>主要定制客户</td><td>Google TPU</td><td>Google TPU（历史）+ OpenAI 定制芯片</td><td>AWS Trainium/Inferentia</td></tr>
+<tr><td>AI 半导体收入</td><td>TPU 代工（爬坡）</td><td>$10.8bn（+143% YoY）</td><td>定制 ASIC + 光互连</td></tr>
+<tr><td>当前市值</td><td>NT$6.4Tn（~$200bn）</td><td>$1.54Tn</td><td>$201bn</td></tr>
+</table>
+<p class="src">来源：行业数据库（CoWoS booking）/ Yahoo Finance（10/22 市值）/ Broadcom 财报（AI semis +143%）</p>
+<ul>
+<li><strong>Broadcom 在 Google TPU 代工中是历史主供应商</strong>，CoWoS booking 2027E 35,416 wpm 仍远高于 MTK 10,416 wpm——MediaTek 是"第二供应商"角色逐步放量，而非取代。</li>
+<li><strong>MediaTek 的相对优势</strong>：与 NVIDIA 战略联盟、台系先进封装协同、以及 Google 引入第二供应商以分散 Broadcom 依赖的公开信号（前几期已跟踪）。</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>5.4 风险（公开信息）</h3>
+<ul>
+<li class="risk">地缘政治：美国对华芯片出口管制持续升级，台厂承接 Google 等美国 CSP 定制 ASIC 需符合 EAR/BIS 要求；若管制延伸至"代工定制 AI 芯片"，MediaTek 的 Google TPU 代工面临合规与地缘双重约束。</li>
+<li class="risk">Google 第二供应商策略不确定性：若 Google 重新集中于 Broadcom，或引入第三家（如 Marvell 产能富余），MTK 2027 "爆量"假设可能落空。</li>
+<li class="risk">估值/情绪：MTK 股价 1M -22.6%，处于 AI 板块抛售漩涡；TPU 代工收入尚处爬坡，短期盈利贡献有限，若 2027 放量节奏延后，估值回撤风险高。</li>
+</ul>
+</div>
+
+<!-- ==================== 6. 事件驱动 ==================== -->
+<h2>6. Emerging Signals &amp; Event-Driven（事件驱动）</h2>
+
+<div class="card">
+<h3>6.1 本期关键事件日历</h3>
+<table>
+<tr><th>日期</th><th>事件</th><th>方向</th></tr>
+<tr><td>10/20-21</td><td>NVIDIA GTC Berlin：供应链扩产 + 物理 AI + DSX POD</td><td>偏多（供给确定性）</td></tr>
+<tr><td>10/21 盘后</td><td>META 3Q26 财报：capex 下限上修至 $135bn，但发无投票权新股</td><td>多空交织</td></tr>
+<tr><td>10/22</td><td>Lam Research "supply chain constraints" 警告 → 全板块半导体抛售</td><td class="down">偏空（短期）</td></tr>
+<tr><td>10/22</td><td>Moody's 上调 TSMC 至 Aa2；CoreWeave -10%、Coherent -17%</td><td>中性偏空</td></tr>
+<tr><td>10/28</td><td>MSFT / GOOGL 3Q26 财报（AI capex 指引关键验证）</td><td>待观察</td></tr>
+<tr><td>10/29</td><td>AMZN 3Q26 财报；SMCI 正式财报（毛利率可持续性）</td><td>待观察</td></tr>
+<tr><td>10/30</td><td>MediaTek 3Q26 财报</td><td>待观察（TPU 进展）</td></tr>
+<tr><td>11/4</td><td>Coherent 财报（AI optics 需求验证）</td><td>待观察</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>6.2 需持续跟踪的信号</h3>
+<ul>
+<li><strong>NeoCloud 融资/再融资</strong>：CoreWeave 契约测试（2026/11/30 DDTL 5.0 DSCR 1.35x）、无担保债收益率是否维持 15%+；OpenAI 定制芯片融资（Broadcom 承接）。</li>
+<li><strong>利率路径</strong>：Fed 3.75–4%，Argus 预测年底前再加 2 次 25bp；美债收益率上行直接抬高 AI 基础设施债务成本。</li>
+<li><strong>供给约束归因</strong>：Lam Research 警告的具体环节（晶圆 vs 封装 vs 设备）——若为台积电 3nm/CoWoS 上游，将压制 NVIDIA 2027 收入兑现。</li>
+<li><strong>META 无投票权新股</strong>：2027/1 下旬交易的 2:1 拆股与筹资规模，是"AI 开支仍需外部融资"的体制性信号。</li>
+<li><strong>存储周期</strong>：JPM 判断股价已计入 2027 下行，但 CXMT 4F² 进展与 HBM4E 在 Rubin Ultra 的"降规"是潜在供给/需求弹性变量。</li>
+</ul>
+</div>
+
+<!-- ==================== 供应链映射 ==================== -->
+<h2>7. AI 供应链映射（本期更新）</h2>
+<div class="chain">CSP Capex (Meta $135-145bn / MSFT $210bn / SpaceX $295bn / GOOGL·AMZN 待10/28-29披露)
+    │
+    ├── GPU/ASIC采购
+    │   ├── NVIDIA (Vera Rubin) ← 最大受益者 · 供给端3nm为瓶颈
+    │   ├── AMD (MI350) ← 放量中 · 被Lam供给约束拖累
+    │   └── Huawei Ascend (国内 · 出口管制)
+    │
+    ├── Custom ASIC
+    │   ├── Google TPU → Broadcom (35,416 wpm) / MediaTek (10,416 wpm, TPU v8爆量) ← 重点
+    │   ├── Amazon Trainium → Marvell
+    │   ├── OpenAI 定制 → Broadcom (>$50bn 融资)
+    │   └── Meta MTIA → 自研
+    │
+    ├── Interconnect (全板块10/22重挫)
+    │   ├── Coherent/Lumentum/Credo (光模块 · COHR -17%)
+    │   ├── CPO: NVIDIA SPIL 15x 扩产 / TSMC COUPE
+    │   └── Fabrinet (代工)
+    │
+    └── Cooling (被融资焦虑拖累)
+        ├── Vertiv (液冷 · NVIDIA DSX 10周部署压缩 · UIG并购)
+        └── 模块化"14天AI工厂"趋势
+
+资金流向信号：高杠杆NeoCloud (CRWV -10%) → 垂直整合/自有能源 (SpaceX SI TP $500)</div>
+
+<div class="footer">
+本报告由 Hermes Agent 自动生成 · 面向 MediaTek 战略规划 · 数据截至 2026-10-23 08:00 CST<br>
+所有目标价/评级均注明机构与日期；股价为 2026-10-22 收盘价 · 预测值（E）与实际值已区分<br>
+数据来源：Goldman Sachs / Morgan Stanley / J.P. Morgan / Bernstein / Nomura / BofA / UBS / Yahoo Finance / 本地行业数据库（Bernstein/BofA/MS 聚合）
+</div>
+
+</div>
+</body>
+</html>
