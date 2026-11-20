@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI / 数据中心双周报 · 2026-11-20</title>
+<style>
+:root{--bg:#0e1117;--panel:#161b26;--panel2:#1c2333;--border:#2a3346;--txt:#e6edf3;--muted:#8b98ab;--accent:#38bdf8;--green:#34d399;--red:#f87171;--amber:#fbbf24;--purple:#a78bfa;}
+*{box-sizing:border-box;}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--txt);line-height:1.7;font-size:15px;}
+.wrap{max-width:1000px;margin:0 auto;padding:32px 20px 80px;}
+header{border-bottom:2px solid var(--accent);padding-bottom:20px;margin-bottom:28px;}
+h1{font-size:26px;margin:0 0 6px;color:#fff;}
+h2{font-size:20px;margin:36px 0 14px;padding:8px 14px;background:var(--panel2);border-left:4px solid var(--accent);border-radius:4px;color:#fff;}
+h3{font-size:16px;margin:22px 0 8px;color:var(--accent);}
+p{margin:8px 0;}
+.meta{color:var(--muted);font-size:13px;}
+.badge{display:inline-block;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:600;margin-right:6px;}
+.b-up{background:rgba(52,211,153,.15);color:var(--green);}
+.b-down{background:rgba(248,113,113,.15);color:var(--red);}
+.b-warn{background:rgba(251,191,36,.15);color:var(--amber);}
+.b-info{background:rgba(56,189,248,.15);color:var(--accent);}
+table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px;}
+th,td{border:1px solid var(--border);padding:7px 10px;text-align:left;vertical-align:top;}
+th{background:var(--panel2);color:#fff;font-weight:600;}
+tr:nth-child(even) td{background:var(--panel);}
+.pos{color:var(--green);font-weight:600;}
+.neg{color:var(--red);font-weight:600;}
+.card{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:16px 18px;margin:14px 0;}
+.card h4{margin:0 0 8px;color:#fff;font-size:15px;}
+.kv{display:flex;flex-wrap:wrap;gap:6px 0;margin:4px 0;}
+.kv span{margin-right:16px;color:var(--muted);font-size:13px;}
+.kv b{color:var(--txt);}
+.quote{border-left:3px solid var(--purple);padding:6px 12px;margin:10px 0;background:var(--panel2);color:#c9d2e0;font-size:14px;border-radius:0 4px 4px 0;}
+.src{color:var(--muted);font-size:12px;}
+.conf{background:rgba(251,191,36,.08);border:1px dashed var(--amber);padding:2px 6px;border-radius:4px;color:var(--amber);font-weight:600;font-size:12px;}
+.hr{border:none;border-top:1px solid var(--border);margin:20px 0;}
+ul{margin:6px 0;padding-left:22px;}
+li{margin:4px 0;}
+.toc{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:14px 18px;font-size:14px;}
+.toc a{color:var(--accent);text-decoration:none;}
+.toc a:hover{text-decoration:underline;}
+.footer{margin-top:40px;color:var(--muted);font-size:12px;border-top:1px solid var(--border);padding-top:14px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+<h1>AI / 数据中心双周报</h1>
+<div class="meta">第 19 期 · 2026-11-20（周五）· MediaTek 战略规划支撑 · 数据截至 2026-11-19 美股收盘</div>
+<div class="meta" style="margin-top:6px;">
+<span class="badge b-warn">NVDA 财报后 52 周低点</span>
+<span class="badge b-info">BIS 远程算力新规落地</span>
+<span class="badge b-up">MediaTek TPU 机会升级</span>
+<span class="badge b-info">Anthropic 史上最大 IPO</span>
+</div>
+</header>
+
+<div class="toc">
+<b>本期要点导航</b><br>
+<a href="#s1">① AI Capex 周期定位</a> · <a href="#s2">② GPU/ASIC 供需</a> · <a href="#s3">③ CSP 专题</a> · <a href="#s4">④ 光互连 &amp; 温控</a> · <a href="#s5">⑤ MediaTek APU / Custom ASIC 机会（重点）</a> · <a href="#s6">⑥ 事件驱动 &amp; 新兴信号</a> · <a href="#s7">⑦ 股价快照</a> · <a href="#s8">⑧ 数据来源</a>
+</div>
+
+<h2>执行摘要</h2>
+<div class="card">
+<p>本期是 AI 基建投资周期的一个<b>关键转折观察点</b>：<b>基本面与股价出现罕见背离</b>。NVIDIA F3Q27 交出史上最强季度（营收 $115.8B、同比 +103%、数据中心 +110%、Vera Rubin 首季即贡献 ~$20B），并把 FY28 增速指引上调至 +75%，但股价却触及 <span class="neg">52 周低点（~$146，1M -33%）</span>——三大因素压制估值：①黄仁勋辞任 CEO（11-12，婚外情丑闻 + 所谓"华人间谍"调查）带来的治理/执行折价；②BIS 远程算力新规（11-16 IFR）从"管制芯片"升级为"管制算力"、覆盖推理，动摇中国敞口与第三国数据中心叙事；③Anthropic 史上最大 IPO（11-19）引发的"供应商返投支撑需求"质疑，资金从老牌 AI 硬件轮动。</p>
+<p>对 MediaTek 而言，本期出现<b>两则确定性升级信号</b>：<b>NVIDIA 宣布 $3.5B 战略投资 MediaTek</b>（Jensen Huang 称"非循环交易"、十年路线图是核心），以及 <b>ByteDance 被报道正接近与 MediaTek 达成 AI 数据中心芯片合作</b>；叠加 Goldman Sachs 在 Broadcom 财报前瞻中明确点名 "incremental competition from MediaTek and others"，MediaTek 在 Google TPU + 新兴超大规模 ASIC 双线的位置正从"传闻"走向"公开叙事"。</p>
+<p><b>周期判断：</b>AI capex 仍处"<b>中期偏后段</b>"——需求端积压订单 $2.5T、供应承诺 $390B、2026 年五大超大规模资本开支 ~$800-828B（+~20% QoQ）均为历史高位；但边际信号开始分化：腾讯率先喊出"capex 见顶、2028 下降"，Broadcom 的 FY28 部署 75% 依赖"新兴超大规模客户"（融资未定），BIS 新规给亚洲数据中心需求留下"空气袋"（MS 下调东盟 2028 数据中心电力需求 -33%）。<b>供给/物理约束（土地/电力/厂房）取代芯片供给成为新的瓶颈。</b></p>
+</div>
+
+<hr class="hr" id="s1">
+
+<h2>① AI Capex 周期定位</h2>
+
+<div class="card">
+<h4>全球 AI 基建投资总量（2026 年维持历史高位）</h4>
+<table>
+<tr><th>指标</th><th>数值</th><th>来源 / 日期</th></tr>
+<tr><td>Amazon + Alphabet + Meta + Microsoft Q3'26 合计资本开支</td><td><b>$201.9B</b>（环比 +$36.9B，单季最大增幅）</td><td>The Kobeissi Letter / 247wallst，2026-10</td></tr>
+<tr><td>2026 全年五大超大规模合计 capex 指引</td><td><b>$803–828B</b>（含 SpaceX）</td><td>Business Insider，2026-10</td></tr>
+<tr><td>NVIDIA 超大规模云积压订单</td><td><b>$2.5T</b>（3 个月前 $2T）</td><td>NVIDIA F3Q27 电话会，2026-11-17</td></tr>
+<tr><td>NVIDIA 供应承诺</td><td><b>$390B</b>（此前 $279B，主要为多年期存储采购）</td><td>NVIDIA F3Q27，2026-11-17</td></tr>
+<tr><td>Broadcom FY27 定制 XPU 部署目标</td><td>~10GW；FY28 ~20GW（新兴客户占 ~75%）</td><td>Goldman Sachs，2026-11-18</td></tr>
+</table>
+<p class="src">结论：总量仍在扩张，但边际驱动已从"芯片供给"转向"客户侧土地/电力/厂房（land/power/shell）就绪度 + 融资能力"。NVIDIA 管理层明确配额现取决于客户基建就绪度，而非 NVDA 供应——这是周期阶段位移的核心信号。</p>
+</div>
+
+<div class="card">
+<h4>周期阶段判断：中期偏后段（"供给/物理约束"取代"算力饥饿"）</h4>
+<ul>
+<li><b>需求端仍强但能见度以"地板"形式呈现</b>：JPM 指出多年需求被明确定义为 floor，且未计入若干增量收入流；但"地板"叙事本身就暗示上行动力取决于客户融资与基建落地。</li>
+<li><b>腾讯打响"capex 见顶"第一枪（中国侧）</b>：Q3 现金 capex RMB65.1bn，管理层指引未来数季"横向波动"、<b>2028 年起下降</b>——这是继 Sony 之后 Bernstein 覆盖内第二家明确"当前硬件成本不可持续"的公司。</li>
+<li><b>物理/监管约束显性化（美国侧）</b>：2026 中期选举民主党横扫后，UBS 估 2028 年美国 ~30% 数据中心新增产能面临建设暂停风险；IDCA 统计 2024-01 至 2026-05 已有 46 个 AI DC 项目（$170bn+）被阻/撤回/搁置。</li>
+<li><b>关键指标交叉验证</b>：NVIDIA 数据中心收入 $107.6B（+110% YoY）、Broadcom AI 半导体收入 $16.7B（+221%）、Marvell 数据中心 $2.17B（+46%）——三家同步高增，确认周期尚未见顶，但估值已提前交易"见顶预期"。</li>
+</ul>
+</div>
+
+<hr class="hr" id="s2">
+
+<h2>② GPU/ASIC 供需</h2>
+
+<div class="card">
+<h4>NVIDIA：史上最强季度 vs 52 周低点股价</h4>
+<table>
+<tr><th>指标（F3Q27，10 月季）</th><th>数值</th><th>同比</th></tr>
+<tr><td>总营收</td><td><b>$115.8B</b>（超指引中值 $108B、超一致预期 $109B）</td><td class="pos">+103%</td></tr>
+<tr><td>数据中心营收</td><td><b>$107.6B</b></td><td class="pos">+110%</td></tr>
+<tr><td>— Hyperscale</td><td>$60.1B（环比 +23%，较 F2Q +13% 加速）</td><td class="pos">+71%</td></tr>
+<tr><td>— ACI&amp;E（neocloud + 前沿实验室）</td><td>$47.5B</td><td class="pos">~+195%</td></tr>
+<tr><td>毛利率</td><td>74.9%（超预期 74.1%）</td><td>—</td></tr>
+<tr><td>EPS（proforma）</td><td>$2.68（超一致预期 $2.08）</td><td>—</td></tr>
+<tr><td>Vera Rubin 首季贡献</td><td><b>~$20B</b>（史上最快产品爬坡）</td><td>—</td></tr>
+<tr><td>Q4 指引</td><td>$130B ±3%（中点超 Street 4.1%）</td><td>—</td></tr>
+</table>
+<p><b>FY28 增速框架上调至 +75% YoY</b>（此前 +70%），按 JPM 测算 FY28 营收 ~$741B，高于一致预期 ~6%。CPU 与企业业务 FY28 各翻倍以上。网络业务超 $21B，CPO scale-out 已量产。</p>
+<p><b>但股价 ~$146（52 周低点）</b>：三大压制——①<b>CEO 过渡</b>：董事会确认 Huang 不会复职，永久 CEO 遴选进行中，CFO Colette Kress 任临时 CEO；②<b>监管</b>：已停止对华许可版 Hopper（$2.4B，占营收 ~2%），SEC/DoJ 调查聚焦"转移（diversion）"，"可能远超中国"；③<b>融资</b>：CY28 生态融资语调更审慎。</p>
+<div class="kv"><span>JPM：评级 OW，目标价 <b>$215→$230</b>（Dec-27）</span><span>BofA：BUY，目标价 <b>$280</b>（估值倍数 18x→16x ex-cash）</span><span>Melius：<b>下调至 Hold</b>，目标价 $315→$185</span></div>
+<p class="src">来源：J.P. Morgan（2026-11-18）、BofA Securities（2026-11-18）、Yahoo Finance（2026-11-19）</p>
+</div>
+
+<div class="card">
+<h4>AMD：Hunterbrook 做空报告冲击（11-19）</h4>
+<ul>
+<li><b>Q3 FY26 业绩创新高</b>：营收 $13.4B（+45% YoY）、毛利率 56%（+190bps）、Non-GAAP EPS $2.09（+74%）；<b>Q4 指引 ~$17B（~+66%）</b>；CEO Lisa Su 11 月初宣布 AMD "是一家数据中心公司"（DC 收入近翻倍、游戏收入 -40%）。</li>
+<li><b>11-19 做空冲击</b>：Hunterbrook Media 发布做空报告《AMD Has Its Own China Problem》，指控 AMD 向被列入实体清单的中国服务器厂 IEIT Systems 及三家关联公司持续提供 firmware 更新，并称 AMD 对华/港收入 &gt;20%。AMD <span class="neg">当日 -8~9%</span>，公司否认指控。Hunterbrook 自认"未证明违反出口法"——本质是<b>监管风险重定价</b>而非已证实违规。</li>
+<li>估值：TTM P/E ~104x，Forward P/E ~31x；BofA 11-12 维持 Buy、目标价 $650→$700。</li>
+</ul>
+<p class="src">来源：Yahoo Finance（2026-11-19）、Hunterbrook Media（2026-11-19）</p>
+</div>
+
+<div class="card">
+<h4>Broadcom：AI 半导体 $16.7B（+221%），但目标价被估值压缩</h4>
+<ul>
+<li><b>Q3 FY26（10 月季）</b>：营收 $29.6B（+86% YoY），其中 AI 半导体 <b>$16.7B（+221%）</b>、基础设施软件 $8.8B（+29%）；Non-GAAP EPS $3.32（+96%）。</li>
+<li><b>GS 目标价 $540→$460（-14.8%）</b>：纯粹是<b>估值倍数压缩（30x→25x）</b>，标准化 EPS $18.00 不变——即"倍数压缩而非盈利下修"。GS 预测 FY27 总收入 $177B、AI 收入 $119B。</li>
+<li><b>最大不确定性</b>：FY28 ~20GW 定制 XPU 部署中 <b>~75% 来自新兴超大规模客户</b>，其外部融资能力是最大变量；land/power/shell 物理约束叠加。</li>
+<li><b>竞争信号（对 MediaTek 关键）</b>：GS 明确点名 <b>"incremental competition from MediaTek and others"</b> 威胁下一代 XPU 客户关系持久性，尤其 Google 等关键账户。</li>
+</ul>
+<p class="src">来源：Goldman Sachs（2026-11-18）、Yahoo Finance（2026-11-19）</p>
+</div>
+
+<div class="card">
+<h4>Huawei Ascend / 国产替代：海外通道被封 → 供需缺口扩大</h4>
+<ul>
+<li>BIS 新规（11-16）堵死中国海外算力通道，Bernstein 判断国产 AI 芯片（寒武纪、海光、华为昇腾）<b>结构性受益但量受 HBM 供给约束</b>——2027 年主要利好体现在 <b>ASP 与盈利能力</b>而非出货量。</li>
+<li>中国设计、海外代工的 AI 芯片路径收紧：16/14nm 及以下或 FinFET/GAAFET 推定受控，取消"晶体管数量低于阈值"规避路径。</li>
+<li>国产加速器竞争加剧（JPM 口径），阿里云增长已从"需求驱动"切换为"芯片供给驱动"。</li>
+</ul>
+<p class="src">来源：Bernstein（2026-11-18）、J.P. Morgan（2026-11-17）</p>
+</div>
+
+<hr class="hr" id="s3">
+
+<h2>③ CSP 专题（本期重点：Microsoft / Google / Tencent + Anthropic）</h2>
+
+<div class="card">
+<h4>四大美国超大规模资本开支（Q3'26 已披露）</h4>
+<table>
+<tr><th>公司</th><th>Q3'26 capex</th><th>2026 全年指引</th><th>AI 收入 / 云增速信号</th></tr>
+<tr><td><b>Amazon (AWS)</b></td><td><b>$75.9B</b>（最大开支方）</td><td>~$220B</td><td>AWS 收入 +39% 至 $46B（5 年最快）</td></tr>
+<tr><td><b>Microsoft (Azure)</b></td><td>Q1 FY27 合计 $45.2B（$39.4B 现金 + $7.4B 融资租赁）</td><td>~$170B</td><td>Azure +48%；Cloud +30%；RPO $677B（+73%）</td></tr>
+<tr><td><b>Meta</b></td><td>Q3 营收 $64.6B（+26%）</td><td>$130–145B</td><td>MTIA 自研 + Llama 生态</td></tr>
+<tr><td><b>Alphabet (Google)</b></td><td>（"heavy AI spending"）</td><td>—</td><td>Cloud 加速；Q3 广告 miss；Gemini Tasks 代理上线</td></tr>
+</table>
+<p class="src">来源：Reuters（2026-10-29）、Business Insider（2026-10）、Yahoo/MSFT 页（2026-11）</p>
+</div>
+
+<div class="card">
+<h4>Microsoft：四大 AI 开支方中唯一仍产出大额自由现金流的玩家</h4>
+<ul>
+<li>Q1 FY27 营收 $92.3B（+19%）、EPS $4.89（+18% ex-OpenAI 投资影响）；Q2 指引 $96.0–97.1B。</li>
+<li>Copilot 日活 +~50% QoQ（&gt;5x YoY）；&gt;50,000 席客户数 +&gt;8x；大众汽车 33 万员工铺开。</li>
+<li>capex = 69% 经营现金流（四大开支方最低），TTM FCF ~$60B；CFO 称"需要时才会动用外部融资"（尚未发债，区别于同业）。</li>
+<li><b>风险</b>：OpenAI 集中度 ~11% 季度收入；Azure 部分第三方产能交付滑档；Windows OEM -27%。</li>
+</ul>
+<p class="src">来源：Yahoo Finance / Microsoft 财报（2026-11）</p>
+</div>
+
+<div class="card">
+<h4>Google：Gemini Tasks 代理参战 + 4x 算力效率</h4>
+<ul>
+<li><b>Gemini "Tasks" 上线</b>：免费向美/日/韩/加/澳/印六国推出，初期覆盖 ~2.5 亿用户（Gemini 总 MAU 10 亿+），对标 Meta Muse（~1,200 万 MAU）。差异化在 Google 生态独占（Wallet/Photos/YouTube）。</li>
+<li><b>Gemini 4 Hydrogen 算力效率 ~4x</b>（MS 测算，vs 9 月 Gemini 3.8 Flash）——模型效率决定 serving 成本与 GenAI ROIC。</li>
+<li><b>风险</b>：搜索有效变现率 20–40% vs 代理佣金低个位数，存在自我蚕食风险；MS 2026e EPS $18.89 低于共识 8.4%；Q3 广告 miss；SpaceX 持股单季亏损 &gt;$10B；Druckenmiller 清仓 $120M 头寸。</li>
+<li>MS 评级 OW，目标价 $375（较前值 $397.61 隐含下调 ~5.7%）。</li>
+</ul>
+<p class="src">来源：Morgan Stanley（2026-11-18）、Yahoo Finance（2026-11-19）</p>
+</div>
+
+<div class="card">
+<h4>Tencent：中国侧"capex 见顶"信号 + 算力成本侵蚀利润</h4>
+<ul>
+<li><b>Q3 现金 capex RMB65.1bn</b>，管理层指引未来数季"横向波动"、<b>2028 年起下降</b>；prepayment RMB86bn（将回落）。</li>
+<li><b>算力成本严重侵蚀利润率</b>：Q3 带宽与服务器成本 RMB20.0bn（+132% YoY）、非人员研发费用 +152%，导致 Non-GAAP 经营利润 RMB68.1bn（<b>-6.2% YoY</b>，低于共识 6.6%）。</li>
+<li><b>AI 变现首次量化</b>：WorkBuddy 年化收入 ~$500M run-rate、Xiaowei DAU 3,000 万（商业化 6-12 个月清晰化）。</li>
+<li>Bernstein 目标价 HK$760→HK$520（-31.6%，连续第 4 次下调），倍数 20x→16x；Nomura/MS 同步下调盈利预期。</li>
+</ul>
+<p class="src">来源：Bernstein（2026-11-18/19）、Nomura（2026-11-19）、Morgan Stanley（2026-11-18）</p>
+</div>
+
+<div class="card">
+<h4>Anthropic：史上最大 IPO 与"供应商返投"质疑</h4>
+<ul>
+<li><b>11-19 定价 $83、募资 $81.3B</b>（超 SpaceX 成史上最大 IPO），开盘 $111.50（+34%），市值 ~$2tn。</li>
+<li><b>供应商配售 $26B</b>：TSMC $500M slice、Broadcom 加入；叠加 $895B 累计承诺算力支出——引发市场质疑 <b>"AI capex 是否被供应商自己掏钱支撑、需求是否自足"</b>（"supplier-funded demand"）。</li>
+<li>当日 Dow 盘中 -800~1000 点，资金从老牌 AI 硬件轮动至 ANT；NVDA/AVGO/MU/AMD 均承压。</li>
+</ul>
+<p class="src">来源：Reuters / Yahoo Finance（2026-11-19）</p>
+</div>
+
+<div class="card">
+<h4>中国 CSP：BIS 新规敞口分化</h4>
+<ul>
+<li><b>阿里</b>：阿里云海外 AI 收入占云收入 &lt;10%，直接收入冲击小；Qwen4-Max（11-16）发布，单任务成本降 58%（RMB26.58→RMB11.16），AI 定位转向企业单位经济性。Citi 维持 Buy、TP US$193。</li>
+<li><b>百度</b>：AI Cloud Infra 3Q26 +94% YoY 至 RMB8.2bn（2Q +50%），广告 -22%；自研 M100 2026 底量产就绪、M300 2027 推出。BofA 维持 Buy、TP US$132。</li>
+<li><b>MiniMax 最暴露</b>：1H26 约 60.8% 收入来自海外，生成式产品不适用推荐豁免，JPM 预计跑输。</li>
+<li><b>腾讯/智谱相对防御</b>：腾讯境外主要负载获推荐豁免；Z.AI &gt;80% 收入来自中国 + 已入实体清单。</li>
+</ul>
+<p class="src">来源：J.P. Morgan（2026-11-17）、Citi（2026-11-16）、BofA（2026-11-17）</p>
+</div>
+
+<hr class="hr" id="s4">
+
+<h2>④ 光互连 &amp; 温控</h2>
+
+<div class="card">
+<h4>光模块 / 光互连</h4>
+<ul>
+<li><b>Coherent (COHR)</b>：Q1 FY27 营收 $2.37B（<b>+49.9% YoY</b>）、调整后 EPS $2.09（+80.2%）；董事会批准 $2B 无限期回购。Citi 11-06 维持 Buy、目标价 $420→$440。风险：TTM 杠杆自由现金流 -$1.68B、客户集中度。</li>
+<li><b>Lumentum (LITE)</b>：~$528.82（-4.04%）；财报销售 +137% 但股价承压（估值/获利了结）。</li>
+<li><b>NVIDIA 网络业务超 $21B（+158%）</b>，CPO scale-out 已量产；Lambda 部署首个 NVIDIA Photonics CPO 交换机（超 10,000 颗 GB300 GPU）。</li>
+<li>MS 称"Optical demand 强劲但 supply 仍 constrained"——光互连供不应求延续。</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>温控 / 电力</h4>
+<ul>
+<li><b>Vertiv (VRT)</b>：Q3 营收 $3.27B（<b>+24% YoY</b>）、调整后经营利润 +51%、调整后 FCF 增至 $925M；全年营收指引上调至 ~$14B（~+37%）；有机订单 +100%+；并购 Utility Innovation Group（~$1.45B 首付）延伸 behind-the-meter 微电网。但股价 <span class="neg">-6.26%</span>（6M -42.66%），因模块化交付时点错配 + 数据中心建设放缓担忧。</li>
+<li><b>电力约束成为新瓶颈</b>：MS 下调东盟 2028 数据中心电力需求 <b>-33%（-34TWh）</b>，马来西亚最暴露（8GW 在建、中国关联厂商占 ~50%）；美国侧 2028 年 ~30% 新增产能面临建设暂停风险。</li>
+</ul>
+<p class="src">来源：Yahoo Finance（2026-11-19）、Morgan Stanley（2026-11-18）</p>
+</div>
+
+<hr class="hr" id="s5">
+
+<h2>⑤ MediaTek APU / Custom ASIC 机会【重点章节】</h2>
+
+<div class="card" style="border-color:var(--accent);">
+<h4>本期三大升级信号（公开信息）</h4>
+<table>
+<tr><th>信号</th><th>内容</th><th>来源 / 日期</th></tr>
+<tr><td><b>① NVIDIA $3.5B 战略投资</b></td><td>NVIDIA 投资 $3.5B 于 MediaTek 以拓展 GPU 之外布局；Jensen Huang 称该交易"不是循环交易"，"十年路线图才是真正信号"。此前的 AI 计算平台合作进一步深化。</td><td>Yahoo Finance / MediaTek 页（2026-11）</td></tr>
+<tr><td><b>② ByteDance 接洽 AI DC 芯片</b></td><td>据报道 ByteDance 正接近与 MediaTek 达成 AI 数据中心芯片合作协议（聚焦火山引擎算力自给）。</td><td>Yahoo Finance / MediaTek 页（2026-11）</td></tr>
+<tr><td><b>③ Goldman 点名 MediaTek 竞争 Broadcom</b></td><td>Broadcom 3Q 前瞻中，GS 明确将 "incremental competition from MediaTek and others" 列为定制 ASIC（XPU）赛道风险，指向下一代 XPU 客户关系（尤其 Google）持久性。</td><td>Goldman Sachs（2026-11-18）</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h4>TPU 业务进展（公开信息 + 卖方研报推算）</h4>
+<ul>
+<li><b>Google TPU v7（v7e）</b>：CoWoS 产能分配中，MediaTek TPU v7 已"起步"（2026 年，占 CoWoS 份额爬坡中）。<span class="conf">Confidential</span></li>
+<li><b>Google TPU v8（v8i）</b>：预计 <b>2027 年"爆量"</b>——CoWoS 延伸至 14x 光罩，是 MediaTek TPU 收入放量的关键节点。<span class="conf">Confidential</span></li>
+<li><b>CoWoS 产能锚点</b>（Dashboard 聚合卖方数据）：2026 年终 <b>115K wpm</b>（年产出 1.1M 片）→ 2027 年终 <b>175K wpm</b>（年产出 1.9M 片）→ 2028 <b>220K+ wpm</b>；Google 在 CSP 客户中占 ~15%。</li>
+<li><b>竞争格局（vs Broadcom / Marvell）</b>：Broadcom 是 Google TPU 现任主供应商（AI 半导体 $16.7B/季）；Marvell 主供 Amazon Trainium（数据中心 +46%）；MediaTek 以"第二供应商 + 增量设计"切入，GS 已将其列为 Broadcom 的增量竞争。</li>
+</ul>
+<p class="src">来源：Dashboard 本地行业数据库（Bernstein/Citi/Goldman/JPM 聚合）、Goldman Sachs（2026-11-18）</p>
+</div>
+
+<div class="card">
+<h4>市场机会估算（公开数据推算）</h4>
+<ul>
+<li><b>Google 年度 capex 规模</b>：Alphabet 2026 属"heavy AI spending"阵营，五大超大规模 2026 合计 $803–828B，Google 为其中核心开支方之一。</li>
+<li><b>TPU 相关市场规模</b>：Broadcom 单季 AI 半导体收入 $16.7B（年化 ~$67B，Google 为最大客户之一）是 TPU ASIC 市场规模的直接代理指标；GS 预测 Broadcom FY27 AI 收入 ~$119B。</li>
+<li><b>MediaTek 增量空间</b>：若 MediaTek 在 Google TPU v8 世代获得量产份额（第二供应商），叠加 NVIDIA 合作（AI 计算平台）与潜在 ByteDance ASIC，对应的是数十亿美元量级的定制 ASIC 收入增量——但具体金额依赖 NRE/royalty 模式，需与 Felix 确认（见 Open Questions）。</li>
+<li><b>股价表现</b>：MediaTek 2454.TW 现价 NT$3,720，<b>YTD +160%</b>、1Y +220%，市值 ~NT$5.94T；52 周区间 NT$1,130–5,480。市场已部分定价 AI/ASIC 预期，但分析师平均目标价 NT$6,163（区间 4,000–10,400）仍有上行空间。</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>风险（公开信息）</h4>
+<ul>
+<li><b>地缘政治</b>：BIS 新规含"代工条款"——中国总部设计公司"晶体管 &lt;300 亿"证明不再有效，中国设计芯片海外代工/封测收紧；作为台厂，MediaTek 的 Google/美系 ASIC 业务受此影响相对小，但需关注 MATCH 法案（FY2027 NDAA 参议院版本）对中国设备链的连锁冲击。</li>
+<li><b>第二供应商引入不确定性</b>：Google 是否/何时引入 MediaTek 作为 TPU 第二供应商仍存变数；Broadcom 凭借多年绑定关系（FY27 已锁定 ~10GW）仍占先手。</li>
+<li><b>竞争加剧反噬</b>：GS 同时指出"定制计算竞争加剧"可能压制行业领先毛利率——MediaTek 切入的同时也面临博通/Marvell 的份额守卫。</li>
+</ul>
+</div>
+
+<hr class="hr" id="s6">
+
+<h2>⑥ 事件驱动 &amp; 新兴信号</h2>
+
+<div class="card">
+<h4>本期关键事件日历</h4>
+<table>
+<tr><th>日期</th><th>事件</th><th>对算力需求 / 板块影响</th></tr>
+<tr><td>11-12</td><td>黄仁勋辞任 NVIDIA CEO（婚外情丑闻）</td><td>治理/执行折价，NVDA 市值蒸发 ~$600B</td></tr>
+<tr><td>11-14</td><td>美国法官驳回三星/SK 海力士/美光 DRAM 价格操纵联合驳回动议</td><td>存储"三巨头"法律悬顶，每次 memory 简报须追踪</td></tr>
+<tr><td>11-16</td><td>BIS 远程算力 IFR 正式落地（132 页）</td><td>管制从"芯片"延伸至"算力"，覆盖推理，堵海外通道</td></tr>
+<tr><td>11-16</td><td>阿里 Qwen4-Max 发布</td><td>单任务成本 -58%，企业级单位经济性</td></tr>
+<tr><td>11-17</td><td>NVIDIA F3Q27 财报</td><td>营收 $115.8B 超预期，Vera Rubin 首季 $20B</td></tr>
+<tr><td>11-18</td><td>腾讯 Q3（capex 见顶信号）</td><td>中国侧 AI 开支边际放缓</td></tr>
+<tr><td>11-19</td><td>Anthropic IPO（$81.3B）</td><td>"供应商返投支撑需求"质疑，资金轮动</td></tr>
+<tr><td>11-19</td><td>Hunterbrook 做空 AMD</td><td>"中国敞口审查"从 NVDA 扩散至第二梯队</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h4>AI 需求可持续性"三重质疑"框架（当前核心叙事）</h4>
+<ul>
+<li><b>第一重：AI lab 经济性/融资</b>——前沿实验室是否具备自足盈利路径。</li>
+<li><b>第二重：supplier-funded demand</b>——Anthropic IPO 供应商集体认购 $26B 配售 + $895B 累计算力承诺，市场质疑需求是否被供应商自己掏钱支撑。</li>
+<li><b>第三重：物理/监管约束（data-center moratorium）</b>——中期选举后民主党国会 + 地方民粹限制 DC 建设与电力审批；BIS 新规对第三国 DC 的限制属同一向量的全球延伸。</li>
+</ul>
+<p class="src">需区分"需求转移 vs 需求消失"：neocloud 融资收紧 → CSP 接单，总需求未必减少；但估值已提前交易"见顶预期"。</p>
+</div>
+
+<hr class="hr" id="s7">
+
+<h2>⑦ 股价快照（2026-11-19 美股收盘 / 台股收盘）</h2>
+
+<div class="card">
+<table>
+<tr><th>标的</th><th>代码</th><th>现价</th><th>当日</th><th>YTD</th><th>52周区间</th></tr>
+<tr><td>NVIDIA</td><td>NVDA</td><td><b>$145.98</b></td><td class="neg">-3.29%</td><td class="neg">-21.73%</td><td>$145.71–243.37</td></tr>
+<tr><td>AMD</td><td>AMD</td><td><b>$479.11</b></td><td class="neg">-9.63%</td><td class="pos">+128.42%</td><td>$188.22–658.52</td></tr>
+<tr><td>Broadcom</td><td>AVGO</td><td><b>$345.80</b></td><td class="neg">-2.33%</td><td class="pos">+0.16%</td><td>$289.77–495.00</td></tr>
+<tr><td>Marvell</td><td>MRVL</td><td><b>$139.27</b></td><td class="neg">-4.31%</td><td>—</td><td>—</td></tr>
+<tr><td>Micron</td><td>MU</td><td><b>$687.57</b></td><td class="neg">-2.51%</td><td class="pos">+141.91%</td><td>$192.59–1,255.00</td></tr>
+<tr><td>TSMC (ADR)</td><td>TSM</td><td><b>$349.60</b></td><td class="neg">-3.59%</td><td>—</td><td>—</td></tr>
+<tr><td>Alphabet</td><td>GOOGL</td><td><b>$274.61</b></td><td class="neg">-2.81%</td><td class="neg">-12.89%</td><td>$272.11–408.61</td></tr>
+<tr><td>Microsoft</td><td>MSFT</td><td><b>$497.25</b></td><td class="neg">-0.21%</td><td>—</td><td>—</td></tr>
+<tr><td>Meta</td><td>META</td><td><b>$591.03</b></td><td class="neg">-4.11%</td><td>—</td><td>—</td></tr>
+<tr><td>Vertiv</td><td>VRT</td><td><b>$184.99</b></td><td class="neg">-6.26%</td><td class="pos">+14.18%</td><td>$147.82–379.93</td></tr>
+<tr><td>Coherent</td><td>COHR</td><td><b>$212.95</b></td><td>+0.05%</td><td class="pos">+16.45%</td><td>$130.42–440.00</td></tr>
+<tr><td>Lumentum</td><td>LITE</td><td><b>$528.82</b></td><td class="neg">-4.04%</td><td>—</td><td>—</td></tr>
+<tr><td><b>MediaTek</b></td><td>2454.TW</td><td><b>NT$3,720</b></td><td class="neg">-5.58%</td><td class="pos">+160.14%</td><td>NT$1,130–5,480</td></tr>
+</table>
+<p class="src">数据日期：2026-11-19（美股收盘 / 台股收盘）。来源：Yahoo Finance（web_extract 抓取）。注：本周 AI 硬件板块普遍承压，主因 Anthropic IPO 资金轮动 + 黄仁勋辞职 + BIS 新规三重冲击。</p>
+</div>
+
+<hr class="hr" id="s8">
+
+<h2>⑧ 数据来源</h2>
+<div class="card">
+<ul>
+<li><b>公司财报</b>：NVIDIA F3Q27（2026-11-17）、AMD Q3 FY26、Broadcom Q3 FY26、Microsoft Q1 FY27、Meta Q3、Amazon Q3（2026-10-29 Reuters）、腾讯 Q3（2026-11-18）、百度 3Q26、MediaTek Q3（2026-10-30）。</li>
+<li><b>卖方研报（本地仓库，2026-11-17~19）</b>：J.P. Morgan NVIDIA（11-18）、BofA NVIDIA（11-18）、Goldman Sachs Broadcom（11-18）、Morgan Stanley TSMC / Alphabet / US Chip Export Rules（11-18）、Bernstein China Semis BIS（11-18）、Bernstein Tencent（11-19）、Bernstein Neocloud 3Q26（11-19）、Goldman Sachs HBM tracker（11-17）、J.P. Morgan China AI（11-17）、Citi Alibaba Qwen4（11-16）、BofA Baidu（11-17）。</li>
+<li><b>行业数据库</b>：Dashboard localhost:8899（CoWoS 产能 / HBM / Memory 价格）。</li>
+<li><b>公开新闻</b>：Reuters、Business Insider、Yahoo Finance、247wallst（2026-10~11）。</li>
+</ul>
+</div>
+
+<div class="card">
+<h4>待与 Felix 确认（Open Questions）</h4>
+<ol>
+<li><b>MediaTek TPU 收入模式</b>：一次性 NRE 还是量产 royalty？TPU v7e/v8i/v9 的量产时间线与收入贡献需更详细数据。</li>
+<li><b>TPU v9 机会概率</b>：当前评估多少？决定拿到/没拿到的关键因素（Google 第二供应商策略、代工产能、地缘）？</li>
+<li><b>中国 CSP 跟踪</b>：阿里/腾讯/ByteDance 是否需单独建表跟踪（受 BIS 新规影响，本期已显性化）？</li>
+</ol>
+</div>
+
+<div class="footer">
+本报告由 Hermes Agent（Felix 的研究助理）自动生成 · 2026-11-20 · 数据截至 2026-11-19 收盘。<br>
+报告内 <span class="conf">Confidential</span> 标注内容来自本地卖方研报聚合（知识星球/私域纪要口径），与公开数据明确区分。<br>
+所有目标价/评级均注明机构与日期，未做自行推算。股价数据日期已标注，符合 7 天 freshness 要求。
+</div>
+
+</div>
+</body>
+</html>
